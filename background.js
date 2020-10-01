@@ -6,7 +6,10 @@ chrome.runtime.getPackageDirectoryEntry(function(root) {
         var reader = new FileReader();
 
         reader.onloadend = function(e) {
-        //   console.log(reader.result)
+            lines = reader.result.split('\n');
+            lines.forEach(line=>{
+                console.log(line)
+            })
         };
         reader.readAsText(file);
       });
