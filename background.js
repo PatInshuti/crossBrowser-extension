@@ -129,131 +129,24 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 {urls: ["<all_urls>"]},
 ["blocking"]);
 
-// let model = tf.sequential();
-
-// model.add(tf.layers.dense(
-//     {
-//         inputShape: 4,
-//         activation: 'sigmoid',
-//         units: 10
-//     }
-// ));
-
-// model.add(tf.layers.dense(
-//     {
-//         inputShape: 10,
-//         units: 3,
-//         activation: 'softmax'
-//     }
-// ));
-
-// model.compile({
-//     loss: "categoricalCrossentropy",
-//     optimizer: tf.train.adam()
-// });
-
-const start_model = async() =>{
-
-    await getFeatures('testing.json').then(_res => {
-        jsonres = (JSON.parse(_res))
-    
-        jsonres.map(res =>{
-            testSet.push(res)
-        })
-    })
-    .catch(_error => {
-        console.log(_error );
-    });
-
-    await getFeatures('training.json').then(_res => {
-        jsonres = (JSON.parse(_res))
-    
-        jsonres.map(res =>{
-            trainingSet.push(res)
-        })
-    })
-    .catch(_error => {
-        console.log(_error );
-    });
-
-    // console.log(testSet)
-    // console.log(trainingSet)
 
 
-    let trainingData = tf.tensor2d(
-        trainingSet.map(item => [
-            item.sepal_length,
-            item.sepal_width,
-            item.petal_length,
-            item.petal_width
-        ]),
-        [trainingSet.length, 4]
-    );
-      
-    let testData = tf.tensor2d(
-        testSet.map(item => [
-            item.sepal_length,
-            item.sepal_width,
-            item.petal_length,
-            item.petal_width
-        ]),
-        [14, 4]
-    );
+classes = ["Iris-setosa", "Iris-versicolor", "Iris-virginica"]
 
+let test_data2 = [5.9,3.0,5.1,1.8]
 
-    let outputData = tf.tensor2d(trainingSet.map(item => [
-        item.species === 'setosa' ? 1 : 0,
-        item.species === 'virginica' ? 1 : 0,
-        item.species === 'versicolor' ? 1 : 0
-    
-    ]), [trainingSet.length,3])
+tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
-
-    let model = tf.sequential();
-
-    model.add(tf.layers.dense(
-        {
-            inputShape: 4,
-            activation: 'sigmoid',
-            units: 10
-        }
-    ));
-
-    model.add(tf.layers.dense(
-        {
-            inputShape: 10,
-            units: 3,
-            activation: 'softmax'
-        }
-    ));
-
-    model.compile({
-        loss: "categoricalCrossentropy",
-        optimizer: tf.train.adam()
-    });
-
-        model.fit(trainingData, outputData,{epochs: 40});
-
-
-    let test = [{"petal_length": 1, "petal_width": 0.7, "sepal_length": 1.5, "sepal_width": 0.4},{"petal_length": 1, "petal_width": 0.7, "sepal_length": 1.5, "sepal_width": 0.4}]
-    
     let newDataTensor = tf.tensor2d(
-        test.map((item) => [
-          item.sepal_length,
-          item.sepal_width,
-          item.petal_length,
-          item.petal_width
-        ]),
-        [test.length, 4]
-    );
+        test_data2,
+        [1, 4]
+      );
+      
+    predictions = model.predict(newDataTensor)  
 
-    console.log("**************PREDICTION*****************")
+    let maxProbability = Math.max(...predictions.dataSync());
+    let predictionIndex = predictions.dataSync().indexOf(maxProbability);
 
-    model.predict(newDataTensor).print();
+    console.log("===== " +classes[predictionIndex] +" =====")
 
-
-}
-
-start_model()
-
-
+} );
