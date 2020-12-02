@@ -90,20 +90,20 @@ let getFeatures = (_path) => {
     });
 };
 
-// getFeatures('FinalFeatures.txt').then(_res => {
+getFeatures('FinalFeatures.txt').then(_res => {
 
-//         lines = _res.split('\n');
-//         lines.forEach(line=>{
-//             line = line.split('|')[0]
-//             featuresList.push(line)
-//         })
+        lines = _res.split('\n');
+        lines.forEach(line=>{
+            line = line.split('|')[0]
+            featuresList.push(line)
+        })
 
-//         // console.log(featuresList)
-//         // setupDB();
-//     })
-//     .catch(_error => {
-//         console.log(_error );
-// });
+        console.log(featuresList)
+        // setupDB();
+    })
+    .catch(_error => {
+        console.log(_error );
+});
 
 
 
@@ -120,6 +120,12 @@ browser.webRequest.onBeforeSendHeaders.addListener(
                     let searchTerm = "."+feature+"\\("
                     let count = result.search(searchTerm);
                     count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
+
+                    // if count is > 0
+                    // Provide a json file for features with their --> index for the ml model array -- do this within the google colab
+                    // [{"feature1":count},{"feature2":count}]
+                    // get the [feature] and look up its index in the ml model array
+                    // populate the array[index] with the count
                 })
 
                 console.log(featuresCount)
