@@ -90,15 +90,16 @@ let getFeatures = (_path) => {
     });
 };
 
-getFeatures('FinalFeatures.txt').then(_res => {
+getFeatures('selectedFeatures.txt').then(_res => {
 
         lines = _res.split('\n');
+
         lines.forEach(line=>{
             line = line.split('|')[0]
             featuresList.push(line)
         })
 
-        console.log(featuresList)
+        // console.log(featuresList)
         // setupDB();
     })
     .catch(_error => {
@@ -106,34 +107,6 @@ getFeatures('FinalFeatures.txt').then(_res => {
 });
 
 
-
-browser.webRequest.onBeforeSendHeaders.addListener(
-    function(details) {
-        if (details.type == "script"){  
-
-            console.log("-------------"+details.url+"-------------")
-            fetch(details.url).then(r => r.text()).then(result => {
-
-                let featuresCount = {}
-
-                featuresList.forEach(feature =>{
-                    let searchTerm = "."+feature+"\\("
-                    let count = result.search(searchTerm);
-                    count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
-
-                    // if count is > 0
-                    // Provide a json file for features with their --> index for the ml model array -- do this within the google colab
-                    // [{"feature1":count},{"feature2":count}]
-                    // get the [feature] and look up its index in the ml model array
-                    // populate the array[index] with the count
-                })
-
-                console.log(featuresCount)
-            })
-        }
-    },
-{urls: ["<all_urls>"]},
-["blocking"]);
 
 
 
@@ -186,6 +159,71 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
         test_data,
         [1, 508]
     );
+
+
+
+    browser.webRequest.onBeforeSendHeaders.addListener(
+        function(details) {
+            if (details.type == "script"){  
+
+                console.log("-------------"+details.url+"-------------")
+                fetch(details.url).then(r => r.text()).then(result => {
+
+                    let featuresCount = {}
+
+                    featuresList.forEach(feature =>{
+
+                        if (!feature.includes("__")){
+                            let searchTerm = "."+feature+"\\("
+                            let count = result.search(searchTerm);
+                            count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
+                        }
+
+                        else{
+                            let feats = feature.split('__')
+                            let res = 1
+
+                            feats.forEach(feat=>{
+                                let searchTerm = "."+feat+"\\("
+                                let count = result.search(searchTerm)
+
+                                if (count == -1)
+                                    res = 0
+
+                                featuresCount[feature] = res
+                            })
+                        }
+
+                    })
+
+                    console.log(featuresCount)
+                    let array_data = new Array(508); for (let i=0; i<508; ++i) array_data[i] = 0;
+
+                    getFeatures("feature_index_mapping.json").then(res=>{
+
+                        featureIndexMapping = JSON.parse(res);
+                        
+                        featuresCount.forEach(feature =>{
+                            if (featuresCount[feature] !=0){
+                                //get features's index on the list
+                                featureIndex = featureIndexMapping[feature]
+                                array_data[featureIndex] = featuresCount[feature];
+                            }
+                        })
+
+                        
+                    })
+
+
+                })
+
+
+
+            }
+        },
+    {urls: ["<all_urls>"]},
+    ["blocking"]);
+
       
     predictions = model.predict(newDataTensor)  
 
