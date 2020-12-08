@@ -124,13 +124,13 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
                         let featuresCount = {}
 
                         // Replace all multiple consecutive white spaces with one white space
-                        result = result.replace(/\s+/g, ' ')
+                        //result = result.replace(/\s+/g, ' ')
 
                         featuresList.forEach(feature =>{
 
                             if (!feature.includes("__")){
                                 let searchTerm = "."+feature+"\\("
-                                let searchTerm2 = "."+feature+"\\ ("
+                                let searchTerm2 = "."+feature+" \\("
                                 let count = result.search(searchTerm);
                                 let count2 =  result.search(searchTerm2) 
                                 count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
@@ -143,7 +143,7 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
                                 feats.forEach(feat=>{
                                     let searchTerm = "."+feat+"\\("
-                                    let searchTerm2 = "."+feature+"\\ ("
+                                    let searchTerm2 = "."+feature+" \\("
                                     let count = result.search(searchTerm)
                                     let count2 =  result.search(searchTerm2)
 
