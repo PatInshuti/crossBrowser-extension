@@ -95,7 +95,6 @@ getFeatures('selectedFeatures.txt').then(_res => {
         lines = _res.split('\n');
 
         lines.forEach(line=>{
-            line = line.split('|')[0]
             featuresList.push(line)
         })
 
@@ -108,134 +107,93 @@ getFeatures('selectedFeatures.txt').then(_res => {
 
 
 
-
-
 classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"]
-
-test_data = [
-    [ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 16,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1,
-    0,  1,  0,  0,  0,  0,  0,  6,  0,  0,  0,  0,  0,
-    0,  0,  0,  4,  0,  0,  1,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  4,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  6,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0, 19,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  4,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  2,
-    0,  0,  0,  0,  3,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,
-    7,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0]
-    ]
 
 tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
-    browser.webRequest.onBeforeSendHeaders.addListener(
-        function(details) {
-            if (details.type == "script"){  
 
-                console.log("-------------"+details.url+"-------------")
-                fetch(details.url).then(r => r.text()).then(result => {
+    getFeatures("feature_index_mapping.json").then(async res=>{
 
-                    let featuresCount = {}
+        let featureIndexMapping = JSON.parse(res);
 
-                    featuresList.forEach(feature =>{
 
-                        if (!feature.includes("__")){
-                            let searchTerm = "."+feature+"\\("
-                            let count = result.search(searchTerm);
-                            count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
-                        }
 
-                        else{
-                            let feats = feature.split('__')
-                            let res = 1
+        browser.webRequest.onBeforeSendHeaders.addListener(
+            async (details) => {
+                if (details.type == "script"){  
 
-                            feats.forEach(feat=>{
-                                let searchTerm = "."+feat+"\\("
-                                let count = result.search(searchTerm)
+                    await fetch(details.url).then(r => r.text()).then(async result => {
 
-                                if (count == -1)
-                                    res = 0
+                        let featuresCount = {}
 
-                            })
-                            
-                            featuresCount[feature] = res
+                        // First replace all multiple consecutive spaces with one space
 
-                        }
-
-                    })
-
-                    // console.log(featuresCount)
-                    let array_data = new Array(508); for (let i=0; i<508; ++i) array_data[i] = 0;
-
-                    getFeatures("feature_index_mapping.json").then(res=>{
-
-                        featureIndexMapping = JSON.parse(res);
-                        
                         featuresList.forEach(feature =>{
+
+                            if (!feature.includes("__")){
+                                let searchTerm = "."+feature+"\\("
+                                let count = result.search(searchTerm);
+                                // count also for "."+feature+"\\ ("
+                                count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
+                            }
+
+                            else{
+                                let feats = feature.split('__')
+                                let res = 1
+
+                                feats.forEach(feat=>{
+                                    let searchTerm = "."+feat+"\\("
+                                    // count also for "."+feature+"\\ ("
+                                    let count = result.search(searchTerm)
+
+                                    if (count == -1)
+                                        res = 0
+
+                                })
+
+                                featuresCount[feature] = res
+                            }
+
+                        })
+
+                        let scriptArrayData = [[]];
+                        for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
+
+                        // Filling the scriptArrayData with feature occurences
+                        await featuresList.forEach(async feature =>{
                             if (featuresCount[feature] !=0){
                                 //get features's index on the list
                                 featureIndex = featureIndexMapping[feature]
-                                array_data[featureIndex] = featuresCount[feature];
+                                scriptArrayData[0][featureIndex] = featuresCount[feature];
                             }
                         })
-                        
+
+                        let newDataTensor = tf.tensor2d(
+                            scriptArrayData,
+                            [1, 508]
+                        );                
+
+                        predictions = model.predict(newDataTensor)  
+
+                        let maxProbability = Math.max(...predictions.dataSync());
+                        let predictionIndex = predictions.dataSync().indexOf(maxProbability);
+                    
+                        console.log("                               ")
+                        console.log("******************************")
+                        console.log(details.url)
+                        console.log("predicted class -- "+ classes[predictionIndex])
+                        console.log("******************************")
+                        console.log("                               ")
+
                     })
 
-                    console.log("*****")
-                    let two_d_array = []
-                    two_d_array.push(array_data)
-                    
-                    console.log(two_d_array)
+                }
+            },
+        {urls: ["<all_urls>"]},
+        ["blocking"]);
 
-                    let newDataTensor = tf.tensor2d(
-                        two_d_array,
-                        [1, 508]
-                    );                
+        
+    })
 
-                    predictions = model.predict(newDataTensor)  
-
-                    let maxProbability = Math.max(...predictions.dataSync());
-                    let predictionIndex = predictions.dataSync().indexOf(maxProbability);
-                
-                    console.log("predicted class --> "+ classes[predictionIndex])
-
-
-                })
-
-
-
-            }
-        },
-    {urls: ["<all_urls>"]},
-    ["blocking"]);
 
 } );
