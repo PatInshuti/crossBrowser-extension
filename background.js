@@ -111,12 +111,9 @@ classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "util
 
 tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
-
     getFeatures("feature_index_mapping.json").then(async res=>{
 
         let featureIndexMapping = JSON.parse(res);
-
-
 
         browser.webRequest.onBeforeSendHeaders.addListener(
             async (details) => {
@@ -126,15 +123,18 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
                         let featuresCount = {}
 
-                        // First replace all multiple consecutive spaces with one space
+                        // Replace all multiple consecutive white spaces with one white space
+                        result = result.replace(/\s+/g, ' ')
 
                         featuresList.forEach(feature =>{
 
                             if (!feature.includes("__")){
                                 let searchTerm = "."+feature+"\\("
+                                let searchTerm2 = "."+feature+"\\ ("
                                 let count = result.search(searchTerm);
-                                // count also for "."+feature+"\\ ("
+                                let count2 =  result.search(searchTerm2) 
                                 count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
+                                count2 == -1 ? "" : featuresCount[feature] += count2
                             }
 
                             else{
@@ -143,10 +143,11 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
                                 feats.forEach(feat=>{
                                     let searchTerm = "."+feat+"\\("
-                                    // count also for "."+feature+"\\ ("
+                                    let searchTerm2 = "."+feature+"\\ ("
                                     let count = result.search(searchTerm)
+                                    let count2 =  result.search(searchTerm2)
 
-                                    if (count == -1)
+                                    if (count == -1 || count2 == -1)
                                         res = 0
 
                                 })
