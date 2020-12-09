@@ -5,69 +5,11 @@ browser = (function () {
 })();
 
 var db;
+let db_name = "db38"
+let featureStore = "featureStore"
 var featuresList =[]
 var testSet = [];
 var trainingSet = [];
-
-const setupDB = () =>{
-        //check for support
-        if (!('indexedDB' in window)) {
-            console.log('This browser doesn\'t support IndexedDB');
-        }
-
-        else{
-            console.log("Index DB supported")
-
-            const request = window.indexedDB.open('tedb',2);
-
-            request.onerror = (event) =>{
-                console.log("error opening db...")
-            }
-
-            request.onupgradeneeded = (event) =>{
-                db = event.target.result;
-                
-                let objectStore = db.createObjectStore('tests',{autoIncrement:true});
-                
-                objectStore.transaction.oncomplete = () =>{
-                    console.log("store created")
-                }
-            }
-
-            request.onsuccess = (event) =>{
-                db = event.target.result;
-
-                if (!db.objectStoreNames.contains('tests')){
-                    console.log("store does not exist");
-                }
-                else{
-                    console.log("store exists")
-
-                    var tx = db.transaction('tests', 'readwrite');
-                    var store = tx.objectStore('tests')
-
-                    // Go through line by line and store in db
-                    
-                    // var request = store.add("okay this is my input");
-
-                    // request.onerror = function(e) {
-                    //     console.log('Error', e.target.error.name);
-                    // };
-
-                    // request.onsuccess = function(e) {
-                    // console.log('Woot! Did it');
-                    // };
-
-                    var getall = store.getAll();
-
-                    getall.onsuccess = (event) =>{
-                        console.log(event.target.result);
-                    }
-                }
-            }
- 
-        }
-}
 
 let getFeatures = (_path) => {
     return new Promise((resolve, reject) => {
@@ -90,22 +32,104 @@ let getFeatures = (_path) => {
     });
 };
 
-getFeatures('selectedFeatures.txt').then(_res => {
 
-        lines = _res.split('\n');
+const setupDB = async (data) =>{
 
-        lines.forEach(line=>{
-            featuresList.push(line)
-        })
+        //check for support
+        if (!('indexedDB' in window)) {
+            console.log('This browser doesn\'t support IndexedDB');
+        }
 
-        // console.log(featuresList)
-        // setupDB();
-    })
-    .catch(_error => {
-        console.log(_error );
-});
+        else{
 
+                // Fetch Features Locally
+                await getFeatures('selectedFeatures.txt').then(_res => {
 
+                    lines = _res.split('\n');
+                    
+                    lines.forEach(async line=>{
+                        await featuresList.push(line)
+                    })
+                })
+            
+                //open the db 
+                const request = window.indexedDB.open(db_name,2);
+
+                request.onerror = (event) =>{
+                    console.log("error opening db...")
+                }
+                
+                // Runs only one time
+                request.onupgradeneeded = async (event) =>{
+
+                    db = event.target.result;
+                    
+                    let objectStore = db.createObjectStore(featureStore,{autoIncrement:true});
+
+                    objectStore.transaction.oncomplete = () =>{
+                        console.log("store created")
+                    }
+
+                    await featuresList.forEach(async feature=>{
+                        await objectStore.add(feature)
+                    })
+
+                }
+                
+                // // Runs 
+                // request.onsuccess = (event) =>{
+                //     db = event.target.result;
+    
+                //     if (!db.objectStoreNames.contains(featureStore)){
+                //         console.log("store does not exist");
+                //     }
+                //     else{
+                //         console.log("store exists")
+    
+                //         var tx = db.transaction(featureStore, 'readwrite');
+                //         var store = tx.objectStore(featureStore)
+    
+                //         // Go through line by line and store in db
+                        
+                //         // var request = store.add("okay this is my input");
+    
+                //         // request.onerror = function(e) {
+                //         //     console.log('Error', e.target.error.name);
+                //         // };
+    
+                //         // request.onsuccess = function(e) {
+                //         // console.log('Woot! Did it');
+                //         // };
+    
+                //         var getall = store.getAll();
+    
+                //         getall.onsuccess = (event) =>{
+                //             console.log(event.target.result);
+                //         }
+                //     }
+    
+                //     // db.deleteObjectStore("tests");
+                // }
+ 
+        }
+}
+
+setupDB(); 
+// getFeatures('selectedFeatures.txt').then(_res => {
+
+//         lines = _res.split('\n');
+
+//         lines.forEach(line=>{
+//             featuresList.push(line)
+//         })
+
+//         // console.log(featuresList)
+//         var data = "saveFeatures"
+//         // setupDB(data);
+//     })
+//     .catch(_error => {
+//         console.log(_error );
+// });
 
 classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"]
 
@@ -115,86 +139,110 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
         let featureIndexMapping = JSON.parse(res);
 
-        browser.webRequest.onBeforeSendHeaders.addListener(
-            async (details) => {
-                if (details.type == "script"){  
+        //open the db 
+        const request = window.indexedDB.open(db_name,2);
 
-                    await fetch(details.url).then(r => r.text()).then(async result => {
+        request.onerror = (event) =>{
+            console.log("error opening db...")
+        }
 
-                        let featuresCount = {}
+        // Run
+        request.onsuccess = (event) =>{
+            db = event.target.result;
 
-                        // Replace all multiple consecutive white spaces with one white space
-                        //result = result.replace(/\s+/g, ' ')
+            if (!db.objectStoreNames.contains(featureStore)){
+                console.log("store does not exist");
+            }
+            else{
+                console.log("store exists")
 
-                        featuresList.forEach(feature =>{
+                var tx = db.transaction(featureStore, 'readwrite');
+                var featureDBStore = tx.objectStore(featureStore);
+                var getall = featureDBStore.getAll();
 
-                            if (!feature.includes("__")){
-                                let searchTerm = "."+feature+"\\("
-                                let searchTerm2 = "."+feature+" \\("
-                                let count = result.search(searchTerm);
-                                let count2 =  result.search(searchTerm2) 
-                                count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
-                                count2 == -1 ? "" : featuresCount[feature] += count2
-                            }
+                getall.onsuccess = (event) =>{
+                    featuresList = event.target.result;
+                    browser.webRequest.onBeforeSendHeaders.addListener( async (details) => {
+                        if (details.type == "script"){  
 
-                            else{
-                                let feats = feature.split('__')
-                                let res = 1
+                            await fetch(details.url).then(r => r.text()).then(async result => {
 
-                                feats.forEach(feat=>{
-                                    let searchTerm = "."+feat+"\\("
-                                    let searchTerm2 = "."+feature+" \\("
-                                    let count = result.search(searchTerm)
-                                    let count2 =  result.search(searchTerm2)
+                                let featuresCount = {}
 
-                                    if (count == -1 || count2 == -1)
-                                        res = 0
+                                // Replace all multiple consecutive white spaces with one white space
+                                //result = result.replace(/\s+/g, ' ')
+
+                                featuresList.forEach(feature =>{
+
+                                    if (!feature.includes("__")){
+                                        let searchTerm = "."+feature+"\\("
+                                        let searchTerm2 = "."+feature+" \\("
+                                        let count = result.search(searchTerm);
+                                        let count2 =  result.search(searchTerm2) 
+                                        count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
+                                        count2 == -1 ? "" : featuresCount[feature] += count2
+                                    }
+
+                                    else{
+                                        let feats = feature.split('__')
+                                        let res = 1
+
+                                        feats.forEach(feat=>{
+                                            let searchTerm = "."+feat+"\\("
+                                            let searchTerm2 = "."+feature+" \\("
+                                            let count = result.search(searchTerm)
+                                            let count2 =  result.search(searchTerm2)
+
+                                            if (count == -1 || count2 == -1)
+                                                res = 0
+
+                                        })
+
+                                        featuresCount[feature] = res
+                                    }
 
                                 })
 
-                                featuresCount[feature] = res
-                            }
+                                let scriptArrayData = [[]];
+                                for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
 
-                        })
+                                // Filling the scriptArrayData with feature occurences
+                                await featuresList.forEach(async feature =>{
+                                    if (featuresCount[feature] !=0){
+                                        //get features's index on the list
+                                        featureIndex = featureIndexMapping[feature]
+                                        scriptArrayData[0][featureIndex] = featuresCount[feature];
+                                    }
+                                })
 
-                        let scriptArrayData = [[]];
-                        for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
+                                let newDataTensor = tf.tensor2d(
+                                    scriptArrayData,
+                                    [1, 508]
+                                );                
 
-                        // Filling the scriptArrayData with feature occurences
-                        await featuresList.forEach(async feature =>{
-                            if (featuresCount[feature] !=0){
-                                //get features's index on the list
-                                featureIndex = featureIndexMapping[feature]
-                                scriptArrayData[0][featureIndex] = featuresCount[feature];
-                            }
-                        })
+                                predictions = model.predict(newDataTensor)  
 
-                        let newDataTensor = tf.tensor2d(
-                            scriptArrayData,
-                            [1, 508]
-                        );                
+                                let maxProbability = Math.max(...predictions.dataSync());
+                                let predictionIndex = predictions.dataSync().indexOf(maxProbability);
+                            
+                                console.log("                               ")
+                                console.log("******************************")
+                                console.log(details.url)
+                                console.log("predicted class -- "+ classes[predictionIndex])
+                                console.log("******************************")
+                                console.log("                               ")
 
-                        predictions = model.predict(newDataTensor)  
+                            })
 
-                        let maxProbability = Math.max(...predictions.dataSync());
-                        let predictionIndex = predictions.dataSync().indexOf(maxProbability);
-                    
-                        console.log("                               ")
-                        console.log("******************************")
-                        console.log(details.url)
-                        console.log("predicted class -- "+ classes[predictionIndex])
-                        console.log("******************************")
-                        console.log("                               ")
-
-                    })
+                        }
+                    },
+                    {urls: ["<all_urls>"]},
+                    ["blocking"]);
 
                 }
-            },
-        {urls: ["<all_urls>"]},
-        ["blocking"]);
+            }
+        }
 
-        
     })
-
 
 } );
