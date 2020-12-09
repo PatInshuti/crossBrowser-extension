@@ -5,11 +5,21 @@ browser = (function () {
 })();
 
 var db;
-let db_name = "db38"
+let db_name = "db41"
 let featureStore = "featureStore"
+let hashCodeToScriptStore = "hashCodeToScriptStore"
 var featuresList =[]
 var testSet = [];
 var trainingSet = [];
+var hashScriptMapping = {}
+
+async function hashString(message) {
+    const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
+    const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+    return hashHex;
+}
 
 let getFeatures = (_path) => {
     return new Promise((resolve, reject) => {
@@ -64,14 +74,18 @@ const setupDB = async (data) =>{
 
                     db = event.target.result;
                     
-                    let objectStore = db.createObjectStore(featureStore,{autoIncrement:true});
+                    let featureObjectStore = db.createObjectStore(featureStore,{autoIncrement:true});
+                    featureObjectStore.transaction.oncomplete = () =>{
+                        console.log("feature store created")
+                    }
 
-                    objectStore.transaction.oncomplete = () =>{
-                        console.log("store created")
+                    let hashCodeToScriptObjectStore = db.createObjectStore(hashCodeToScriptStore, {keyPath: 'id'});
+                    hashCodeToScriptObjectStore.transaction.oncomplete = () =>{
+                        console.log("hashcode_to_script store created")
                     }
 
                     await featuresList.forEach(async feature=>{
-                        await objectStore.add(feature)
+                        await featureObjectStore.add(feature)
                     })
 
                 }
@@ -114,22 +128,7 @@ const setupDB = async (data) =>{
         }
 }
 
-setupDB(); 
-// getFeatures('selectedFeatures.txt').then(_res => {
-
-//         lines = _res.split('\n');
-
-//         lines.forEach(line=>{
-//             featuresList.push(line)
-//         })
-
-//         // console.log(featuresList)
-//         var data = "saveFeatures"
-//         // setupDB(data);
-//     })
-//     .catch(_error => {
-//         console.log(_error );
-// });
+setupDB();
 
 classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"]
 
@@ -150,27 +149,36 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
         request.onsuccess = (event) =>{
             db = event.target.result;
 
-            if (!db.objectStoreNames.contains(featureStore)){
-                console.log("store does not exist");
+            if (!db.objectStoreNames.contains(featureStore) || !db.objectStoreNames.contains(hashCodeToScriptStore)){
+                console.log("One of the store does not exist");
             }
             else{
-                console.log("store exists")
+                console.log("All stores exist")
 
                 var tx = db.transaction(featureStore, 'readwrite');
-                var featureDBStore = tx.objectStore(featureStore);
-                var getall = featureDBStore.getAll();
 
-                getall.onsuccess = (event) =>{
+                var featureDBStore = tx.objectStore(featureStore);
+
+
+
+
+                var getallFeatures = featureDBStore.getAll();
+                // var getAllhashCodeToScript = hashCodeToScriptDBStore.getAll()
+
+                getallFeatures.onsuccess = (event) =>{
+
+                    // Start intercepting requests
                     featuresList = event.target.result;
                     browser.webRequest.onBeforeSendHeaders.addListener( async (details) => {
-                        if (details.type == "script"){  
+                        if (details.type == "script"){
+
 
                             await fetch(details.url).then(r => r.text()).then(async result => {
 
                                 let featuresCount = {}
 
                                 // Replace all multiple consecutive white spaces with one white space
-                                //result = result.replace(/\s+/g, ' ')
+                                result = result.replace(/\s+/g, ' ')
 
                                 featuresList.forEach(feature =>{
 
@@ -224,13 +232,40 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
 
                                 let maxProbability = Math.max(...predictions.dataSync());
                                 let predictionIndex = predictions.dataSync().indexOf(maxProbability);
-                            
-                                console.log("                               ")
-                                console.log("******************************")
-                                console.log(details.url)
-                                console.log("predicted class -- "+ classes[predictionIndex])
-                                console.log("******************************")
-                                console.log("                               ")
+
+                                // Get the hash string
+                                let hashValue = await hashString(result);
+
+                                const request = window.indexedDB.open(db_name,2);
+
+                                request.onsuccess = (event) =>{
+                                    db = event.target.result;
+
+                                    var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+
+                                    var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+
+                                    // var request = hashCodeToScriptDBStore.add("okay this is my input");
+
+                                    // request.onerror = function(e) {
+                                    //     console.log('Error', e.target.error.name);
+                                    // };
+                
+                                    // request.onsuccess = function(e) {
+                                    // console.log('Woot! Did it');
+                                    // };
+                                    
+                                
+                                    console.log("                               ")
+                                    console.log("******************************")
+                                    console.log(hashValue)
+                                    console.log(details.url)
+                                    console.log("predicted class -- "+ classes[predictionIndex])
+                                    console.log("******************************")
+                                    console.log("                               ")
+                                    hashScriptMapping[hashValue] = classes[predictionIndex]
+                                    console.log(hashScriptMapping)
+                                }
 
                             })
 
