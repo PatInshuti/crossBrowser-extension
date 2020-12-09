@@ -195,11 +195,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         };
                         
                     
-                        console.log("                               ")
                         console.log("******************************")
+                        console.log("                               ")
+
                         console.log(hashValue)
                         console.log(details.url)
                         console.log("predicted class -- "+ classes[predictionIndex])
+                        
                         console.log("******************************")
                         console.log("                               ")
                     }
