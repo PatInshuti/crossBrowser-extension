@@ -95,26 +95,20 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
     browser.webRequest.onBeforeSendHeaders.addListener( async (details) => {
         if (details.type == "script"){
 
-
-
             await fetch(details.url).then(r => r.text()).then(async result => {
-                // First check if script hashcode exists in the objectStore
-
 
                 // Get the hash string
                 let hashValue = await hashString(result);
 
                 var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
                 var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-
                 var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
 
                 getAllhashCodeToScript.onsuccess = async (event) =>{
-
                     // Start intercepting requests
                     theMapping = event.target.result;
 
-                    // If we do not find the hascode for the script
+                    // First check if script hashcode exists in the objectStore
                     if (theMapping == undefined){
 
                         let featuresCount = {}
@@ -201,7 +195,7 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         console.log(hashValue)
                         console.log(details.url)
                         console.log("predicted class -- "+ classes[predictionIndex])
-                        
+
                         console.log("******************************")
                         console.log("                               ")
                     }
@@ -223,7 +217,11 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
             })
 
+            //return {cancel: details.url.indexOf("://www.facebook.com/") != -1}; 
+            //return {cancel: true}; 
+
         }
+
     },
     {urls: ["<all_urls>"]},
     ["blocking"]);
@@ -232,7 +230,7 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 setupDB();
 
 
-
+//  consider them as content --->> tag-manager+content hosting+cdn utility customer-success
 classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"]
 
 tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
@@ -244,30 +242,28 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
         //open the db 
         const request = window.indexedDB.open(db_name,2);
 
-        request.onerror = (event) =>{
+        request.onerror = (event) => {
             console.log("error opening db...")
         }
 
         // Run
-        request.onsuccess = (event) =>{
+        request.onsuccess = (event) => {
             db = event.target.result;
 
             if (!db.objectStoreNames.contains(featureStore) || !db.objectStoreNames.contains(hashCodeToScriptStore)){
                 console.log("One of the store does not exist");
             }
             else{
-                console.log("All stores exist")
+                console.log("All DB Stores exist")
 
                 var tx = db.transaction(featureStore, 'readwrite');
                 var featureDBStore = tx.objectStore(featureStore);
                 var getallFeatures = featureDBStore.getAll();
 
                 getallFeatures.onsuccess = (event) =>{
-
                     // Start intercepting requests
                     featuresList = event.target.result;
                     runScriptLabelling(featureIndexMapping,model);
-
                 }
             }
         }
