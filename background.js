@@ -200,7 +200,7 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         console.log(hashValue)
                         console.log(details.url)
                         console.log("predicted class -- "+ classes[predictionIndex])
-
+                        scriptCategory.unshift(classes[predictionIndex])
                         console.log("******************************")
                         console.log("                               ")
                     }
@@ -213,7 +213,7 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         console.log("script hashcode to label mapping already exists -- retrieving label")
                         console.log(details.url)
                         console.log(theMapping)
-                        scriptCategory.push(theMapping.label);
+                        scriptCategory.unshift(theMapping.label);
                         console.log("******************************")
                         console.log("                               ")
 

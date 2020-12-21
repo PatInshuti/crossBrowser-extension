@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
-    <head>
-        <title>Title</title>
-        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://platform.linkedin.com ">
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.0.1/tf.js"> </script>
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
-
-    </head>
-
-    <body>
-        Analyzing script
-    </body>
-
-
-
-
-<script type="module" src="background.js"></script>
-<script src="content.js"></script>
-<script type="module" src="./tf.js"></script>
-
-<link rel="stylesheet" href="background.css">
-
+  <head>
+    <script type="text/javascript" src="popup.js" async></script>
+    <title>Add a website to block</title>
+  </head>
+  <body>
+    <form id="addWebsiteForm">
+    Website Address: <input type="text" id="websiteAddress"><br>
+    <input type="submit" value="Add Website">
+    </form>
+  </body>
 </html>
