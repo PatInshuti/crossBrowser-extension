@@ -12,6 +12,8 @@ var featuresList =[]
 var testSet = [];
 var trainingSet = [];
 var hashScriptMapping = {}
+let scriptCategory = [];
+
 
 async function hashString(message) {
     const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
@@ -95,9 +97,8 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
     browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
         if (details.type == "script"){
 
-            let scriptCategory = [];
-
-            categoriesToBlock = [];
+            // categoriesToBlock = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"];
+            categoriesToBlock = []
 
             fetch(details.url).then(r => r.text()).then(async result => {
 
@@ -220,11 +221,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                 }
             })
 
-            // console.log("()()()()")
             console.log(scriptCategory)
-
+            let scriptCategory_copy = scriptCategory[0]
+            scriptCategory = []
             // return {cancel: details.url.indexOf("://www.facebook.com/") != -1}; 
-            // return {cancel: true};
+            return {cancel: categoriesToBlock.includes(scriptCategory_copy) ? true : false};
+            
+
         }
 
     },
