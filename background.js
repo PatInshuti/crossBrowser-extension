@@ -92,10 +92,14 @@ const setupDB = async (data) =>{
 }
 
 const runScriptLabelling = (featureIndexMapping, model) =>{
-    browser.webRequest.onBeforeSendHeaders.addListener( async (details) => {
+    browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
         if (details.type == "script"){
 
-            await fetch(details.url).then(r => r.text()).then(async result => {
+            let scriptCategory = [];
+
+            categoriesToBlock = [];
+
+            fetch(details.url).then(r => r.text()).then(async result => {
 
                 // Get the hash string
                 let hashValue = await hashString(result);
@@ -208,18 +212,19 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         console.log("script hashcode to label mapping already exists -- retrieving label")
                         console.log(details.url)
                         console.log(theMapping)
-
+                        scriptCategory.push(theMapping.label);
                         console.log("******************************")
                         console.log("                               ")
 
                     }
                 }
-
             })
 
-            //return {cancel: details.url.indexOf("://www.facebook.com/") != -1}; 
-            //return {cancel: true}; 
+            // console.log("()()()()")
+            console.log(scriptCategory)
 
+            // return {cancel: details.url.indexOf("://www.facebook.com/") != -1}; 
+            // return {cancel: true};
         }
 
     },
@@ -230,10 +235,10 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 setupDB();
 
 
-//  consider them as content --->> tag-manager+content hosting+cdn utility customer-success
+// consider them as ** content ** --->> tag-manager+content * hosting+cdn * utility * customer-success
 classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"]
 
-tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
+tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => {
 
     getFeatures("feature_index_mapping.json").then(async res=>{
 
@@ -260,7 +265,7 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model=> {
                 var featureDBStore = tx.objectStore(featureStore);
                 var getallFeatures = featureDBStore.getAll();
 
-                getallFeatures.onsuccess = (event) =>{
+                getallFeatures.onsuccess = (event) => {
                     // Start intercepting requests
                     featuresList = event.target.result;
                     runScriptLabelling(featureIndexMapping,model);
