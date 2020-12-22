@@ -104,7 +104,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
         for (const [categoryToBlock, blockDecision] of blockEntries) {
 
             if (blockDecision === true){
-                categoriesToBlock.push(categoryToBlock)
+                if (categoryToBlock === "content"){
+                    categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
+                }
+
+                else{
+                    categoriesToBlock.push(categoryToBlock)
+                }
             }
 
         }
