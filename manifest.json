@@ -4,9 +4,10 @@
     "version": "1.0.0",
     "description": "This is a sample description",
     "short_name": "Capstone Plugin",
-    "permissions": ["<all_urls>","webRequest","webRequestBlocking","nativeMessaging","activeTab","tabs"],
+    "permissions": ["<all_urls>","webRequest","webRequestBlocking","nativeMessaging","activeTab","tabs","storage"],
     "content_scripts": [
       {
+        "run_at": "document_start",
         "matches": ["<all_urls>"],
         "css": ["background.css"],
         "js": ["content.js"]

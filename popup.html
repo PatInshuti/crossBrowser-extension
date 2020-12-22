@@ -1,13 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html>
-  <head>
-    <script type="text/javascript" src="popup.js" async></script>
-    <title>Add a website to block</title>
-  </head>
-  <body>
-    <form id="addWebsiteForm">
-    Website Address: <input type="text" id="websiteAddress"><br>
-    <input type="submit" value="Add Website">
-    </form>
-  </body>
+
+    <head>
+        <title>Title</title>
+        <script type="text/javascript" src="./popup.js"></script>
+        <link rel="stylesheet" href="background.css">
+    </head>
+
+
+
+    <body>
+        <form id="scriptCategoriesForm">
+            <input type="checkbox" id="content" name="content" value="content">
+            <label for="content">Content</label><br>
+
+            <input type="checkbox" id="ads+marketing" name="ads+marketing" value="ads+marketing">
+            <label for="ads+marketing">Ads & marketing</label><br>
+
+            <input type="checkbox" id="video" name="video" value="video">
+            <label for="video">Video</label><br><br>
+
+            <input type="checkbox" id="analytics" name="analytics" value="analytics">
+            <label for="analytics">Analytics</label><br><br>
+
+            <input type="checkbox" id="social" name="social" value="social">
+            <label for="social">Social</label><br><br>
+
+            <input id="submit-button" type="submit" value="Save Changes">
+          </form>
+
+          <p id="hello">hello world</p>
+    </body>
+
+
 </html>

@@ -94,11 +94,22 @@ const setupDB = async (data) =>{
 }
 
 const runScriptLabelling = (featureIndexMapping, model) =>{
-    browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
-        if (details.type == "script"){
 
-            // categoriesToBlock = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "utility", "analytics", "social", "customer-success"];
-            categoriesToBlock = []
+    browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
+
+        let categoriesToBlock = [];
+        let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
+        const blockEntries = Object.entries(blockSettings);
+
+        for (const [categoryToBlock, blockDecision] of blockEntries) {
+
+            if (blockDecision === true){
+                categoriesToBlock.push(categoryToBlock)
+            }
+
+        }
+
+        if (details.type == "script"){
 
             fetch(details.url).then(r => r.text()).then(async result => {
 
@@ -221,18 +232,21 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                 }
             })
 
-            console.log(scriptCategory)
+            console.log(categoriesToBlock)
             let scriptCategory_copy = scriptCategory[0]
             scriptCategory = []
             // return {cancel: details.url.indexOf("://www.facebook.com/") != -1}; 
             return {cancel: categoriesToBlock.includes(scriptCategory_copy) ? true : false};
-            
-
+        
         }
 
     },
     {urls: ["<all_urls>"]},
     ["blocking"]);
+
+
+
+
 }
 
 setupDB();
@@ -279,3 +293,21 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
     })
 
 } );
+
+
+
+browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    if (message.from == "popupScript") {
+
+        let settings = message.message;
+
+        // Put the object into storage
+        localStorage.setItem('blockSettings', JSON.stringify(settings));
+
+        // Retrieve the object from storage
+        var retrievedObject = localStorage.getItem('blockSettings');
+
+        console.log('blockSettings: ', JSON.parse(retrievedObject));
+
+    }
+});
