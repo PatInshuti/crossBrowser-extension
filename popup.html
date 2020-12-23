@@ -11,24 +11,37 @@
 
 
     <body>
-        <h3>Select Script Category to Block</h3>
+        <p class="main-title">Select Script Categories To Block</p>
         <form id="scriptCategoriesForm">
-            <input type="checkbox" id="content" name="content" value="content">
-            <label for="content">Content</label><br>
 
-            <input type="checkbox" id="ads+marketing" name="ads+marketing" value="ads+marketing">
-            <label for="ads+marketing">Ads & marketing</label><br>
+            <label class="container">Content
+                <input type="checkbox" id="content" name="content" value="content">
+                <span class="checkmark"></span>
+            </label>
 
-            <input type="checkbox" id="video" name="video" value="video">
-            <label for="video">Video</label><br><br>
+            <label class="container">Ads & Marketing
+                <input type="checkbox" id="ads+marketing" name="ads+marketing" value="ads+marketing">
+                <span class="checkmark"></span>
+            </label>
 
-            <input type="checkbox" id="analytics" name="analytics" value="analytics">
-            <label for="analytics">Analytics</label><br><br>
+            <label class="container">Video
+                <input type="checkbox" id="video" name="video" value="video">
+                <span class="checkmark"></span>
+            </label>
 
-            <input type="checkbox" id="social" name="social" value="social">
-            <label for="social">Social</label><br><br>
+            <label class="container">Analytics
+                <input type="checkbox" id="analytics" name="analytics" value="analytics">
+                <span class="checkmark"></span>
+            </label>
 
-            <input id="submit-button" type="submit" value="Save Changes">
+            <label class="container">Social
+                <input type="checkbox" id="social" name="social" value="social">
+                <span class="checkmark"></span>
+            </label>
+
+            <div class="button-wrapper">
+                <input id="submit-button" type="submit" value="Save Changes">
+            </div>
         </form>
     </body>
 
