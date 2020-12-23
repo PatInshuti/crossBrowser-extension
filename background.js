@@ -304,7 +304,6 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
 
 browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.from == "popupScript") {
-
         let settings = message.message;
 
         // Put the object into storage
@@ -312,8 +311,5 @@ browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
         // Retrieve the object from storage
         var retrievedObject = localStorage.getItem('blockSettings');
-
-        console.log('blockSettings: ', JSON.parse(retrievedObject));
-
     }
 });
