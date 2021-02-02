@@ -1,3 +1,7 @@
+browser = (function () {
+    return window.browser || window.chrome;
+})();
+
 document.addEventListener('DOMContentLoaded', function(){
 
     let button = document.getElementById("submit-button");
@@ -7,12 +11,16 @@ document.addEventListener('DOMContentLoaded', function(){
     let retrievedSettings = localStorage.getItem('blockSettings');
     retrievedSettings = JSON.parse(retrievedSettings);
 
-    // Set checkboxes through local storage
-    document.getElementById("content").checked = retrievedSettings.content;
-    document.getElementById("ads+marketing").checked = retrievedSettings.ads_marketing;
-    document.getElementById("video").checked = retrievedSettings.video;
-    document.getElementById("analytics").checked = retrievedSettings.analytics;
-    document.getElementById("social").checked = retrievedSettings.social;
+    // check if retrievedSettings is not null
+    if (retrievedSettings !== null){
+        // Set checkboxes through local storage
+        document.getElementById("content").checked = retrievedSettings.content;
+        document.getElementById("ads+marketing").checked = retrievedSettings.ads_marketing;
+        document.getElementById("video").checked = retrievedSettings.video;
+        document.getElementById("analytics").checked = retrievedSettings.analytics;
+        document.getElementById("social").checked = retrievedSettings.social;
+    }
+
     
     button.addEventListener("click",(event) => {
         
@@ -32,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(){
             social
         }
         
-        chrome.runtime.sendMessage({ from:"popupScript",message:data });
+        browser.runtime.sendMessage({ from:"popupScript",message:data });
 
     });
 

@@ -101,19 +101,23 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
         let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
         const blockEntries = Object.entries(blockSettings);
 
-        for (const [categoryToBlock, blockDecision] of blockEntries) {
+        if (blockSettings !== null){
+            
+            for (const [categoryToBlock, blockDecision] of blockEntries) {
 
-            if (blockDecision === true){
-                if (categoryToBlock === "content"){
-                    categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
+                if (blockDecision === true){
+                    if (categoryToBlock === "content"){
+                        categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
+                    }
+    
+                    else{
+                        categoriesToBlock.push(categoryToBlock)
+                    }
                 }
-
-                else{
-                    categoriesToBlock.push(categoryToBlock)
-                }
+    
             }
-
         }
+
 
         if (details.type == "script"){
 

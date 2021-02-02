@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "Capstone Plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "This is a sample description",
     "short_name": "Capstone Plugin",
-    "permissions": ["<all_urls>","webRequest","webRequestBlocking","nativeMessaging","activeTab","tabs","storage"],
+    "permissions": ["<all_urls>","webRequest","webRequestBlocking","nativeMessaging","tabs","storage"],
     "content_scripts": [
       {
         "run_at": "document_start",
@@ -26,7 +26,7 @@
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    
     "browser_action": {
-      "default_title": "Does a thing when you do a thing",
+      "default_title": "Manage Scripts",
       "default_popup": "popup.html"
     }
 }

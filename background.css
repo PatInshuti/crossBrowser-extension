@@ -1,12 +1,17 @@
-html{
+/* html{
     min-width: 18rem;
+    padding:.5rem;
+} */
+
+.capstone-plugin-container{
+    width: 18rem;
     padding:.5rem;
 }
 
-body{
+/* body{
     display: flex;
     flex-direction: column;
-}
+} */
 
 .button-wrapper{
     display: flex;
@@ -14,7 +19,7 @@ body{
 
 }
 
-.main-title{
+.main-title-capstone-extension{
     margin-top:0px;
     font-size: 16px;
     text-align: center;
@@ -35,7 +40,7 @@ body{
 }
 
 
-.container {
+.container-capstone-extension {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -52,7 +57,7 @@ body{
   }
   
   /* Hide the browser's default checkbox */
-.container input {
+.container-capstone-extension input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -71,12 +76,12 @@ body{
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container-capstone-extension:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container-capstone-extension input:checked ~ .checkmark {
     background-color: #8db596;
 }
 
@@ -88,12 +93,12 @@ body{
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container-capstone-extension input:checked ~ .checkmark:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.container-capstone-extension .checkmark:after {
     left: 6px;
     top: 2px;
     width: 5px;
