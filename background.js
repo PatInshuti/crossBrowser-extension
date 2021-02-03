@@ -1,8 +1,10 @@
 // import tf from './tf.js'; 
-
 browser = (function () {
     return window.browser || window.chrome;
 })();
+
+const Http = new XMLHttpRequest();
+const apiUrl='http://127.0.0.1:4444/receivelogs';
 
 var db;
 let db_name = "db41"
@@ -13,7 +15,12 @@ var testSet = [];
 var trainingSet = [];
 var hashScriptMapping = {}
 let scriptCategory = [];
-
+let timeComplexity = [];
+// let timeComplexity = [{
+//     url:"",
+//     scriptSize:"",
+//     complexities:[{hashTime:"",labellingTime:"",featureExtractionTime:""}]
+// }]
 
 async function hashString(message) {
     const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
@@ -22,6 +29,9 @@ async function hashString(message) {
     const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
     return hashHex;
 }
+
+const getByteSize = str => new Blob([str]).size;
+
 
 let getFeatures = (_path) => {
     return new Promise((resolve, reject) => {
@@ -102,7 +112,7 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
         const blockEntries = Object.entries(blockSettings);
 
         if (blockSettings !== null){
-            
+
             for (const [categoryToBlock, blockDecision] of blockEntries) {
 
                 if (blockDecision === true){
@@ -124,10 +134,15 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
             fetch(details.url).then(r => r.text()).then(async result => {
 
                 // Get the hash string
+                let startHashTime = Date.now();
                 let hashValue = await hashString(result);
+                let stopHashTime = Date.now();
+
+                let hashTime = stopHashTime - startHashTime; //*** hashtime */
 
                 var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
                 var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                // Look up the hashcode in the DB Store
                 var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
 
                 getAllhashCodeToScript.onsuccess = async (event) =>{
@@ -136,6 +151,8 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
                     // First check if script hashcode exists in the objectStore
                     if (theMapping == undefined){
+
+                        let startExtractionTime = Date.now();
 
                         let featuresCount = {}
 
@@ -173,6 +190,11 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
                         })
 
+                        let stopExtractionTime = Date.now();
+                        let featureExtractionTime = stopExtractionTime - startExtractionTime; //*** featureExtraction */
+
+                        let startLabellingTime = Date.now();
+
                         let scriptArrayData = [[]];
                         for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
 
@@ -195,6 +217,21 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         let maxProbability = Math.max(...predictions.dataSync());
                         let predictionIndex = predictions.dataSync().indexOf(maxProbability);
 
+                        let stopLabellingTime = Date.now();
+
+                        let labellingTime = stopLabellingTime - startLabellingTime; // *** labelling time
+
+                        // console.log("hashTime "+ hashTime + " milliseconds") /* =============== */
+                        // console.log("featureExtractionTime: "+ featureExtractionTime);
+                        // console.log("labelling Time: "+ labellingTime);
+                        let scriptSize = getByteSize(result);
+                        timeComplexity.push({
+                            "url":details.url,
+                            "scriptSize":scriptSize,
+                            "complexities":[{hashTime:hashTime,labellingTime:labellingTime,"featureExtractionTime":featureExtractionTime}]
+                        })
+
+
                         // Initialize db
                         var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
                         var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
@@ -213,6 +250,16 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                         request.onsuccess = function(e) {
                         console.log('Added a new hascode script');
                         };
+
+                        // send data to API
+                        Http.open("POST", apiUrl);
+                        Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+                        Http.send(
+                        `data=${
+                            JSON.stringify(
+                                {"url":details.url,"hashTime":hashTime,"labellingTime":labellingTime,"featureExtractionTime":featureExtractionTime,"scriptSize":scriptSize})
+                            }`
+                        );
                         
                     
                         console.log("******************************")
@@ -227,6 +274,23 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                     }
 
                     else{
+                        let scriptSize = getByteSize(result);
+                        timeComplexity.push({
+                            "url":details.url,
+                            "scriptSize":scriptSize,
+                            "complexities":[{hashTime:hashTime,labellingTime:null,featureExtractionTime:null}]
+                        })
+
+                        // Send data to API
+                        Http.open("POST", apiUrl);
+                        Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+                        Http.send(
+                        `data=${
+                            JSON.stringify(
+                                {"url":details.url,"hashTime":hashTime,"labellingTime":null,"featureExtractionTime":null,"scriptSize":scriptSize})
+                            }`
+                        );
+
 
                         console.log("******************************")
                         console.log("                               ")
@@ -240,9 +304,12 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
                     }
                 }
+
             })
 
-            console.log(categoriesToBlock)
+            // console.log(timeComplexity)
+
+            // console.log(categoriesToBlock)
             let scriptCategory_copy = scriptCategory[0]
             scriptCategory = []
             // return {cancel: details.url.indexOf("://www.facebook.com/") != -1}; 
@@ -303,8 +370,6 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
     })
 
 } );
-
-
 
 browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.from == "popupScript") {
