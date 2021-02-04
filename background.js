@@ -4,7 +4,9 @@ browser = (function () {
 })();
 
 const Http = new XMLHttpRequest();
-const apiUrl='http://127.0.0.1:4444/receivelogs';
+serverDomain = "10.225.86.123"
+port = "4444"
+const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
 let db_name = "db41"

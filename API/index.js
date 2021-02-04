@@ -13,6 +13,11 @@ app.post('/receivelogs',  (req, res) => {
   fs.appendFileSync('logs.txt', `${data.url},${data.hashTime},${data.labellingTime},${data.featureExtractionTime},${data.scriptSize}\n`);
 });
 
+
+app.get("/test", (req,res)=>{
+    res.send("route hit")
+})
+
 app.listen(port, () => {
   console.log(`The plugin server running at: ${port}`);
 });
