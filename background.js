@@ -110,24 +110,25 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
     browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
 
         let categoriesToBlock = [];
-        let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
-        const blockEntries = Object.entries(blockSettings);
 
-        if (blockSettings !== null){
+        if (localStorage.getItem('blockSettings') !== null){
 
-            for (const [categoryToBlock, blockDecision] of blockEntries) {
+            let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
+            const blockEntries = Object.entries(blockSettings);
 
-                if (blockDecision === true){
-                    if (categoryToBlock === "content"){
-                        categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
+                for (const [categoryToBlock, blockDecision] of blockEntries) {
+
+                    if (blockDecision === true){
+                        if (categoryToBlock === "content"){
+                            categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
+                        }
+        
+                        else{
+                            categoriesToBlock.push(categoryToBlock)
+                        }
                     }
-    
-                    else{
-                        categoriesToBlock.push(categoryToBlock)
-                    }
+        
                 }
-    
-            }
         }
 
 
@@ -255,11 +256,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
                         // send data to API
                         Http.open("POST", apiUrl);
+                        console.log(apiUrl)
                         Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
                         Http.send(
                         `data=${
                             JSON.stringify(
-                                {"url":details.url,"hashTime":hashTime,"labellingTime":labellingTime,"featureExtractionTime":featureExtractionTime,"scriptSize":scriptSize})
+                                {"phoneType":"",
+                                "hashTime":hashTime,"labellingTime":labellingTime,"featureExtractionTime":featureExtractionTime,"scriptSize":scriptSize})
                             }`
                         );
                         
@@ -285,11 +288,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
                         // Send data to API
                         Http.open("POST", apiUrl);
+                        console.log(apiUrl)
                         Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
                         Http.send(
                         `data=${
                             JSON.stringify(
-                                {"url":details.url,"hashTime":hashTime,"labellingTime":null,"featureExtractionTime":null,"scriptSize":scriptSize})
+                                {"phoneType":"",
+                                "hashTime":hashTime,"labellingTime":null,"featureExtractionTime":null,"scriptSize":scriptSize})
                             }`
                         );
 
