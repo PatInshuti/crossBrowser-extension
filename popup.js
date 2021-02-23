@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
     // check if retrievedSettings is not null
     if (retrievedSettings !== null){
         // Set checkboxes through local storage
-        document.getElementById("content").checked = retrievedSettings.content;
+        // document.getElementById("content").checked = retrievedSettings.content;
         document.getElementById("ads+marketing").checked = retrievedSettings.ads_marketing;
-        document.getElementById("video").checked = retrievedSettings.video;
+        // document.getElementById("video").checked = retrievedSettings.video;
         document.getElementById("analytics").checked = retrievedSettings.analytics;
         document.getElementById("social").checked = retrievedSettings.social;
     }
@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', function(){
         
         event.preventDefault();
 
-        let content = document.getElementById("content").checked;
+        let content = false;
+        let video = false
+        // let content = document.getElementById("content").checked;
         let ads_marketing = document.getElementById("ads+marketing").checked;
-        let video = document.getElementById("video").checked;
+        // let video = document.getElementById("video").checked;
         let analytics = document.getElementById("analytics").checked;
         let social = document.getElementById("social").checked;
 
