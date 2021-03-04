@@ -28,6 +28,29 @@ let timeComplexity = [];
 //     complexities:[{hashTime:"",labellingTime:"",featureExtractionTime:""}]
 // }]
 
+// Get the website from url
+const domain_from_url = (url) => {
+    let result;
+    let match;
+    if (match = url.match(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n\?\=]+)/im)) {
+        result = match[1]
+        if (match = result.match(/^[^\.]+\.(.+\..+)$/)) {
+            result = match[1]
+        }
+    }
+    return result
+} 
+
+
+const retrieve_SendBlockingInformation = () =>{
+
+    let retrievedObject = localStorage.getItem('blockSettings');
+    retrievedObject = JSON.parse(retrievedObject);
+
+    browser.runtime.sendMessage({ from:"backgroundScript",message:retrievedObject });
+
+}
+
 async function hashString(message) {
     const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
     const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
@@ -119,30 +142,54 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
 
             let categoriesToBlock = [];
 
-            if (localStorage.getItem('blockSettings') !== null){
-    
-                let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
-                const blockEntries = Object.entries(blockSettings);
-    
-                    for (const [categoryToBlock, blockDecision] of blockEntries) {
-    
-                        if (blockDecision === true){
-                            if (categoryToBlock === "content"){
-                                categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
-                            }
+            // retrieve block settings per website
+            browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                var currTab = tabs[0];
+                if (currTab) { // Sanity check
+                    website = domain_from_url(currTab.url);
 
-                            if (categoryToBlock == "ads_marketing"){
-                                categoriesToBlock.push("ads+marketing")
-                                categoriesToBlock.push("tag-manager+content") //many ads classify as this
-                            }
-            
-                            else{
-                                categoriesToBlock.push(categoryToBlock)
-                            }
+                    let retrievedSettings = localStorage.getItem('blockSettingsPerWebsite');
+                    retrievedSettings = JSON.parse(retrievedSettings);
+
+                    if (retrievedSettings !== null){
+                        if (retrievedSettings[website] !== undefined && retrievedSettings[website] == false){
+                            categoriesToBlock = [] //do not block any
                         }
-            
+
+                        // change this to true later
+                        else{
+                            categoriesToBlock = ["ads+marketing","social","analytics"]
+                        }
                     }
-            }
+                }
+        
+            });
+
+
+            // if (localStorage.getItem('blockSettings') !== null){
+    
+            //     let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
+            //     const blockEntries = Object.entries(blockSettings);
+    
+            //         for (const [categoryToBlock, blockDecision] of blockEntries) {
+    
+            //             if (blockDecision === true){
+            //                 if (categoryToBlock === "content"){
+            //                     categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
+            //                 }
+
+            //                 if (categoryToBlock == "ads_marketing"){
+            //                     categoriesToBlock.push("ads+marketing")
+            //                     categoriesToBlock.push("tag-manager+content") //many ads classify as this
+            //                 }
+            
+            //                 else{
+            //                     categoriesToBlock.push(categoryToBlock)
+            //                 }
+            //             }
+            
+            //         }
+            // }
     
     
             if (details.type == "script"){
@@ -402,10 +449,21 @@ browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.from == "popupScript") {
         let settings = message.message;
 
-        // Put the object into storage
-        localStorage.setItem('blockSettings', JSON.stringify(settings));
+        browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            var currTab = tabs[0];
+            if (currTab) { // Sanity check
+                website = domain_from_url(currTab.url);
 
-        // Retrieve the object from storage
-        var retrievedObject = localStorage.getItem('blockSettings');
+                let data = {}
+                data[website] = settings.appleSwitchButton
+
+                // save the data on localstorage
+                localStorage.setItem('blockSettingsPerWebsite', JSON.stringify(data));
+            }
+
+        });
+
+        // Retrieve all information in localstorage and send it back to popupScript
+        retrieve_SendBlockingInformation();
     }
 });
