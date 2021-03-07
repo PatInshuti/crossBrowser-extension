@@ -1,111 +1,18 @@
 #!/bin/bash
 
-allThreads=(
+COUNTER=0
+
+
+#!/bin/bash
+while IFS= read -r url; do
+
+    browsertime --android --browser firefox $url
     
-        "https://www.tmall.com/"
-        "https://www.qq.com/"
-        "http://sohu.com/"
-        "https://yandex.ru/"
-        "https://Taobao.com/"
-        "https://Wikipedia.org/"
-        "https://yahoo.com/"
-        "https://Jd.com/"
-        "https://360.cn/"
-        "https://amazon.com/"
-        "https://www.weibo.com/"
-        "https://www.sina.com.cn/"
-        "https://www.bilibili.com/"
-        "https://www.reddit.com/"
-        "https://outlook.live.com/owa/"
-        "https://vk.com/"
-        "https://www.netflix.com/ae-en/"
-        "https://www.okezone.com/"
-        "https://www.alipay.com/"
-        "https://www.csdn.net/"
-        "https://mail.ru/"
-        "https://www.office.com/"
-        "https://www.aliexpress.com/"
-        "http://xinhuanet.com/"
-        "https://yahoo.co.jp/"
-        "https://Bing.com/"
-        "https://www.microsoft.com/"
-        "https://babytree.com/"
-        "https://stackoverflow.com/"
-        "https://www.naver.com/"
-        "https://www.twitch.tv/"
-        "https://www.ebay.com/"
-        "https://github.com/"
-        "https://www.tribunnews.com/"
-        "https://www.apple.com/"
-        "https://www.tianya.cn/"
-        "https://www.msn.com/"
-        "https://wordpress.com/"
-        "https://www.imdb.com/"
-        "https://www.fandom.com/"
-        "https://imgur.com/"
-        "https://www.hao123.com/"
-        "https://ok.ru/"
-        "https://www.adobe.com/"
-        "https://www.cnblogs.com/"
-        "https://www.douban.com/"
-        "https://www.rakuten.co.jp/"
-        "https://www.pixnet.net/"
-        "https://www.bbc.com/"
-        "https://www.popads.net/"
-        "https://www.nicovideo.jp/"
-        "https://www.jianshu.com/"
-        "https://www.aparat.com/"
-        "https://edition.cnn.com/"
-        "https://discordapp.com/"
-        "https://aws.amazon.com/"
-        "https://dubai.craigslist.org/"
-        "https://soundcloud.com/"
-        "https://www.spotify.com/"
-        "https://www.onlinesbi.com/"
-        "https://www.douyu.com/"
-        "https://www.daum.net/"
-        "https://www.1688.com/"
-        "https://www.hotstar.com/"
-        "https://www.chase.com/"
-        "https://www.espn.com/"
-        "https://www.nytimes.com/"
-        "https://www.mediafire.com/"
-        "https://www.nih.gov/"
-        "https://stackexchange.com/"
-        "https://adf.ly/"
-        "https://vimeo.com/"
-        "https://steamcommunity.com/"
-        "https://www.cricbuzz.com/"
-        "https://www.researchgate.net/"
-        "https://www.uol.com.br/"
-        "https://www.etsy.com/"
-        "https://store.steampowered.com/"
-        "https://fc2.com/"
-        "https://medium.com/"
-        "https://www.gamepedia.com/"
-        "https://www.flipkart.com/"
-        "https://www.theguardian.com/international"
-        "https://www.sindonews.com/"
-        "https://www.mercadolivre.com.br/"
-        "https://www.alibaba.com/"
-        "https://www.ask.com/"
-        "https://www.walmart.com/"
-        "http://www.detik.com/"
-        "https://www.onlinevideoconverter.com/"
-        "https://ae.godaddy.com/"
-        "http://eastday.com/"
-        "https://en.softonic.com/"
-        "https://www.mozilla.org/en-US/"
-        "https://trello.com/"
-        "https://www.yelp.com/"
-        "https://www.liputan6.com/"
-        "https://www.shutterstock.com/"
-        "http://www.ifeng.com/"
-        "https://www.deviantart.com/"
-
-    )
-
-
-for t in ${allThreads[@]}; do
-   browsertime --android --browser firefox $t
-done
+    COUNTER=$((COUNTER+1))
+    
+    if (( COUNTER %20 == 0 ))
+    then
+        sleep 300 #5 minutes
+    fi
+    
+done < "$1"

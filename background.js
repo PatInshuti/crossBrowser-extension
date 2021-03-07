@@ -13,7 +13,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "db41"
+let db_name = "db42"
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
 var featuresList =[]
@@ -161,40 +161,16 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                             categoriesToBlock = ["ads+marketing","social","analytics"]
                         }
                     }
+
+                    else{
+                        categoriesToBlock = ["ads+marketing","social","analytics"]
+                    }
                 }
         
             });
-
-
-            // if (localStorage.getItem('blockSettings') !== null){
-    
-            //     let blockSettings = JSON.parse(localStorage.getItem('blockSettings'));
-            //     const blockEntries = Object.entries(blockSettings);
-    
-            //         for (const [categoryToBlock, blockDecision] of blockEntries) {
-    
-            //             if (blockDecision === true){
-            //                 if (categoryToBlock === "content"){
-            //                     categoriesToBlock.push(...["tag-manager+content","hosting+cdn","utility","customer-success"])
-            //                 }
-
-            //                 if (categoryToBlock == "ads_marketing"){
-            //                     categoriesToBlock.push("ads+marketing")
-            //                     categoriesToBlock.push("tag-manager+content") //many ads classify as this
-            //                 }
-            
-            //                 else{
-            //                     categoriesToBlock.push(categoryToBlock)
-            //                 }
-            //             }
-            
-            //         }
-            // }
     
     
             if (details.type == "script"){
-                
-    
     
                 fetch(details.url).then(r => r.text()).then(async result => {
     
@@ -280,6 +256,7 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                             predictions = model.predict(newDataTensor)  
     
                             let maxProbability = Math.max(...predictions.dataSync());
+
                             let predictionIndex = predictions.dataSync().indexOf(maxProbability);
     
                             let stopLabellingTime = Date.now();
@@ -300,11 +277,22 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                             // Initialize db
                             var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
                             var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                            
+                            let hashScriptMapping = {}
+                            let finalLabel = ""
+
+                            if (maxProbability < 0.8){
+                                hashScriptMapping["id"] = hashValue;
+                                hashScriptMapping["label"] = "unknown";
+                                finalLabel = "unknown"
+                            }
+
+                            else{
+                                hashScriptMapping["id"] = hashValue;
+                                hashScriptMapping["label"] = classes[predictionIndex]
+                                finalLabel = classes[predictionIndex]
+                            }
     
-                            let hashScriptMapping = {
-                                id: hashValue,
-                                label: classes[predictionIndex]
-                            };
     
                             var request = hashCodeToScriptDBStore.add(hashScriptMapping);
     
@@ -329,17 +317,17 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                             );
                             
                         
-                            console.log("******************************")
-                            console.log("                               ")
+                            // console.log("******************************")
+                            // console.log("                               ")
     
-                            console.log(hashValue)
-                            console.log(details.url)
-                            console.log("predicted class -- "+ classes[predictionIndex])
-                            // scriptCategory.unshift(classes[predictionIndex])
-                            console.log("******************************")
-                            console.log("                               ")
+                            // console.log(hashValue)
+                            // console.log(details.url)
+                            console.log("predicted class -- "+ finalLabel)
+                            // // scriptCategory.unshift(classes[predictionIndex])
+                            // console.log("******************************")
+                            // console.log("                               ")
 
-                            resolve({cancel: categoriesToBlock.includes(classes[predictionIndex]) ? true:false  })
+                            resolve({cancel: categoriesToBlock.includes(finalLabel) ? true:false  })
 
                         }
     
@@ -364,15 +352,15 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
                             );
     
     
-                            console.log("******************************")
-                            console.log("                               ")
+                            // console.log("******************************")
+                            // console.log("                               ")
     
-                            console.log("script hashcode to label mapping already exists -- retrieving label")
-                            console.log(details.url)
-                            console.log(theMapping)
-                            scriptCategory.unshift(theMapping.label);
-                            console.log("******************************")
-                            console.log("                               ")
+                            // console.log("script hashcode to label mapping already exists -- retrieving label")
+                            // console.log(details.url)
+                            // console.log(theMapping)
+                            // scriptCategory.unshift(theMapping.label);
+                            // console.log("******************************")
+                            // console.log("                               ")
 
                             resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
 

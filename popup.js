@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
 
             }
+
+            else{
+                appleSwitchButton.checked = true;
+            }
         }
 
     });
