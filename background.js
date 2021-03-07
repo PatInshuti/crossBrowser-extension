@@ -306,26 +306,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
     
                             // send data to API
                             Http.open("POST", apiUrl);
-                            console.log(apiUrl)
                             Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
                             Http.send(
                             `data=${
                                 JSON.stringify(
-                                    {"phoneType":"",
-                                    "hashTime":hashTime,"labellingTime":labellingTime,"featureExtractionTime":featureExtractionTime,"scriptSize":scriptSize})
+                                    {"hashTime":hashTime,"labellingTime":labellingTime,"featureExtractionTime":featureExtractionTime,"scriptSize":scriptSize})
                                 }`
                             );
-                            
-                        
-                            // console.log("******************************")
-                            // console.log("                               ")
-    
-                            // console.log(hashValue)
-                            // console.log(details.url)
-                            console.log("predicted class -- "+ finalLabel)
-                            // // scriptCategory.unshift(classes[predictionIndex])
-                            // console.log("******************************")
-                            // console.log("                               ")
 
                             resolve({cancel: categoriesToBlock.includes(finalLabel) ? true:false  })
 
@@ -341,26 +328,13 @@ const runScriptLabelling = (featureIndexMapping, model) =>{
     
                             // Send data to API
                             Http.open("POST", apiUrl);
-                            console.log(apiUrl)
                             Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
                             Http.send(
                             `data=${
                                 JSON.stringify(
-                                    {"phoneType":"",
-                                    "hashTime":hashTime,"labellingTime":null,"featureExtractionTime":null,"scriptSize":scriptSize})
+                                    {"hashTime":hashTime,"labellingTime":null,"featureExtractionTime":null,"scriptSize":scriptSize})
                                 }`
                             );
-    
-    
-                            // console.log("******************************")
-                            // console.log("                               ")
-    
-                            // console.log("script hashcode to label mapping already exists -- retrieving label")
-                            // console.log(details.url)
-                            // console.log(theMapping)
-                            // scriptCategory.unshift(theMapping.label);
-                            // console.log("******************************")
-                            // console.log("                               ")
 
                             resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
 
