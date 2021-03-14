@@ -1,0 +1,37 @@
+{
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "patrick@betteraudition.com"
+    }
+  },
+    "manifest_version": 2,
+    "name": "Capstone Plugin",
+    "version": "1.1.1",
+    "description": "This is a sample description",
+    "short_name": "Capstone Plugin",
+    "permissions": ["<all_urls>","webRequest","webRequestBlocking","nativeMessaging","tabs","storage"],
+    "content_scripts": [
+      {
+        "run_at": "document_start",
+        "matches": ["<all_urls>"],
+        "css": ["background.css"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["tf.js","background.js"]
+   },
+
+   "web_accessible_resources": [
+    "*.json",
+    "*.js",
+    "model/*"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   
+    "browser_action": {
+      "default_title": "Manage Scripts",
+      "default_popup": "popup.html"
+    }
+}
