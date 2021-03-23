@@ -3,17 +3,8 @@ browser = (function () {
     return window.browser || window.chrome;
 })();
 
-var isFirefox = typeof InstallTrigger !== 'undefined';
-
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-
-const Http = new XMLHttpRequest();
-serverDomain = "10.225.86.123"
-port = "4444"
-const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
-
 var db;
-let db_name = "db42"
+let db_name = "db47"
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
 let featureIndexMapping = {
@@ -644,234 +635,39 @@ const setupDB = async (data) =>{
 
 
 
-const runScriptLabelling = (featureIndexMapping, model) =>{
+const runScriptLabelling = (featureIndexMapping, model,db) =>{
 
     browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
 
         if (details.type == "script"){
 
-        return new Promise(async (resolve, reject) => {
+            return new Promise(async (resolve, reject) => {
 
-            let categoriesToBlock = ["ads+marketing","social","analytics"];
+                let categoriesToBlock = ["ads+marketing","social","analytics"];
+                let hashValue = details.url;
 
-            // // retrieve block settings per website
-            // await browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            //     var currTab = tabs[0];
-            //     if (currTab) { // Sanity check
-            //         console.log(currTab)
-            //         website = domain_from_url(currTab.url);
+                var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+                var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
 
-            //         let retrievedSettings = localStorage.getItem('blockSettingsPerWebsite');
-            //         retrievedSettings = JSON.parse(retrievedSettings);
+                getAllhashCodeToScript.onsuccess = async (event) =>{
+                    // Start intercepting requests
+                    theMapping = event.target.result;
 
-            //         if (retrievedSettings !== null){
-            //             if (retrievedSettings[website] !== undefined && retrievedSettings[website] == false){
-            //                 categoriesToBlock = [] //do not block any
-            //             }
-
-            //             // change this to true later
-            //             else{
-            //                 categoriesToBlock = ["ads+marketing","social","analytics"]
-            //             }
-            //         }
-
-            //         else{
-            //             categoriesToBlock = ["ads+marketing","social","analytics"]
-            //         }
-            //     }
-        
-            // });
-    
-    
-    
-                fetch(details.url).then(r => r.text()).then(async result => {
-    
-                    // Get the hash string
-                    // let startHashTime = Date.now();
-                    let hashValue = await hashString(result);
-                    // let stopHashTime = Date.now();
-    
-                    // let hashTime = stopHashTime - startHashTime; //*** hashtime */
-    
-                    var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                    var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                    // Look up the hashcode in the DB Store
-                    var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
-    
-                    getAllhashCodeToScript.onsuccess = async (event) =>{
-                        // Start intercepting requests
-                        theMapping = event.target.result;
-    
-                        // First check if script hashcode exists in the objectStore
-                        if (theMapping == undefined){
-    
-                            // let startExtractionTime = Date.now();
-    
-                            let featuresCount = {}
-    
-                            // Replace all multiple consecutive white spaces with one white space
-                            result = result.replace(/\s+/g, ' ')
-    
-                            featuresList.forEach(feature =>{
-    
-                                if (!feature.includes("__")){
-                                    let searchTerm = "."+feature+"\\("
-                                    let searchTerm2 = "."+feature+" \\("
-                                    let count = result.search(searchTerm);
-                                    let count2 =  result.search(searchTerm2) 
-                                    count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
-                                    count2 == -1 ? "" : featuresCount[feature] += count2
-                                }
-    
-                                else{
-                                    let feats = feature.split('__')
-                                    let res = 1
-    
-                                    feats.forEach(feat=>{
-                                        let searchTerm = "."+feat+"\\("
-                                        let searchTerm2 = "."+feature+" \\("
-                                        let count = result.search(searchTerm)
-                                        let count2 =  result.search(searchTerm2)
-    
-                                        if (count == -1 || count2 == -1)
-                                            res = 0
-    
-                                    })
-    
-                                    featuresCount[feature] = res
-                                }
-    
-                            })
-    
-                            // let stopExtractionTime = Date.now();
-                            // let featureExtractionTime = stopExtractionTime - startExtractionTime; //*** featureExtraction */
-    
-                            // let startLabellingTime = Date.now();
-    
-                            let scriptArrayData = [[]];
-                            for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
-    
-                            // Filling the scriptArrayData with feature occurences
-                            await featuresList.forEach(async feature =>{
-                                if (featuresCount[feature] !=0){
-                                    //get features's index on the list
-                                    featureIndex = featureIndexMapping[feature]
-                                    scriptArrayData[0][featureIndex] = featuresCount[feature];
-                                }
-                            })
-    
-                            let newDataTensor = tf.tensor2d(
-                                scriptArrayData,
-                                [1, 508]
-                            );                
-    
-                            predictions = model.predict(newDataTensor)  
-    
-                            let maxProbability = Math.max(...predictions.dataSync());
-
-                            let predictionIndex = predictions.dataSync().indexOf(maxProbability);
-    
-                            // let stopLabellingTime = Date.now();
-    
-                            // let labellingTime = stopLabellingTime - startLabellingTime; // *** labelling time
-    
-                            // console.log("hashTime "+ hashTime + " milliseconds") /* =============== */
-                            // console.log("featureExtractionTime: "+ featureExtractionTime);
-                            // console.log("labelling Time: "+ labellingTime);
-                            // let scriptSize = getByteSize(result);
-                            // timeComplexity.push({
-                            //     "url":details.url,
-                            //     "scriptSize":scriptSize,
-                            //     "complexities":[{hashTime:hashTime,labellingTime:labellingTime,"featureExtractionTime":featureExtractionTime}]
-                            // })
-    
-    
-                            // Initialize db
-                            var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                            var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                            
-                            let hashScriptMapping = {}
-                            let finalLabel = ""
-
-                            if (maxProbability < 0.8){
-                                hashScriptMapping["id"] = hashValue;
-                                hashScriptMapping["label"] = "unknown";
-                                finalLabel = "unknown"
-                            }
-
-                            else{
-                                hashScriptMapping["id"] = hashValue;
-                                hashScriptMapping["label"] = classes[predictionIndex]
-                                finalLabel = classes[predictionIndex]
-                            }
-    
-    
-                            var request = hashCodeToScriptDBStore.add(hashScriptMapping);
-    
-                            request.onerror = function(e) {
-                                console.log('Error', "Script hash code already exists");
-                            };
-    
-                            request.onsuccess = function(e) {
-                            console.log('Added a new hascode script');
-                            };
-    
-                            // send data to API
-                            // Http.open("POST", apiUrl);
-                            // Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
-                            // Http.send(
-                            // `data=${
-                            //     JSON.stringify(
-                            //         {"hashTime":hashTime,"labellingTime":labellingTime,"featureExtractionTime":featureExtractionTime,"scriptSize":scriptSize,"url":details.documentUrl})
-                            //     }`
-                            // );
-
-                            resolve({cancel: categoriesToBlock.includes(finalLabel) ? true:false  })
-
-                        }
-    
-                        else{
-                            // let scriptSize = getByteSize(result);
-                            // timeComplexity.push({
-                            //     "url":details.url,
-                            //     "scriptSize":scriptSize,
-                            //     "complexities":[{hashTime:hashTime,labellingTime:null,featureExtractionTime:null}]
-                            // })
-    
-                            // Send data to API
-                            // Http.open("POST", apiUrl);
-                            // Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
-                            // Http.send(
-                            // `data=${
-                            //     JSON.stringify(
-                            //         {"hashTime":hashTime,"labellingTime":null,"featureExtractionTime":null,"scriptSize":scriptSize,"url":details.documentUrl})
-                            //     }`
-                            // );
-
-                            resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
-
-    
-                        }
+                    if (theMapping != undefined){
+                        resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
                     }
 
-    
-                })
-            
-            // }
+                    else{
+                        resolve({cancel:false})
+                    }
+                }
+            })
+        }
 
-            // else{
-            //     resolve()
-            // }
-
-
-
-        })
-    }
-
-    else{
-        return({cancel:false})
-    }
-
+        else{
+            return({cancel:false})
+        }
 
     },
     {urls: ["<all_urls>"]},
@@ -887,64 +683,169 @@ classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "util
 
 tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => {
 
-    //getFeatures("feature_index_mapping.json").then(async res=>{
+    //open the db 
+    const request = window.indexedDB.open(db_name,2);
 
+    request.onerror = (event) => {
+        console.log("error opening db...")
+    }
 
+    // Run
+    request.onsuccess = (event) => {
+        db = event.target.result;
 
-        runScriptLabelling(featureIndexMapping,model);
-
-        // //open the db 
-        // const request = window.indexedDB.open(db_name,2);
-
-        // request.onerror = (event) => {
-        //     console.log("error opening db...")
-        // }
-
-        // Run
-        // request.onsuccess = (event) => {
-        //     db = event.target.result;
-
-        //     if (!db.objectStoreNames.contains(featureStore) || !db.objectStoreNames.contains(hashCodeToScriptStore)){
-        //         console.log("One of the store does not exist");
-        //     }
-        //     else{
-        //         console.log("All DB Stores exist")
-
-        //         var tx = db.transaction(featureStore, 'readwrite');
-        //         var featureDBStore = tx.objectStore(featureStore);
-        //         var getallFeatures = featureDBStore.getAll();
-
-        //         getallFeatures.onsuccess = (event) => {
-        //             // Start intercepting requests
-        //             featuresList = event.target.result;
-        //             runScriptLabelling(featureIndexMapping,model);
-        //         }
-        //     }
-        // }
-
-    //})
+        if (!db.objectStoreNames.contains(featureStore) || !db.objectStoreNames.contains(hashCodeToScriptStore)){
+            console.log("One of the store does not exist");
+        }
+        else{
+            console.log("All DB Stores exist")
+            runScriptLabelling(featureIndexMapping,model,db);
+            listenOnComplete(db,model);
+        }
+    }
 
 } );
 
-browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-    if (message.from == "popupScript") {
-        let settings = message.message;
 
-        browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            var currTab = tabs[0];
-            if (currTab) { // Sanity check
-                website = domain_from_url(currTab.url);
+const listenOnComplete = (db,model) =>{
 
-                let data = {}
-                data[website] = settings.appleSwitchButton
+    browser.webRequest.onCompleted.addListener((details)=>{
 
-                // save the data on localstorage
-                localStorage.setItem('blockSettingsPerWebsite', JSON.stringify(data));
+        if (details.type == "script"){
+
+            let hashValue = details.url;
+
+            var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+            var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+            var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
+
+            getAllhashCodeToScript.onsuccess = async (event) =>{
+                // Start intercepting requests
+                theMapping = event.target.result;
+                // First check if script hashcode exists in the objectStore
+                if (theMapping == undefined){
+
+                    // ============== THEN START A WEB WORKER HERE ===============
+
+                    fetch(details.url).then(r => r.text()).then(async result => {
+                    
+                        let featuresCount = {}
+
+                        result = result.replace(/\s+/g, ' ')
+                        featuresList.forEach(feature =>{
+
+                            if (!feature.includes("__")){
+                                let searchTerm = "."+feature+"\\("
+                                let searchTerm2 = "."+feature+" \\("
+                                let count = result.search(searchTerm);
+                                let count2 =  result.search(searchTerm2) 
+                                count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
+                                count2 == -1 ? "" : featuresCount[feature] += count2
+                            }
+
+                            else{
+                                let feats = feature.split('__')
+                                let res = 1
+
+                                feats.forEach(feat=>{
+                                    let searchTerm = "."+feat+"\\("
+                                    let searchTerm2 = "."+feature+" \\("
+                                    let count = result.search(searchTerm)
+                                    let count2 =  result.search(searchTerm2)
+
+                                    if (count == -1 || count2 == -1)
+                                        res = 0
+
+                                })
+
+                                featuresCount[feature] = res
+                            }
+
+                        })
+
+                        let scriptArrayData = [[]];
+                        for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
+
+                        // Filling the scriptArrayData with feature occurences
+                        await featuresList.forEach(async feature =>{
+                            if (featuresCount[feature] !=0){
+                                //get features's index on the list
+                                featureIndex = featureIndexMapping[feature]
+                                scriptArrayData[0][featureIndex] = featuresCount[feature];
+                            }
+                        })
+
+                        let newDataTensor = tf.tensor2d(
+                            scriptArrayData,
+                            [1, 508]
+                        );                
+
+                        predictions = model.predict(newDataTensor)  
+
+                        let maxProbability = Math.max(...predictions.dataSync());
+                        let predictionIndex = predictions.dataSync().indexOf(maxProbability);
+
+                        // Initialize db
+                        var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+                        var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                        
+                        let hashScriptMapping = {}
+                        let finalLabel = ""
+
+                        if (maxProbability < 0.8){
+                            hashScriptMapping["id"] = hashValue;
+                            hashScriptMapping["label"] = "unknown";
+                            finalLabel = "unknown"
+                        }
+
+                        else{
+                            hashScriptMapping["id"] = hashValue;
+                            hashScriptMapping["label"] = classes[predictionIndex]
+                            finalLabel = classes[predictionIndex]
+                        }
+
+
+                        var request = hashCodeToScriptDBStore.add(hashScriptMapping);
+
+                        request.onerror = function(e) {
+                            console.log('Error', "Script hash code already exists");
+                        };
+
+                        request.onsuccess = function(e) {
+                        console.log('Added a new hascode script');
+                        };
+
+                    })
+
+
+
+                }
             }
+        }
+    }, { urls: ['<all_urls>'] }, []) 
 
-        });
+}
 
-        // Retrieve all information in localstorage and send it back to popupScript
-        retrieve_SendBlockingInformation();
-    }
-});
+
+// browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+//     if (message.from == "popupScript") {
+//         let settings = message.message;
+
+//         browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+//             var currTab = tabs[0];
+//             if (currTab) { // Sanity check
+//                 website = domain_from_url(currTab.url);
+
+//                 let data = {}
+//                 data[website] = settings.appleSwitchButton
+
+//                 // save the data on localstorage
+//                 localStorage.setItem('blockSettingsPerWebsite', JSON.stringify(data));
+//             }
+
+//         });
+
+//         // Retrieve all information in localstorage and send it back to popupScript
+//         retrieve_SendBlockingInformation();
+//     }
+// });
