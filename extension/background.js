@@ -3,6 +3,11 @@ browser = (function () {
     return window.browser || window.chrome;
 })();
 
+const Http = new XMLHttpRequest();
+serverDomain = "10.225.86.123"
+port = "4444"
+const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
+
 var db;
 let db_name = "capstone_plugin_v1"
 let db_version = 1
@@ -595,14 +600,14 @@ const setupDB = async (data) =>{
 
         else{
             // Fetch Features Locally
-            await getFeatures('selectedFeatures.txt').then(_res => {
+            // await getFeatures('selectedFeatures.txt').then(_res => {
 
-                lines = _res.split('\n');
+            //     lines = _res.split('\n');
                 
-                lines.forEach(async line=>{
-                    await featuresList.push(line)
-                })
-            })
+            //     lines.forEach(async line=>{
+            //         await featuresList.push(line)
+            //     })
+            // })
         
             //open the db 
             const request = window.indexedDB.open(db_name,db_version);
@@ -636,7 +641,7 @@ const setupDB = async (data) =>{
 
 
 
-const runScriptLabelling = (featureIndexMapping, model,db) =>{
+const runScriptLabelling = (db) =>{
 
     browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
 
@@ -657,6 +662,15 @@ const runScriptLabelling = (featureIndexMapping, model,db) =>{
 
                     if (theMapping != undefined){
                         console.log("---> "+theMapping.label)
+                        // send data to API
+                        Http.open("POST", apiUrl);
+                        Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+                        Http.send(
+                        `data=${
+                            JSON.stringify(
+                                {"source":"label already exists..."})
+                            }`
+                        );
                         resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
                     }
 
@@ -701,7 +715,7 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
         }
         else{
             console.log("All DB Stores exist")
-            runScriptLabelling(featureIndexMapping,model,db);
+            runScriptLabelling(db);
             labelOnComplete(db);
         }
     }
@@ -733,38 +747,25 @@ const labelOnComplete = (db) =>{
                     myWorker.postMessage({featuresList:featuresList, url:details.url, featureIndexMapping:featureIndexMapping, db_name:db_name, db_version:db_version, hashCodeToScriptStore:hashCodeToScriptStore });
                     
                     myWorker.onmessage = function(e) {
-                        let receivedData = (e.data)
+                        console.log("**** web worker ****")
                         console.log(e.data)
-                        // console.log(`*********${receivedData}*********`)
-                      }
+                        
+                        // send data to API
+                        Http.open("POST", apiUrl);
+                        Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+                        Http.send(
+                        `data=${
+                            JSON.stringify(
+                                {"source":"worker labelling..."})
+                            }`
+                        );
+
+                    }
 
                 }
             }
         }
+
     }, { urls: ['<all_urls>'] }, []) 
 
 }
-
-
-// browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-//     if (message.from == "popupScript") {
-//         let settings = message.message;
-
-//         browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//             var currTab = tabs[0];
-//             if (currTab) { // Sanity check
-//                 website = domain_from_url(currTab.url);
-
-//                 let data = {}
-//                 data[website] = settings.appleSwitchButton
-
-//                 // save the data on localstorage
-//                 localStorage.setItem('blockSettingsPerWebsite', JSON.stringify(data));
-//             }
-
-//         });
-
-//         // Retrieve all information in localstorage and send it back to popupScript
-//         retrieve_SendBlockingInformation();
-//     }
-// });

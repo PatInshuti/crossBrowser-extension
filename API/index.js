@@ -8,9 +8,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/receivelogs',  (req, res) => {
   console.log("receiving logs...")
-  data = JSON.parse(req.body.data)  
+  data = JSON.parse(req.body.data) 
+  console.log(data) 
   // hashTime, labellingTime, featureExtractionTime, scriptSize (Bytes)
-  fs.appendFileSync('logs.txt', `${data.hashTime},${data.labellingTime},${data.featureExtractionTime},${data.scriptSize},${data.url}\n`);
+  // fs.appendFileSync('logs.txt', `${data.hashTime},${data.labellingTime},${data.featureExtractionTime},${data.scriptSize},${data.url}\n`);
 
 });
 
