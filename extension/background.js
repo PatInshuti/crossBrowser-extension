@@ -4,7 +4,8 @@ browser = (function () {
 })();
 
 var db;
-let db_name = "db47"
+let db_name = "capstone_plugin_v1"
+let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
 let featureIndexMapping = {
@@ -604,7 +605,7 @@ const setupDB = async (data) =>{
             })
         
             //open the db 
-            const request = window.indexedDB.open(db_name,2);
+            const request = window.indexedDB.open(db_name,db_version);
 
             request.onerror = (event) =>{
                 console.log("error opening db...")
@@ -655,6 +656,7 @@ const runScriptLabelling = (featureIndexMapping, model,db) =>{
                     theMapping = event.target.result;
 
                     if (theMapping != undefined){
+                        console.log("---> "+theMapping.label)
                         resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
                     }
 
@@ -684,7 +686,7 @@ classes = ["ads+marketing", "tag-manager+content", "hosting+cdn", "video", "util
 tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => {
 
     //open the db 
-    const request = window.indexedDB.open(db_name,2);
+    const request = window.indexedDB.open(db_name,db_version);
 
     request.onerror = (event) => {
         console.log("error opening db...")
@@ -700,14 +702,14 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
         else{
             console.log("All DB Stores exist")
             runScriptLabelling(featureIndexMapping,model,db);
-            listenOnComplete(db,model);
+            labelOnComplete(db);
         }
     }
 
 } );
 
 
-const listenOnComplete = (db,model) =>{
+const labelOnComplete = (db) =>{
 
     browser.webRequest.onCompleted.addListener((details)=>{
 
@@ -726,98 +728,15 @@ const listenOnComplete = (db,model) =>{
                 if (theMapping == undefined){
 
                     // ============== THEN START A WEB WORKER HERE ===============
+                    var myWorker = new Worker('./worker.js');
 
-                    fetch(details.url).then(r => r.text()).then(async result => {
+                    myWorker.postMessage({featuresList:featuresList, url:details.url, featureIndexMapping:featureIndexMapping, db_name:db_name, db_version:db_version, hashCodeToScriptStore:hashCodeToScriptStore });
                     
-                        let featuresCount = {}
-
-                        result = result.replace(/\s+/g, ' ')
-                        featuresList.forEach(feature =>{
-
-                            if (!feature.includes("__")){
-                                let searchTerm = "."+feature+"\\("
-                                let searchTerm2 = "."+feature+" \\("
-                                let count = result.search(searchTerm);
-                                let count2 =  result.search(searchTerm2) 
-                                count == -1 ? featuresCount[feature] = 0 : featuresCount[feature] = count
-                                count2 == -1 ? "" : featuresCount[feature] += count2
-                            }
-
-                            else{
-                                let feats = feature.split('__')
-                                let res = 1
-
-                                feats.forEach(feat=>{
-                                    let searchTerm = "."+feat+"\\("
-                                    let searchTerm2 = "."+feature+" \\("
-                                    let count = result.search(searchTerm)
-                                    let count2 =  result.search(searchTerm2)
-
-                                    if (count == -1 || count2 == -1)
-                                        res = 0
-
-                                })
-
-                                featuresCount[feature] = res
-                            }
-
-                        })
-
-                        let scriptArrayData = [[]];
-                        for (let i=0; i<508; ++i) scriptArrayData[0][i] = 0;
-
-                        // Filling the scriptArrayData with feature occurences
-                        await featuresList.forEach(async feature =>{
-                            if (featuresCount[feature] !=0){
-                                //get features's index on the list
-                                featureIndex = featureIndexMapping[feature]
-                                scriptArrayData[0][featureIndex] = featuresCount[feature];
-                            }
-                        })
-
-                        let newDataTensor = tf.tensor2d(
-                            scriptArrayData,
-                            [1, 508]
-                        );                
-
-                        predictions = model.predict(newDataTensor)  
-
-                        let maxProbability = Math.max(...predictions.dataSync());
-                        let predictionIndex = predictions.dataSync().indexOf(maxProbability);
-
-                        // Initialize db
-                        var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                        var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                        
-                        let hashScriptMapping = {}
-                        let finalLabel = ""
-
-                        if (maxProbability < 0.8){
-                            hashScriptMapping["id"] = hashValue;
-                            hashScriptMapping["label"] = "unknown";
-                            finalLabel = "unknown"
-                        }
-
-                        else{
-                            hashScriptMapping["id"] = hashValue;
-                            hashScriptMapping["label"] = classes[predictionIndex]
-                            finalLabel = classes[predictionIndex]
-                        }
-
-
-                        var request = hashCodeToScriptDBStore.add(hashScriptMapping);
-
-                        request.onerror = function(e) {
-                            console.log('Error', "Script hash code already exists");
-                        };
-
-                        request.onsuccess = function(e) {
-                        console.log('Added a new hascode script');
-                        };
-
-                    })
-
-
+                    myWorker.onmessage = function(e) {
+                        let receivedData = (e.data)
+                        console.log(e.data)
+                        // console.log(`*********${receivedData}*********`)
+                      }
 
                 }
             }
