@@ -9,7 +9,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v1"
+let db_name = "capstone_plugin_v8"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
@@ -650,18 +650,24 @@ const runScriptLabelling = (db) =>{
             return new Promise(async (resolve, reject) => {
 
                 let categoriesToBlock = ["ads+marketing","social","analytics"];
-                let hashValue = details.url;
+                let hashValue = (details.url);
 
                 var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
                 var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
                 var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
-
+            
                 getAllhashCodeToScript.onsuccess = async (event) =>{
                     // Start intercepting requests
                     theMapping = event.target.result;
 
+                    // console.log("===============all========")
+                    // console.log(details.url)
+
                     if (theMapping != undefined){
-                        console.log("---> "+theMapping.label)
+
+                        console.log("============found=================")
+                        console.log(details.url)
+                        console.log("---> mapped: "+theMapping.label)
                         // send data to API
                         Http.open("POST", apiUrl);
                         Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
@@ -725,11 +731,13 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
 
 const labelOnComplete = (db) =>{
 
+    let counter = 0
+
     browser.webRequest.onCompleted.addListener((details)=>{
 
         if (details.type == "script"){
 
-            let hashValue = details.url;
+            let hashValue = (details.url);
 
             var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
             var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
@@ -741,6 +749,11 @@ const labelOnComplete = (db) =>{
                 // First check if script hashcode exists in the objectStore
                 if (theMapping == undefined){
 
+                    console.log(theMapping)
+
+                    counter = counter+1
+                    // console.log(counter +)
+
                     // ============== THEN START A WEB WORKER HERE ===============
                     var myWorker = new Worker('./worker.js');
 
@@ -748,7 +761,7 @@ const labelOnComplete = (db) =>{
                     
                     myWorker.onmessage = function(e) {
                         console.log("**** web worker ****")
-                        console.log(e.data)
+                        console.log(e.data.id)
                         
                         // send data to API
                         Http.open("POST", apiUrl);

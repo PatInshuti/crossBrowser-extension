@@ -97,7 +97,7 @@ if( 'function' === typeof importScripts) {
                 req.onupgradeneeded = function (e) {
                     self.postMessage('successfully upgraded db');              
                 };
-                req.onsuccess = function (e) {
+                req.onsuccess = async function (e) {
 
                     db = e.target.result;
 
@@ -105,7 +105,7 @@ if( 'function' === typeof importScripts) {
                     
                     var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
             
-                    var request = hashCodeToScriptDBStore.add(hashScriptMapping);
+                    var request = await hashCodeToScriptDBStore.add(hashScriptMapping);
             
                     request.onerror = function(e) {
                         console.log('Error', "Script hash code already exists");
