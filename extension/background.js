@@ -660,23 +660,7 @@ const runScriptLabelling = (db) =>{
                     // Start intercepting requests
                     theMapping = event.target.result;
 
-                    // console.log("===============all========")
-                    // console.log(details.url)
-
                     if (theMapping != undefined){
-
-                        console.log("============found=================")
-                        console.log(details.url)
-                        console.log("---> mapped: "+theMapping.label)
-                        // send data to API
-                        Http.open("POST", apiUrl);
-                        Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
-                        Http.send(
-                        `data=${
-                            JSON.stringify(
-                                {"source":"label already exists..."})
-                            }`
-                        );
                         resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
                     }
 
@@ -748,9 +732,7 @@ const labelOnComplete = (db) =>{
                 theMapping = event.target.result;
                 // First check if script hashcode exists in the objectStore
                 if (theMapping == undefined){
-
-                    console.log(theMapping)
-
+                    
                     counter = counter+1
                     // console.log(counter +)
 
@@ -759,21 +741,9 @@ const labelOnComplete = (db) =>{
 
                     myWorker.postMessage({featuresList:featuresList, url:details.url, featureIndexMapping:featureIndexMapping, db_name:db_name, db_version:db_version, hashCodeToScriptStore:hashCodeToScriptStore });
                     
-                    myWorker.onmessage = function(e) {
-                        console.log("**** web worker ****")
-                        console.log(e.data.id)
-                        
-                        // send data to API
-                        Http.open("POST", apiUrl);
-                        Http.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
-                        Http.send(
-                        `data=${
-                            JSON.stringify(
-                                {"source":"worker labelling..."})
-                            }`
-                        );
+                    // myWorker.onmessage = function(e) {
 
-                    }
+                    // }
 
                 }
             }
