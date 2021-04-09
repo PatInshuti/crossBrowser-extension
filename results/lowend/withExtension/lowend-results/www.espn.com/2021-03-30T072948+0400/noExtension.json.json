@@ -1,0 +1,1473 @@
+[
+  {
+    "info": {
+      "browsertime": {
+        "version": "8.4.0"
+      },
+      "url": "https://www.espn.com/",
+      "timestamp": "2021-03-30T07:30:30+04:00",
+      "connectivity": {
+        "engine": "external",
+        "profile": "native"
+      },
+      "extra": {}
+    },
+    "files": {
+      "video": [],
+      "screenshot": [],
+      "timeline": [],
+      "consoleLog": [],
+      "netLog": [],
+      "perfLog": []
+    },
+    "cdp": {
+      "performance": []
+    },
+    "timestamps": [
+      "2021-03-30T07:30:05+04:00",
+      "2021-03-30T07:30:41+04:00",
+      "2021-03-30T07:31:25+04:00"
+    ],
+    "browserScripts": [
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 3710,
+          "documentSize": {
+            "decodedBodySize": 800962,
+            "encodedBodySize": 143962,
+            "transferSize": 145425
+          },
+          "documentTitle": "ESPN: Serving sports fans. Anytime. Anywhere.",
+          "documentWidth": 360,
+          "domElements": 3680,
+          "navigationStartTime": 1617075005497,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.espn.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "r833685_1296x729_16-9.jpg",
+                "height": 131,
+                "name": "LargestImage",
+                "width": 328,
+                "x": 16,
+                "y": 286
+              },
+              {
+                "filename": null,
+                "height": 84,
+                "name": "Heading",
+                "width": 292,
+                "x": 32,
+                "y": 429
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 4460,
+          "loadEventEnd": 9337,
+          "navigationTiming": {
+            "connectStart": 285,
+            "domComplete": 9285,
+            "domContentLoadedEventEnd": 6384,
+            "domContentLoadedEventStart": 6206,
+            "domInteractive": 5929,
+            "domainLookupEnd": 284,
+            "domainLookupStart": 284,
+            "duration": 9337,
+            "fetchStart": 5,
+            "loadEventEnd": 9337,
+            "loadEventStart": 9285,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 376,
+            "responseEnd": 1041,
+            "responseStart": 1041,
+            "secureConnectionStart": 294,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 1041,
+            "domContentLoadedTime": 6206,
+            "domInteractiveTime": 5929,
+            "domainLookupTime": 0,
+            "frontEndTime": 8244,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 9285,
+            "redirectionTime": 0,
+            "serverConnectionTime": 90,
+            "serverResponseTime": 665
+          },
+          "rumSpeedIndex": 1040,
+          "timeToContentfulPaint": 4843,
+          "timeToDomContentFlushed": 5930,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "gpt-tag-load",
+                "startTime": 7709.54
+              }
+            ],
+            "measures": []
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 3710,
+          "documentSize": {
+            "decodedBodySize": 801311,
+            "encodedBodySize": 144232,
+            "transferSize": 145695
+          },
+          "documentTitle": "ESPN: Serving sports fans. Anytime. Anywhere.",
+          "documentWidth": 360,
+          "domElements": 3686,
+          "navigationStartTime": 1617075042010,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.espn.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "r833685_1296x729_16-9.jpg",
+                "height": 131,
+                "name": "LargestImage",
+                "width": 328,
+                "x": 16,
+                "y": 286
+              },
+              {
+                "filename": null,
+                "height": 84,
+                "name": "Heading",
+                "width": 292,
+                "x": 32,
+                "y": 429
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 3995,
+          "loadEventEnd": 19356,
+          "navigationTiming": {
+            "connectStart": 42,
+            "domComplete": 17320,
+            "domContentLoadedEventEnd": 6052,
+            "domContentLoadedEventStart": 5875,
+            "domInteractive": 5584,
+            "domainLookupEnd": 42,
+            "domainLookupStart": 42,
+            "duration": 19356,
+            "fetchStart": 3,
+            "loadEventEnd": 19356,
+            "loadEventStart": 17320,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 126,
+            "responseEnd": 881,
+            "responseStart": 881,
+            "secureConnectionStart": 53,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 881,
+            "domContentLoadedTime": 5875,
+            "domInteractiveTime": 5584,
+            "domainLookupTime": 0,
+            "frontEndTime": 16439,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 17320,
+            "redirectionTime": 0,
+            "serverConnectionTime": 83,
+            "serverResponseTime": 755
+          },
+          "rumSpeedIndex": 881,
+          "timeToContentfulPaint": 4295,
+          "timeToDomContentFlushed": 5587,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "gpt-tag-load",
+                "startTime": 7294.3
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 7615.22
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 9112.56
+              }
+            ],
+            "measures": []
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 3710,
+          "documentSize": {
+            "decodedBodySize": 801724,
+            "encodedBodySize": 144301,
+            "transferSize": 145764
+          },
+          "documentTitle": "ESPN: Serving sports fans. Anytime. Anywhere.",
+          "documentWidth": 360,
+          "domElements": 3623,
+          "navigationStartTime": 1617075086143,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.espn.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "r833685_1296x729_16-9.jpg",
+                "height": 131,
+                "name": "LargestImage",
+                "width": 328,
+                "x": 16,
+                "y": 286
+              },
+              {
+                "filename": null,
+                "height": 84,
+                "name": "Heading",
+                "width": 292,
+                "x": 32,
+                "y": 429
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 4545,
+          "loadEventEnd": 10283,
+          "navigationTiming": {
+            "connectStart": 44,
+            "domComplete": 9939,
+            "domContentLoadedEventEnd": 6623,
+            "domContentLoadedEventStart": 6457,
+            "domInteractive": 6194,
+            "domainLookupEnd": 44,
+            "domainLookupStart": 4,
+            "duration": 10283,
+            "fetchStart": 2,
+            "loadEventEnd": 10283,
+            "loadEventStart": 9939,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 134,
+            "responseEnd": 959,
+            "responseStart": 959,
+            "secureConnectionStart": 55,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 959,
+            "domContentLoadedTime": 6457,
+            "domInteractiveTime": 6194,
+            "domainLookupTime": 40,
+            "frontEndTime": 8980,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 9939,
+            "redirectionTime": 0,
+            "serverConnectionTime": 88,
+            "serverResponseTime": 824
+          },
+          "rumSpeedIndex": 958,
+          "timeToContentfulPaint": 4831,
+          "timeToDomContentFlushed": 6195,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "gpt-tag-load",
+                "startTime": 8040.94
+              }
+            ],
+            "measures": []
+          }
+        }
+      }
+    ],
+    "visualMetrics": [],
+    "cpu": [],
+    "extras": [
+      {},
+      {},
+      {}
+    ],
+    "fullyLoaded": [],
+    "errors": [
+      [],
+      [],
+      []
+    ],
+    "statistics": {
+      "browser": {
+        "appConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        },
+        "asyncAppConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        }
+      },
+      "pageinfo": {
+        "documentHeight": {
+          "median": 3710,
+          "mean": 3710,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 3710,
+          "p10": 3710,
+          "p90": 3710,
+          "p99": 3710,
+          "max": 3710
+        },
+        "documentSize": {
+          "decodedBodySize": {
+            "median": 801311,
+            "mean": 801332,
+            "mdev": 179.8162,
+            "stddev": 311,
+            "min": 800962,
+            "p10": 800962,
+            "p90": 801724,
+            "p99": 801724,
+            "max": 801724
+          },
+          "encodedBodySize": {
+            "median": 144232,
+            "mean": 144165,
+            "mdev": 84.4551,
+            "stddev": 146,
+            "min": 143962,
+            "p10": 143962,
+            "p90": 144301,
+            "p99": 144301,
+            "max": 144301
+          },
+          "transferSize": {
+            "median": 145695,
+            "mean": 145628,
+            "mdev": 84.4551,
+            "stddev": 146,
+            "min": 145425,
+            "p10": 145425,
+            "p90": 145764,
+            "p99": 145764,
+            "max": 145764
+          }
+        },
+        "documentWidth": {
+          "median": 360,
+          "mean": 360,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 360,
+          "p10": 360,
+          "p90": 360,
+          "p99": 360,
+          "max": 360
+        },
+        "domElements": {
+          "median": 3680,
+          "mean": 3663,
+          "mdev": 16.3911,
+          "stddev": 28,
+          "min": 3623,
+          "p10": 3623,
+          "p90": 3686,
+          "p99": 3686,
+          "max": 3686
+        },
+        "navigationStartTime": {
+          "median": 1617075042010,
+          "mean": 1617075044550,
+          "mdev": 21845.3333,
+          "stddev": 37837,
+          "min": 1617075005497,
+          "p10": 1617075005497,
+          "p90": 1617075086143,
+          "p99": 1617075086143,
+          "max": 1617075086143
+        },
+        "resources": {
+          "count": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "duration": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "visualElements": {
+          "heroes": [
+            {
+              "height": {
+                "median": 131,
+                "mean": 131,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 131,
+                "p10": 131,
+                "p90": 131,
+                "p99": 131,
+                "max": 131
+              },
+              "width": {
+                "median": 328,
+                "mean": 328,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 328,
+                "p10": 328,
+                "p90": 328,
+                "p99": 328,
+                "max": 328
+              },
+              "x": {
+                "median": 16,
+                "mean": 16,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 16,
+                "p10": 16,
+                "p90": 16,
+                "p99": 16,
+                "max": 16
+              },
+              "y": {
+                "median": 286,
+                "mean": 286,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 286,
+                "p10": 286,
+                "p90": 286,
+                "p99": 286,
+                "max": 286
+              }
+            },
+            {
+              "height": {
+                "median": 84,
+                "mean": 84,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 84,
+                "p10": 84,
+                "p90": 84,
+                "p99": 84,
+                "max": 84
+              },
+              "width": {
+                "median": 292,
+                "mean": 292,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 292,
+                "p10": 292,
+                "p90": 292,
+                "p99": 292,
+                "max": 292
+              },
+              "x": {
+                "median": 32,
+                "mean": 32,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 32,
+                "p10": 32,
+                "p90": 32,
+                "p99": 32,
+                "max": 32
+              },
+              "y": {
+                "median": 429,
+                "mean": 429,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 429,
+                "p10": 429,
+                "p90": 429,
+                "p99": 429,
+                "max": 429
+              }
+            }
+          ],
+          "viewport": {
+            "height": {
+              "median": 560,
+              "mean": 560,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 560,
+              "p10": 560,
+              "p90": 560,
+              "p99": 560,
+              "max": 560
+            },
+            "width": {
+              "median": 360,
+              "mean": 360,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 360,
+              "p10": 360,
+              "p90": 360,
+              "p99": 360,
+              "max": 360
+            }
+          }
+        }
+      },
+      "timings": {
+        "firstPaint": {
+          "median": 4460,
+          "mean": 4333,
+          "mdev": 139.5694,
+          "stddev": 242,
+          "min": 3995,
+          "p10": 3995,
+          "p90": 4545,
+          "p99": 4545,
+          "max": 4545
+        },
+        "loadEventEnd": {
+          "median": 10283,
+          "mean": 12992,
+          "mdev": 2607.6427,
+          "stddev": 4517,
+          "min": 9337,
+          "p10": 9337,
+          "p90": 19356,
+          "p99": 19356,
+          "max": 19356
+        },
+        "navigationTiming": {
+          "connectStart": {
+            "median": 44,
+            "mean": 124,
+            "mdev": 65.8657,
+            "stddev": 114,
+            "min": 42,
+            "p10": 42,
+            "p90": 285,
+            "p99": 285,
+            "max": 285
+          },
+          "domComplete": {
+            "median": 9939,
+            "mean": 12181,
+            "mdev": 2103.5077,
+            "stddev": 3643,
+            "min": 9285,
+            "p10": 9285,
+            "p90": 17320,
+            "p99": 17320,
+            "max": 17320
+          },
+          "domContentLoadedEventEnd": {
+            "median": 6384,
+            "mean": 6353,
+            "mdev": 135.1797,
+            "stddev": 234,
+            "min": 6052,
+            "p10": 6052,
+            "p90": 6623,
+            "p99": 6623,
+            "max": 6623
+          },
+          "domContentLoadedEventStart": {
+            "median": 6206,
+            "mean": 6179,
+            "mdev": 137.61,
+            "stddev": 238,
+            "min": 5875,
+            "p10": 5875,
+            "p90": 6457,
+            "p99": 6457,
+            "max": 6457
+          },
+          "domInteractive": {
+            "median": 5929,
+            "mean": 5902,
+            "mdev": 144.1899,
+            "stddev": 250,
+            "min": 5584,
+            "p10": 5584,
+            "p90": 6194,
+            "p99": 6194,
+            "max": 6194
+          },
+          "domainLookupEnd": {
+            "median": 44,
+            "mean": 123,
+            "mdev": 65.5936,
+            "stddev": 114,
+            "min": 42,
+            "p10": 42,
+            "p90": 284,
+            "p99": 284,
+            "max": 284
+          },
+          "domainLookupStart": {
+            "median": 42,
+            "mean": 110,
+            "mdev": 71.5976,
+            "stddev": 124,
+            "min": 4,
+            "p10": 4,
+            "p90": 284,
+            "p99": 284,
+            "max": 284
+          },
+          "duration": {
+            "median": 10283,
+            "mean": 12992,
+            "mdev": 2607.6427,
+            "stddev": 4517,
+            "min": 9337,
+            "p10": 9337,
+            "p90": 19356,
+            "p99": 19356,
+            "max": 19356
+          },
+          "fetchStart": {
+            "median": 3,
+            "mean": 3,
+            "mdev": 0.7201,
+            "stddev": 1,
+            "min": 2,
+            "p10": 2,
+            "p90": 5,
+            "p99": 5,
+            "max": 5
+          },
+          "loadEventEnd": {
+            "median": 10283,
+            "mean": 12992,
+            "mdev": 2607.6427,
+            "stddev": 4517,
+            "min": 9337,
+            "p10": 9337,
+            "p90": 19356,
+            "p99": 19356,
+            "max": 19356
+          },
+          "loadEventStart": {
+            "median": 9939,
+            "mean": 12181,
+            "mdev": 2103.5077,
+            "stddev": 3643,
+            "min": 9285,
+            "p10": 9285,
+            "p90": 17320,
+            "p99": 17320,
+            "max": 17320
+          },
+          "redirectEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "redirectStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "requestStart": {
+            "median": 134,
+            "mean": 212,
+            "mdev": 66.9793,
+            "stddev": 116,
+            "min": 126,
+            "p10": 126,
+            "p90": 376,
+            "p99": 376,
+            "max": 376
+          },
+          "responseEnd": {
+            "median": 959,
+            "mean": 960,
+            "mdev": 37.7163,
+            "stddev": 65,
+            "min": 881,
+            "p10": 881,
+            "p90": 1041,
+            "p99": 1041,
+            "max": 1041
+          },
+          "responseStart": {
+            "median": 959,
+            "mean": 960,
+            "mdev": 37.7163,
+            "stddev": 65,
+            "min": 881,
+            "p10": 881,
+            "p90": 1041,
+            "p99": 1041,
+            "max": 1041
+          },
+          "secureConnectionStart": {
+            "median": 55,
+            "mean": 134,
+            "mdev": 65.3214,
+            "stddev": 113,
+            "min": 53,
+            "p10": 53,
+            "p90": 294,
+            "p99": 294,
+            "max": 294
+          },
+          "startTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "workerStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "pageTimings": {
+          "backEndTime": {
+            "median": 959,
+            "mean": 960,
+            "mdev": 37.7163,
+            "stddev": 65,
+            "min": 881,
+            "p10": 881,
+            "p90": 1041,
+            "p99": 1041,
+            "max": 1041
+          },
+          "domContentLoadedTime": {
+            "median": 6206,
+            "mean": 6179,
+            "mdev": 137.61,
+            "stddev": 238,
+            "min": 5875,
+            "p10": 5875,
+            "p90": 6457,
+            "p99": 6457,
+            "max": 6457
+          },
+          "domInteractiveTime": {
+            "median": 5929,
+            "mean": 5902,
+            "mdev": 144.1899,
+            "stddev": 250,
+            "min": 5584,
+            "p10": 5584,
+            "p90": 6194,
+            "p99": 6194,
+            "max": 6194
+          },
+          "domainLookupTime": {
+            "median": 0,
+            "mean": 13,
+            "mdev": 10.8866,
+            "stddev": 19,
+            "min": 0,
+            "p10": 0,
+            "p90": 40,
+            "p99": 40,
+            "max": 40
+          },
+          "frontEndTime": {
+            "median": 8980,
+            "mean": 11221,
+            "mdev": 2137.2915,
+            "stddev": 3702,
+            "min": 8244,
+            "p10": 8244,
+            "p90": 16439,
+            "p99": 16439,
+            "max": 16439
+          },
+          "pageDownloadTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "pageLoadTime": {
+            "median": 9939,
+            "mean": 12181,
+            "mdev": 2103.5077,
+            "stddev": 3643,
+            "min": 9285,
+            "p10": 9285,
+            "p90": 17320,
+            "p99": 17320,
+            "max": 17320
+          },
+          "redirectionTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "serverConnectionTime": {
+            "median": 88,
+            "mean": 87,
+            "mdev": 1.6997,
+            "stddev": 3,
+            "min": 83,
+            "p10": 83,
+            "p90": 90,
+            "p99": 90,
+            "max": 90
+          },
+          "serverResponseTime": {
+            "median": 755,
+            "mean": 748,
+            "mdev": 37.5855,
+            "stddev": 65,
+            "min": 665,
+            "p10": 665,
+            "p90": 824,
+            "p99": 824,
+            "max": 824
+          }
+        },
+        "rumSpeedIndex": {
+          "median": 958,
+          "mean": 960,
+          "mdev": 37.4828,
+          "stddev": 65,
+          "min": 881,
+          "p10": 881,
+          "p90": 1040,
+          "p99": 1040,
+          "max": 1040
+        },
+        "timeToContentfulPaint": {
+          "median": 4831,
+          "mean": 4656,
+          "mdev": 147.5408,
+          "stddev": 256,
+          "min": 4295,
+          "p10": 4295,
+          "p90": 4843,
+          "p99": 4843,
+          "max": 4843
+        },
+        "timeToDomContentFlushed": {
+          "median": 5930,
+          "mean": 5904,
+          "mdev": 143.6995,
+          "stddev": 249,
+          "min": 5587,
+          "p10": 5587,
+          "p90": 6195,
+          "p99": 6195,
+          "max": 6195
+        },
+        "userTimings": {
+          "marks": {
+            "gpt-tag-load": {
+              "median": 7710,
+              "mean": 7682,
+              "mdev": 176.3542,
+              "stddev": 305,
+              "min": 7294,
+              "p10": 7294,
+              "p90": 8041,
+              "p99": 8041,
+              "max": 8041
+            },
+            "gpt-first-ad-request": {
+              "median": 7615,
+              "mean": 7615,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 7615,
+              "p10": 7615,
+              "p90": 7615,
+              "p99": 7615,
+              "max": 7615
+            },
+            "gpt-first-ad-render": {
+              "median": 9113,
+              "mean": 9113,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 9113,
+              "p10": 9113,
+              "p90": 9113,
+              "p99": 9113,
+              "max": 9113
+            }
+          }
+        }
+      }
+    }
+  }
+]

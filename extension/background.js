@@ -643,7 +643,7 @@ const setupDB = async (data) =>{
 
 const runScriptLabelling = (db) =>{
 
-    browser.webRequest.onBeforeSendHeaders.addListener( (details) => {
+    browser.webRequest.onBeforeRequest.addListener( (details) => {
 
         if (details.type == "script"){
 
