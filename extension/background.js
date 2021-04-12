@@ -9,7 +9,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v11"
+let db_name = "capstone_plugin_v12"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
@@ -677,27 +677,28 @@ const runScriptLabelling = (db) =>{
                         }
 
 
-                        console.log(categoriesToBlock)
+                        hashString(details.url).then(hashValue=>{
+
+                            var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+                            var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                            var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
+                        
+                            
+                            getAllhashCodeToScript.onsuccess = async (event) =>{
+                                // Start intercepting requests
+                                theMapping = event.target.result;
+            
+                                if (theMapping != undefined){
+                                    resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
+                                }
+            
+                                else{
+                                    resolve({cancel:false})
+                                }
+                            }
+                        })
 
 
-                        let hashValue = (details.url);
-        
-                        var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                        var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                        var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
-                    
-                        getAllhashCodeToScript.onsuccess = async (event) =>{
-                            // Start intercepting requests
-                            theMapping = event.target.result;
-        
-                            if (theMapping != undefined){
-                                resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
-                            }
-        
-                            else{
-                                resolve({cancel:false})
-                            }
-                        }
                     }
 
                     else{
@@ -757,8 +758,6 @@ tf.loadLayersModel(browser.extension.getURL("model/model.json")).then( model => 
 
 const labelOnComplete = (db) =>{
 
-    let counter = 0
-
     browser.webRequest.onCompleted.addListener((details)=>{
 
         if (details.type == "script"){
@@ -774,18 +773,11 @@ const labelOnComplete = (db) =>{
                 theMapping = event.target.result;
                 // First check if script hashcode exists in the objectStore
                 if (theMapping == undefined){
-                    
-                    counter = counter+1
-                    // console.log(counter +)
 
                     // ============== THEN START A WEB WORKER HERE ===============
                     var myWorker = new Worker('./worker.js');
 
                     myWorker.postMessage({featuresList:featuresList, url:details.url, featureIndexMapping:featureIndexMapping, db_name:db_name, db_version:db_version, hashCodeToScriptStore:hashCodeToScriptStore });
-                    
-                    // myWorker.onmessage = function(e) {
-
-                    // }
 
                 }
             }
