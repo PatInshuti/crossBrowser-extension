@@ -9,7 +9,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v8"
+let db_name = "capstone_plugin_v11"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
@@ -675,29 +675,41 @@ const runScriptLabelling = (db) =>{
                         else{
                             categoriesToBlock = ["ads+marketing","social","analytics"]
                         }
-                    }
-            
-                });
-                // End of settings retrieval 
 
-                let hashValue = (details.url);
 
-                var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
-            
-                getAllhashCodeToScript.onsuccess = async (event) =>{
-                    // Start intercepting requests
-                    theMapping = event.target.result;
+                        console.log(categoriesToBlock)
 
-                    if (theMapping != undefined){
-                        resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
+
+                        let hashValue = (details.url);
+        
+                        var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+                        var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                        var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
+                    
+                        getAllhashCodeToScript.onsuccess = async (event) =>{
+                            // Start intercepting requests
+                            theMapping = event.target.result;
+        
+                            if (theMapping != undefined){
+                                resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
+                            }
+        
+                            else{
+                                resolve({cancel:false})
+                            }
+                        }
                     }
 
                     else{
                         resolve({cancel:false})
                     }
-                }
+            
+                });
+                // End of settings retrieval 
+
+
+
+
             })
         }
 
