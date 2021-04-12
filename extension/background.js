@@ -649,7 +649,37 @@ const runScriptLabelling = (db) =>{
 
             return new Promise(async (resolve, reject) => {
 
-                let categoriesToBlock = ["ads+marketing","social","analytics"];
+                let categoriesToBlock = [];
+
+                
+                // retrieve block settings per website
+                await browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                    var currTab = tabs[0];
+                    if (currTab) { // Sanity check
+                        website = domain_from_url(currTab.url);
+
+                        let retrievedSettings = localStorage.getItem('blockSettingsPerWebsite');
+                        retrievedSettings = JSON.parse(retrievedSettings);
+
+                        if (retrievedSettings !== null){
+                            if (retrievedSettings[website] !== undefined && retrievedSettings[website] == false){
+                                categoriesToBlock = [] //do not block any
+                            }
+
+                            // change this to true later
+                            else{
+                                categoriesToBlock = ["ads+marketing","social","analytics"]
+                            }
+                        }
+
+                        else{
+                            categoriesToBlock = ["ads+marketing","social","analytics"]
+                        }
+                    }
+            
+                });
+                // End of settings retrieval 
+
                 let hashValue = (details.url);
 
                 var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
