@@ -9,7 +9,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v12"
+let db_name = "capstone_plugin_v13"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
@@ -558,14 +558,6 @@ const retrieve_SendBlockingInformation = () =>{
 
 }
 
-async function hashString(message) {
-    const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
-    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
-    const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
-    return hashHex;
-}
-
 const getByteSize = str => new Blob([str]).size;
 
 
@@ -651,61 +643,40 @@ const runScriptLabelling = (db) =>{
 
                 let categoriesToBlock = [];
 
-                
-                // retrieve block settings per website
-                await browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-                    var currTab = tabs[0];
-                    if (currTab) { // Sanity check
-                        website = domain_from_url(currTab.url);
+                if (localStorage.getItem('scriptBlockSettings') !== null){
+    
+                    let scriptBlockSettings = JSON.parse(localStorage.getItem('scriptBlockSettings'));
 
-                        let retrievedSettings = localStorage.getItem('blockSettingsPerWebsite');
-                        retrievedSettings = JSON.parse(retrievedSettings);
+                    if (scriptBlockSettings == true){
+                        categoriesToBlock = ["ads+marketing","social","analytics"]
+                    }
 
-                        if (retrievedSettings !== null){
-                            if (retrievedSettings[website] !== undefined && retrievedSettings[website] == false){
-                                categoriesToBlock = [] //do not block any
-                            }
+                    console.log(categoriesToBlock)
 
-                            // change this to true later
-                            else{
-                                categoriesToBlock = ["ads+marketing","social","analytics"]
-                            }
+                    hashValue = details.url;
+                    var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+                    var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                    var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
+                    
+                    getAllhashCodeToScript.onsuccess = async (event) =>{
+                        // Start intercepting requests
+                        theMapping = event.target.result;
+    
+                        if (theMapping != undefined){
+                            resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
                         }
-
+    
                         else{
-                            categoriesToBlock = ["ads+marketing","social","analytics"]
+                            resolve({cancel:false})
                         }
-
-
-                        hashString(details.url).then(hashValue=>{
-
-                            var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                            var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                            var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
-                        
-                            
-                            getAllhashCodeToScript.onsuccess = async (event) =>{
-                                // Start intercepting requests
-                                theMapping = event.target.result;
-            
-                                if (theMapping != undefined){
-                                    resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
-                                }
-            
-                                else{
-                                    resolve({cancel:false})
-                                }
-                            }
-                        })
-
-
                     }
 
-                    else{
-                        resolve({cancel:false})
-                    }
+                }
+
+                else{
+                    resolve({cancel:false})
+                }
             
-                });
                 // End of settings retrieval 
 
 
