@@ -7,7 +7,7 @@ COUNTER=0
 while IFS= read -r url; do
 
     # with extension
-    browsertime --android --prettyPrint --browsertime.cacheClearRaw --firefox.preference browser.cache.disk.enable:false --extension ../../extension/web-ext-artifacts/capstone.xpi --browser firefox $url https://google.com $url --multi --output withExtension.json
+    browsertime --android --prettyPrint --browsertime.cacheClearRaw --firefox.preference browser.cache.disk.enable:false --extension ../../extension/web-ext-artifacts/capstone.xpi --browser firefox $url https://website.com $url --multi --output withExtension.json
 
     # with no extension
     browsertime --android --prettyPrint --browsertime.cacheClearRaw --firefox.preference browser.cache.disk.enable:false --browser firefox $url --output noExtension.json
