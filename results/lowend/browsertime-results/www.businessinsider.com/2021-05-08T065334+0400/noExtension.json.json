@@ -1,0 +1,2382 @@
+[
+  {
+    "info": {
+      "browsertime": {
+        "version": "8.4.0"
+      },
+      "url": "https://www.businessinsider.com/",
+      "timestamp": "2021-05-08T06:54:40+04:00",
+      "connectivity": {
+        "engine": "external",
+        "profile": "native"
+      },
+      "extra": {}
+    },
+    "files": {
+      "video": [],
+      "screenshot": [],
+      "timeline": [],
+      "consoleLog": [],
+      "netLog": [],
+      "perfLog": []
+    },
+    "cdp": {
+      "performance": []
+    },
+    "timestamps": [
+      "2021-05-08T06:53:50+04:00",
+      "2021-05-08T06:54:55+04:00",
+      "2021-05-08T06:57:15+04:00"
+    ],
+    "browserScripts": [
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 21564,
+          "documentSize": {
+            "decodedBodySize": 407207,
+            "encodedBodySize": 43805,
+            "transferSize": 45078
+          },
+          "documentTitle": "Business - Insider",
+          "documentWidth": 360,
+          "domElements": 1859,
+          "navigationStartTime": 1620442430728,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.businessinsider.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "603e9ed3b46d720018b046f3?width=700",
+                "height": 242,
+                "name": "LargestImage",
+                "width": 323,
+                "x": 18,
+                "y": 314
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 2807,
+          "loadEventEnd": 40500,
+          "navigationTiming": {
+            "connectStart": 33,
+            "domComplete": 40428,
+            "domContentLoadedEventEnd": 3089,
+            "domContentLoadedEventStart": 3068,
+            "domInteractive": 2383,
+            "domainLookupEnd": 32,
+            "domainLookupStart": 32,
+            "duration": 40500,
+            "fetchStart": 2,
+            "loadEventEnd": 40500,
+            "loadEventStart": 40428,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 308,
+            "responseEnd": 896,
+            "responseStart": 896,
+            "secureConnectionStart": 139,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 896,
+            "domContentLoadedTime": 3068,
+            "domInteractiveTime": 2383,
+            "domainLookupTime": 0,
+            "frontEndTime": 39531,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 40428,
+            "redirectionTime": 0,
+            "serverConnectionTime": 274,
+            "serverResponseTime": 588
+          },
+          "rumSpeedIndex": 896,
+          "timeToContentfulPaint": 3055,
+          "timeToDomContentFlushed": 2777,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "facebookPixelAddonInitStart",
+                "startTime": 9442.24
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 12978.88
+              },
+              {
+                "name": "Ad Prebid ias Mobile Header Start",
+                "startTime": 13039.88
+              },
+              {
+                "name": "Ad Slot Call -- Mobile Header",
+                "startTime": 13093.42
+              },
+              {
+                "name": "Ad Prebid ias offpage Start",
+                "startTime": 13098.22
+              },
+              {
+                "name": "Ad Slot Call -- offpage",
+                "startTime": 13129.94
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Header Start",
+                "startTime": 13212.84
+              },
+              {
+                "name": "Ad Prebid rubicon offpage Start",
+                "startTime": 13273.48
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Header End",
+                "startTime": 13307.38
+              },
+              {
+                "name": "Ad Prebid rubicon offpage End",
+                "startTime": 13309.94
+              },
+              {
+                "name": "facebookPixelAddonInitEnd",
+                "startTime": 14142
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 14256.16
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 14256.64
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 14256.92
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 14257.12
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 14790.76
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 18101.86
+              },
+              {
+                "name": "Ad Slot Render -- Mobile Header",
+                "startTime": 18125.42
+              },
+              {
+                "name": "Ad Slot Render -- offpage",
+                "startTime": 18424.2
+              },
+              {
+                "name": "Ad Prebid ias Mobile Sticky Lower HP Start",
+                "startTime": 19256.66
+              },
+              {
+                "name": "Ad Slot Call -- Mobile Sticky Lower HP",
+                "startTime": 19273.68
+              },
+              {
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP Start",
+                "startTime": 19288.88
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP Start",
+                "startTime": 19354.08
+              },
+              {
+                "name": "Ad Prebid ias Mobile Header End",
+                "startTime": 20789.9
+              },
+              {
+                "name": "Ad Prebid ias offpage End",
+                "startTime": 20809.56
+              },
+              {
+                "name": "prebidAddonInitStart",
+                "startTime": 21358.9
+              },
+              {
+                "name": "prebidAddonInitEnd",
+                "startTime": 21382.68
+              },
+              {
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP End",
+                "startTime": 21633.5
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP End",
+                "startTime": 21648.08
+              },
+              {
+                "name": "Ad Prebid ias Mobile Sticky Lower HP End",
+                "startTime": 22776.22
+              },
+              {
+                "name": "Ad Slot Render -- Mobile Sticky Lower HP",
+                "startTime": 22873.42
+              }
+            ],
+            "measures": [
+              {
+                "duration": 4699.76,
+                "name": "facebookPixelAddonLoadingtime",
+                "startTime": 9442.24
+              },
+              {
+                "duration": 7750.02,
+                "name": "Ad Prebid ias Mobile Header",
+                "startTime": 13039.88
+              },
+              {
+                "duration": 7711.34,
+                "name": "Ad Prebid ias offpage",
+                "startTime": 13098.22
+              },
+              {
+                "duration": 94.54000000000087,
+                "name": "Ad Prebid rubicon Mobile Header",
+                "startTime": 13212.84
+              },
+              {
+                "duration": 36.460000000000946,
+                "name": "Ad Prebid rubicon offpage",
+                "startTime": 13273.48
+              },
+              {
+                "duration": 0.47999999999956344,
+                "name": "lteu",
+                "startTime": 14256.16
+              },
+              {
+                "duration": 0.2000000000007276,
+                "name": "ltpq",
+                "startTime": 14256.92
+              },
+              {
+                "duration": 3519.5600000000013,
+                "name": "Ad Prebid ias Mobile Sticky Lower HP",
+                "startTime": 19256.66
+              },
+              {
+                "duration": 2344.619999999999,
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP",
+                "startTime": 19288.88
+              },
+              {
+                "duration": 2294,
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP",
+                "startTime": 19354.08
+              },
+              {
+                "duration": 23.779999999998836,
+                "name": "prebidAddonLoadingtime",
+                "startTime": 21358.9
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 21564,
+          "documentSize": {
+            "decodedBodySize": 407207,
+            "encodedBodySize": 43803,
+            "transferSize": 45076
+          },
+          "documentTitle": "Business - Insider",
+          "documentWidth": 360,
+          "domElements": 1861,
+          "navigationStartTime": 1620442496211,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.businessinsider.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "603e9ed3b46d720018b046f3?width=700",
+                "height": 242,
+                "name": "LargestImage",
+                "width": 323,
+                "x": 18,
+                "y": 314
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 2928,
+          "loadEventEnd": 117867,
+          "navigationTiming": {
+            "connectStart": 40,
+            "domComplete": 117789,
+            "domContentLoadedEventEnd": 2916,
+            "domContentLoadedEventStart": 2897,
+            "domInteractive": 2516,
+            "domainLookupEnd": 39,
+            "domainLookupStart": 39,
+            "duration": 117867,
+            "fetchStart": 3,
+            "loadEventEnd": 117867,
+            "loadEventStart": 117789,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 335,
+            "responseEnd": 1174,
+            "responseStart": 1174,
+            "secureConnectionStart": 146,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 1174,
+            "domContentLoadedTime": 2897,
+            "domInteractiveTime": 2516,
+            "domainLookupTime": 0,
+            "frontEndTime": 116615,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 117789,
+            "redirectionTime": 0,
+            "serverConnectionTime": 294,
+            "serverResponseTime": 839
+          },
+          "rumSpeedIndex": 1174,
+          "timeToContentfulPaint": 3116,
+          "timeToDomContentFlushed": 2863,
+          "timeToFirstInteractive": 50663,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "facebookPixelAddonInitStart",
+                "startTime": 7974.58
+              },
+              {
+                "name": "facebookPixelAddonInitEnd",
+                "startTime": 11574.54
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 11913.72
+              },
+              {
+                "name": "Ad Prebid ias Mobile Header Start",
+                "startTime": 11982.24
+              },
+              {
+                "name": "Ad Slot Call -- Mobile Header",
+                "startTime": 12039.52
+              },
+              {
+                "name": "Ad Prebid ias offpage Start",
+                "startTime": 12044.66
+              },
+              {
+                "name": "Ad Slot Call -- offpage",
+                "startTime": 12074.74
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Header Start",
+                "startTime": 12155.14
+              },
+              {
+                "name": "Ad Prebid rubicon offpage Start",
+                "startTime": 12204.66
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Header End",
+                "startTime": 12228.02
+              },
+              {
+                "name": "Ad Prebid rubicon offpage End",
+                "startTime": 12229.92
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 15147.56
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 16358.12
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 16358.4
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 16358.6
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 16358.74
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 16737.58
+              },
+              {
+                "name": "Ad Slot Render -- Mobile Header",
+                "startTime": 16752.1
+              },
+              {
+                "name": "Ad Slot Render -- offpage",
+                "startTime": 16786.72
+              },
+              {
+                "name": "Ad Prebid ias Mobile Sticky Lower HP Start",
+                "startTime": 17778.64
+              },
+              {
+                "name": "Ad Slot Call -- Mobile Sticky Lower HP",
+                "startTime": 17799.2
+              },
+              {
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP Start",
+                "startTime": 17822.04
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP Start",
+                "startTime": 17890.66
+              },
+              {
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP End",
+                "startTime": 19166.82
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP End",
+                "startTime": 19191.18
+              },
+              {
+                "name": "prebidAddonInitStart",
+                "startTime": 19861.46
+              },
+              {
+                "name": "prebidAddonInitEnd",
+                "startTime": 19887.88
+              },
+              {
+                "name": "Ad Prebid ias Mobile Header End",
+                "startTime": 20233.08
+              },
+              {
+                "name": "Ad Prebid ias offpage End",
+                "startTime": 20275.7
+              },
+              {
+                "name": "Ad Slot Render -- Mobile Sticky Lower HP",
+                "startTime": 20770.52
+              },
+              {
+                "name": "Ad Prebid ias Mobile Sticky Lower HP End",
+                "startTime": 21030.76
+              }
+            ],
+            "measures": [
+              {
+                "duration": 3599.960000000001,
+                "name": "facebookPixelAddonLoadingtime",
+                "startTime": 7974.58
+              },
+              {
+                "duration": 8250.840000000002,
+                "name": "Ad Prebid ias Mobile Header",
+                "startTime": 11982.24
+              },
+              {
+                "duration": 8231.04,
+                "name": "Ad Prebid ias offpage",
+                "startTime": 12044.66
+              },
+              {
+                "duration": 72.88000000000102,
+                "name": "Ad Prebid rubicon Mobile Header",
+                "startTime": 12155.14
+              },
+              {
+                "duration": 25.26000000000022,
+                "name": "Ad Prebid rubicon offpage",
+                "startTime": 12204.66
+              },
+              {
+                "duration": 0.27999999999883585,
+                "name": "lteu",
+                "startTime": 16358.12
+              },
+              {
+                "duration": 0.13999999999941792,
+                "name": "ltpq",
+                "startTime": 16358.6
+              },
+              {
+                "duration": 3252.1200000000026,
+                "name": "Ad Prebid ias Mobile Sticky Lower HP",
+                "startTime": 17778.64
+              },
+              {
+                "duration": 1344.7799999999988,
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP",
+                "startTime": 17822.04
+              },
+              {
+                "duration": 1300.5200000000004,
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP",
+                "startTime": 17890.66
+              },
+              {
+                "duration": 26.42000000000189,
+                "name": "prebidAddonLoadingtime",
+                "startTime": 19861.46
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 21564,
+          "documentSize": {
+            "decodedBodySize": 407208,
+            "encodedBodySize": 43801,
+            "transferSize": 45074
+          },
+          "documentTitle": "Business - Insider",
+          "documentWidth": 360,
+          "domElements": 1870,
+          "navigationStartTime": 1620442635778,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.businessinsider.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "603e9ed3b46d720018b046f3?width=700",
+                "height": 242,
+                "name": "LargestImage",
+                "width": 323,
+                "x": 18,
+                "y": 314
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 2561,
+          "loadEventEnd": 190146,
+          "navigationTiming": {
+            "connectStart": 33,
+            "domComplete": 190050,
+            "domContentLoadedEventEnd": 2777,
+            "domContentLoadedEventStart": 2760,
+            "domInteractive": 2198,
+            "domainLookupEnd": 33,
+            "domainLookupStart": 32,
+            "duration": 190146,
+            "fetchStart": 3,
+            "loadEventEnd": 190146,
+            "loadEventStart": 190051,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 334,
+            "responseEnd": 843,
+            "responseStart": 843,
+            "secureConnectionStart": 141,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 843,
+            "domContentLoadedTime": 2760,
+            "domInteractiveTime": 2198,
+            "domainLookupTime": 0,
+            "frontEndTime": 189208,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 190051,
+            "redirectionTime": 0,
+            "serverConnectionTime": 300,
+            "serverResponseTime": 508
+          },
+          "rumSpeedIndex": 842,
+          "timeToContentfulPaint": 2744,
+          "timeToDomContentFlushed": 2522,
+          "timeToFirstInteractive": 51456,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "facebookPixelAddonInitStart",
+                "startTime": 7932.5
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 10929.74
+              },
+              {
+                "name": "Ad Prebid ias Mobile Header Start",
+                "startTime": 10988.28
+              },
+              {
+                "name": "Ad Slot Call -- Mobile Header",
+                "startTime": 11029.82
+              },
+              {
+                "name": "Ad Prebid ias offpage Start",
+                "startTime": 11036.5
+              },
+              {
+                "name": "Ad Slot Call -- offpage",
+                "startTime": 11061.68
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Header Start",
+                "startTime": 11129.28
+              },
+              {
+                "name": "Ad Prebid rubicon offpage Start",
+                "startTime": 11181.08
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Header End",
+                "startTime": 11211.96
+              },
+              {
+                "name": "Ad Prebid rubicon offpage End",
+                "startTime": 11214.22
+              },
+              {
+                "name": "facebookPixelAddonInitEnd",
+                "startTime": 11910.2
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 13747.74
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 14825.08
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 14825.34
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 14825.54
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 14825.68
+              },
+              {
+                "name": "Ad Prebid ias Mobile Header End",
+                "startTime": 16129.72
+              },
+              {
+                "name": "Ad Prebid ias offpage End",
+                "startTime": 16165.56
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 16244.16
+              },
+              {
+                "name": "Ad Slot Render -- Mobile Header",
+                "startTime": 16276.94
+              },
+              {
+                "name": "Ad Slot Render -- offpage",
+                "startTime": 16375.06
+              },
+              {
+                "name": "Ad Prebid ias Mobile Sticky Lower HP Start",
+                "startTime": 17511.66
+              },
+              {
+                "name": "Ad Slot Call -- Mobile Sticky Lower HP",
+                "startTime": 17528.08
+              },
+              {
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP Start",
+                "startTime": 17539.22
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP Start",
+                "startTime": 17608.58
+              },
+              {
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP End",
+                "startTime": 19364.04
+              },
+              {
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP End",
+                "startTime": 19381.16
+              },
+              {
+                "name": "prebidAddonInitStart",
+                "startTime": 19990.52
+              },
+              {
+                "name": "prebidAddonInitEnd",
+                "startTime": 20012.66
+              },
+              {
+                "name": "Ad Prebid ias Mobile Sticky Lower HP End",
+                "startTime": 20411.8
+              },
+              {
+                "name": "Ad Slot Render -- Mobile Sticky Lower HP",
+                "startTime": 20905.58
+              },
+              {
+                "name": "LUX_end",
+                "startTime": 190746.76
+              }
+            ],
+            "measures": [
+              {
+                "duration": 3977.7000000000007,
+                "name": "facebookPixelAddonLoadingtime",
+                "startTime": 7932.5
+              },
+              {
+                "duration": 5141.4400000000005,
+                "name": "Ad Prebid ias Mobile Header",
+                "startTime": 10988.28
+              },
+              {
+                "duration": 5129.0599999999995,
+                "name": "Ad Prebid ias offpage",
+                "startTime": 11036.5
+              },
+              {
+                "duration": 82.68000000000029,
+                "name": "Ad Prebid rubicon Mobile Header",
+                "startTime": 11129.28
+              },
+              {
+                "duration": 33.13999999999942,
+                "name": "Ad Prebid rubicon offpage",
+                "startTime": 11181.08
+              },
+              {
+                "duration": 0.2600000000002183,
+                "name": "lteu",
+                "startTime": 14825.08
+              },
+              {
+                "duration": 0.13999999999941792,
+                "name": "ltpq",
+                "startTime": 14825.54
+              },
+              {
+                "duration": 2900.1399999999994,
+                "name": "Ad Prebid ias Mobile Sticky Lower HP",
+                "startTime": 17511.66
+              },
+              {
+                "duration": 1824.8199999999997,
+                "name": "Ad Prebid amazon Mobile Sticky Lower HP",
+                "startTime": 17539.22
+              },
+              {
+                "duration": 1772.579999999998,
+                "name": "Ad Prebid rubicon Mobile Sticky Lower HP",
+                "startTime": 17608.58
+              },
+              {
+                "duration": 22.139999999999414,
+                "name": "prebidAddonLoadingtime",
+                "startTime": 19990.52
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "visualMetrics": [],
+    "cpu": [],
+    "extras": [
+      {},
+      {},
+      {}
+    ],
+    "fullyLoaded": [],
+    "errors": [
+      [],
+      [],
+      []
+    ],
+    "statistics": {
+      "browser": {
+        "appConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        },
+        "asyncAppConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        }
+      },
+      "pageinfo": {
+        "documentHeight": {
+          "median": 21564,
+          "mean": 21564,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 21564,
+          "p10": 21564,
+          "p90": 21564,
+          "p99": 21564,
+          "max": 21564
+        },
+        "documentSize": {
+          "decodedBodySize": {
+            "median": 407207,
+            "mean": 407207,
+            "mdev": 0.2722,
+            "stddev": 0,
+            "min": 407207,
+            "p10": 407207,
+            "p90": 407208,
+            "p99": 407208,
+            "max": 407208
+          },
+          "encodedBodySize": {
+            "median": 43803,
+            "mean": 43803,
+            "mdev": 0.9428,
+            "stddev": 2,
+            "min": 43801,
+            "p10": 43801,
+            "p90": 43805,
+            "p99": 43805,
+            "max": 43805
+          },
+          "transferSize": {
+            "median": 45076,
+            "mean": 45076,
+            "mdev": 0.9428,
+            "stddev": 2,
+            "min": 45074,
+            "p10": 45074,
+            "p90": 45078,
+            "p99": 45078,
+            "max": 45078
+          }
+        },
+        "documentWidth": {
+          "median": 360,
+          "mean": 360,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 360,
+          "p10": 360,
+          "p90": 360,
+          "p99": 360,
+          "max": 360
+        },
+        "domElements": {
+          "median": 1861,
+          "mean": 1863,
+          "mdev": 2.7622,
+          "stddev": 5,
+          "min": 1859,
+          "p10": 1859,
+          "p90": 1870,
+          "p99": 1870,
+          "max": 1870
+        },
+        "navigationStartTime": {
+          "median": 1620442496211,
+          "mean": 1620442520906,
+          "mdev": 48847.6503,
+          "stddev": 84607,
+          "min": 1620442430728,
+          "p10": 1620442430728,
+          "p90": 1620442635778,
+          "p99": 1620442635778,
+          "max": 1620442635778
+        },
+        "resources": {
+          "count": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "duration": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "visualElements": {
+          "heroes": [
+            {
+              "height": {
+                "median": 242,
+                "mean": 242,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 242,
+                "p10": 242,
+                "p90": 242,
+                "p99": 242,
+                "max": 242
+              },
+              "width": {
+                "median": 323,
+                "mean": 323,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 323,
+                "p10": 323,
+                "p90": 323,
+                "p99": 323,
+                "max": 323
+              },
+              "x": {
+                "median": 18,
+                "mean": 18,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 18,
+                "p10": 18,
+                "p90": 18,
+                "p99": 18,
+                "max": 18
+              },
+              "y": {
+                "median": 314,
+                "mean": 314,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 314,
+                "p10": 314,
+                "p90": 314,
+                "p99": 314,
+                "max": 314
+              }
+            }
+          ],
+          "viewport": {
+            "height": {
+              "median": 560,
+              "mean": 560,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 560,
+              "p10": 560,
+              "p90": 560,
+              "p99": 560,
+              "max": 560
+            },
+            "width": {
+              "median": 360,
+              "mean": 360,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 360,
+              "p10": 360,
+              "p90": 360,
+              "p99": 360,
+              "max": 360
+            }
+          }
+        }
+      },
+      "timings": {
+        "firstPaint": {
+          "median": 2807,
+          "mean": 2765,
+          "mdev": 88.1594,
+          "stddev": 153,
+          "min": 2561,
+          "p10": 2561,
+          "p90": 2928,
+          "p99": 2928,
+          "max": 2928
+        },
+        "loadEventEnd": {
+          "median": 117867,
+          "mean": 116171,
+          "mdev": 35278.6956,
+          "stddev": 61104,
+          "min": 40500,
+          "p10": 40500,
+          "p90": 190146,
+          "p99": 190146,
+          "max": 190146
+        },
+        "navigationTiming": {
+          "connectStart": {
+            "median": 33,
+            "mean": 35,
+            "mdev": 1.9052,
+            "stddev": 3,
+            "min": 33,
+            "p10": 33,
+            "p90": 40,
+            "p99": 40,
+            "max": 40
+          },
+          "domComplete": {
+            "median": 117789,
+            "mean": 116089,
+            "mdev": 35273.0719,
+            "stddev": 61095,
+            "min": 40428,
+            "p10": 40428,
+            "p90": 190050,
+            "p99": 190050,
+            "max": 190050
+          },
+          "domContentLoadedEventEnd": {
+            "median": 2916,
+            "mean": 2927,
+            "mdev": 73.6845,
+            "stddev": 128,
+            "min": 2777,
+            "p10": 2777,
+            "p90": 3089,
+            "p99": 3089,
+            "max": 3089
+          },
+          "domContentLoadedEventStart": {
+            "median": 2897,
+            "mean": 2908,
+            "mdev": 72.7436,
+            "stddev": 126,
+            "min": 2760,
+            "p10": 2760,
+            "p90": 3068,
+            "p99": 3068,
+            "max": 3068
+          },
+          "domInteractive": {
+            "median": 2383,
+            "mean": 2366,
+            "mdev": 75.2866,
+            "stddev": 130,
+            "min": 2198,
+            "p10": 2198,
+            "p90": 2516,
+            "p99": 2516,
+            "max": 2516
+          },
+          "domainLookupEnd": {
+            "median": 33,
+            "mean": 35,
+            "mdev": 1.7847,
+            "stddev": 3,
+            "min": 32,
+            "p10": 32,
+            "p90": 39,
+            "p99": 39,
+            "max": 39
+          },
+          "domainLookupStart": {
+            "median": 32,
+            "mean": 34,
+            "mdev": 1.9052,
+            "stddev": 3,
+            "min": 32,
+            "p10": 32,
+            "p90": 39,
+            "p99": 39,
+            "max": 39
+          },
+          "duration": {
+            "median": 117867,
+            "mean": 116171,
+            "mdev": 35278.6956,
+            "stddev": 61104,
+            "min": 40500,
+            "p10": 40500,
+            "p90": 190146,
+            "p99": 190146,
+            "max": 190146
+          },
+          "fetchStart": {
+            "median": 3,
+            "mean": 3,
+            "mdev": 0.2722,
+            "stddev": 0,
+            "min": 2,
+            "p10": 2,
+            "p90": 3,
+            "p99": 3,
+            "max": 3
+          },
+          "loadEventEnd": {
+            "median": 117867,
+            "mean": 116171,
+            "mdev": 35278.6956,
+            "stddev": 61104,
+            "min": 40500,
+            "p10": 40500,
+            "p90": 190146,
+            "p99": 190146,
+            "max": 190146
+          },
+          "loadEventStart": {
+            "median": 117789,
+            "mean": 116089,
+            "mdev": 35273.3049,
+            "stddev": 61095,
+            "min": 40428,
+            "p10": 40428,
+            "p90": 190051,
+            "p99": 190051,
+            "max": 190051
+          },
+          "redirectEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "redirectStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "requestStart": {
+            "median": 334,
+            "mean": 326,
+            "mdev": 7.2162,
+            "stddev": 12,
+            "min": 308,
+            "p10": 308,
+            "p90": 335,
+            "p99": 335,
+            "max": 335
+          },
+          "responseEnd": {
+            "median": 896,
+            "mean": 971,
+            "mdev": 83.8106,
+            "stddev": 145,
+            "min": 843,
+            "p10": 843,
+            "p90": 1174,
+            "p99": 1174,
+            "max": 1174
+          },
+          "responseStart": {
+            "median": 896,
+            "mean": 971,
+            "mdev": 83.8106,
+            "stddev": 145,
+            "min": 843,
+            "p10": 843,
+            "p90": 1174,
+            "p99": 1174,
+            "max": 1174
+          },
+          "secureConnectionStart": {
+            "median": 141,
+            "mean": 142,
+            "mdev": 1.6997,
+            "stddev": 3,
+            "min": 139,
+            "p10": 139,
+            "p90": 146,
+            "p99": 146,
+            "max": 146
+          },
+          "startTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "workerStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "pageTimings": {
+          "backEndTime": {
+            "median": 896,
+            "mean": 971,
+            "mdev": 83.8106,
+            "stddev": 145,
+            "min": 843,
+            "p10": 843,
+            "p90": 1174,
+            "p99": 1174,
+            "max": 1174
+          },
+          "domContentLoadedTime": {
+            "median": 2897,
+            "mean": 2908,
+            "mdev": 72.7436,
+            "stddev": 126,
+            "min": 2760,
+            "p10": 2760,
+            "p90": 3068,
+            "p99": 3068,
+            "max": 3068
+          },
+          "domInteractiveTime": {
+            "median": 2383,
+            "mean": 2366,
+            "mdev": 75.2866,
+            "stddev": 130,
+            "min": 2198,
+            "p10": 2198,
+            "p90": 2516,
+            "p99": 2516,
+            "max": 2516
+          },
+          "domainLookupTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "frontEndTime": {
+            "median": 116615,
+            "mean": 115118,
+            "mdev": 35284.5003,
+            "stddev": 61115,
+            "min": 39531,
+            "p10": 39531,
+            "p90": 189208,
+            "p99": 189208,
+            "max": 189208
+          },
+          "pageDownloadTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "pageLoadTime": {
+            "median": 117789,
+            "mean": 116089,
+            "mdev": 35273.3049,
+            "stddev": 61095,
+            "min": 40428,
+            "p10": 40428,
+            "p90": 190051,
+            "p99": 190051,
+            "max": 190051
+          },
+          "redirectionTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "serverConnectionTime": {
+            "median": 294,
+            "mean": 289,
+            "mdev": 6.4176,
+            "stddev": 11,
+            "min": 274,
+            "p10": 274,
+            "p90": 300,
+            "p99": 300,
+            "max": 300
+          },
+          "serverResponseTime": {
+            "median": 588,
+            "mean": 645,
+            "mdev": 81.4139,
+            "stddev": 141,
+            "min": 508,
+            "p10": 508,
+            "p90": 839,
+            "p99": 839,
+            "max": 839
+          }
+        },
+        "rumSpeedIndex": {
+          "median": 896,
+          "mean": 971,
+          "mdev": 83.9806,
+          "stddev": 145,
+          "min": 842,
+          "p10": 842,
+          "p90": 1174,
+          "p99": 1174,
+          "max": 1174
+        },
+        "timeToContentfulPaint": {
+          "median": 3055,
+          "mean": 2972,
+          "mdev": 94.05,
+          "stddev": 163,
+          "min": 2744,
+          "p10": 2744,
+          "p90": 3116,
+          "p99": 3116,
+          "max": 3116
+        },
+        "timeToDomContentFlushed": {
+          "median": 2777,
+          "mean": 2721,
+          "mdev": 83.6,
+          "stddev": 145,
+          "min": 2522,
+          "p10": 2522,
+          "p90": 2863,
+          "p99": 2863,
+          "max": 2863
+        },
+        "userTimings": {
+          "marks": {
+            "facebookPixelAddonInitStart": {
+              "median": 7975,
+              "mean": 8450,
+              "mdev": 405.2942,
+              "stddev": 702,
+              "min": 7933,
+              "p10": 7933,
+              "p90": 9442,
+              "p99": 9442,
+              "max": 9442
+            },
+            "gpt-tag-load": {
+              "median": 11914,
+              "mean": 11941,
+              "mdev": 483.1133,
+              "stddev": 837,
+              "min": 10930,
+              "p10": 10930,
+              "p90": 12979,
+              "p99": 12979,
+              "max": 12979
+            },
+            "Ad Prebid ias Mobile Header Start": {
+              "median": 11982,
+              "mean": 12003,
+              "mdev": 483.6444,
+              "stddev": 838,
+              "min": 10988,
+              "p10": 10988,
+              "p90": 13040,
+              "p99": 13040,
+              "max": 13040
+            },
+            "Ad Slot Call -- Mobile Header": {
+              "median": 12040,
+              "mean": 12054,
+              "mdev": 486.4324,
+              "stddev": 843,
+              "min": 11030,
+              "p10": 11030,
+              "p90": 13093,
+              "p99": 13093,
+              "max": 13093
+            },
+            "Ad Prebid ias offpage Start": {
+              "median": 12045,
+              "mean": 12060,
+              "mdev": 485.9913,
+              "stddev": 842,
+              "min": 11037,
+              "p10": 11037,
+              "p90": 13098,
+              "p99": 13098,
+              "max": 13098
+            },
+            "Ad Slot Call -- offpage": {
+              "median": 12075,
+              "mean": 12089,
+              "mdev": 487.5273,
+              "stddev": 844,
+              "min": 11062,
+              "p10": 11062,
+              "p90": 13130,
+              "p99": 13130,
+              "max": 13130
+            },
+            "Ad Prebid rubicon Mobile Header Start": {
+              "median": 12155,
+              "mean": 12166,
+              "mdev": 491.1189,
+              "stddev": 851,
+              "min": 11129,
+              "p10": 11129,
+              "p90": 13213,
+              "p99": 13213,
+              "max": 13213
+            },
+            "Ad Prebid rubicon offpage Start": {
+              "median": 12205,
+              "mean": 12220,
+              "mdev": 493.2218,
+              "stddev": 854,
+              "min": 11181,
+              "p10": 11181,
+              "p90": 13273,
+              "p99": 13273,
+              "max": 13273
+            },
+            "Ad Prebid rubicon Mobile Header End": {
+              "median": 12228,
+              "mean": 12249,
+              "mdev": 493.9703,
+              "stddev": 856,
+              "min": 11212,
+              "p10": 11212,
+              "p90": 13307,
+              "p99": 13307,
+              "max": 13307
+            },
+            "Ad Prebid rubicon offpage End": {
+              "median": 12230,
+              "mean": 12251,
+              "mdev": 494.0435,
+              "stddev": 856,
+              "min": 11214,
+              "p10": 11214,
+              "p90": 13310,
+              "p99": 13310,
+              "max": 13310
+            },
+            "facebookPixelAddonInitEnd": {
+              "median": 11910,
+              "mean": 12542,
+              "mdev": 657.8711,
+              "stddev": 1139,
+              "min": 11575,
+              "p10": 11575,
+              "p90": 14142,
+              "p99": 14142,
+              "max": 14142
+            },
+            "loadStarteventUtils": {
+              "median": 14825,
+              "mean": 15146,
+              "mdev": 512.5144,
+              "stddev": 888,
+              "min": 14256,
+              "p10": 14256,
+              "p90": 16358,
+              "p99": 16358,
+              "max": 16358
+            },
+            "loadEndeventUtils": {
+              "median": 14825,
+              "mean": 15147,
+              "mdev": 512.4772,
+              "stddev": 888,
+              "min": 14257,
+              "p10": 14257,
+              "p90": 16358,
+              "p99": 16358,
+              "max": 16358
+            },
+            "loadStartpixelQueue": {
+              "median": 14826,
+              "mean": 15147,
+              "mdev": 512.4618,
+              "stddev": 888,
+              "min": 14257,
+              "p10": 14257,
+              "p90": 16359,
+              "p99": 16359,
+              "max": 16359
+            },
+            "loadEndpixelQueue": {
+              "median": 14826,
+              "mean": 15147,
+              "mdev": 512.4502,
+              "stddev": 888,
+              "min": 14257,
+              "p10": 14257,
+              "p90": 16359,
+              "p99": 16359,
+              "max": 16359
+            },
+            "gpt-first-ad-request": {
+              "median": 14791,
+              "mean": 14562,
+              "mdev": 342.9012,
+              "stddev": 594,
+              "min": 13748,
+              "p10": 13748,
+              "p90": 15148,
+              "p99": 15148,
+              "max": 15148
+            },
+            "gpt-first-ad-render": {
+              "median": 16738,
+              "mean": 17028,
+              "mdev": 453.6181,
+              "stddev": 786,
+              "min": 16244,
+              "p10": 16244,
+              "p90": 18102,
+              "p99": 18102,
+              "max": 18102
+            },
+            "Ad Slot Render -- Mobile Header": {
+              "median": 16752,
+              "mean": 17051,
+              "mdev": 452.51,
+              "stddev": 784,
+              "min": 16277,
+              "p10": 16277,
+              "p90": 18125,
+              "p99": 18125,
+              "max": 18125
+            },
+            "Ad Slot Render -- offpage": {
+              "median": 16787,
+              "mean": 17195,
+              "mdev": 510.9823,
+              "stddev": 885,
+              "min": 16375,
+              "p10": 16375,
+              "p90": 18424,
+              "p99": 18424,
+              "max": 18424
+            },
+            "Ad Prebid ias Mobile Sticky Lower HP Start": {
+              "median": 17779,
+              "mean": 18182,
+              "mdev": 443.0888,
+              "stddev": 767,
+              "min": 17512,
+              "p10": 17512,
+              "p90": 19257,
+              "p99": 19257,
+              "max": 19257
+            },
+            "Ad Slot Call -- Mobile Sticky Lower HP": {
+              "median": 17799,
+              "mean": 18200,
+              "mdev": 442.8325,
+              "stddev": 767,
+              "min": 17528,
+              "p10": 17528,
+              "p90": 19274,
+              "p99": 19274,
+              "max": 19274
+            },
+            "Ad Prebid amazon Mobile Sticky Lower HP Start": {
+              "median": 17822,
+              "mean": 18217,
+              "mdev": 442.7572,
+              "stddev": 767,
+              "min": 17539,
+              "p10": 17539,
+              "p90": 19289,
+              "p99": 19289,
+              "max": 19289
+            },
+            "Ad Prebid rubicon Mobile Sticky Lower HP Start": {
+              "median": 17891,
+              "mean": 18284,
+              "mdev": 441.7112,
+              "stddev": 765,
+              "min": 17609,
+              "p10": 17609,
+              "p90": 19354,
+              "p99": 19354,
+              "max": 19354
+            },
+            "Ad Prebid ias Mobile Header End": {
+              "median": 20233,
+              "mean": 19051,
+              "mdev": 1199.7668,
+              "stddev": 2078,
+              "min": 16130,
+              "p10": 16130,
+              "p90": 20790,
+              "p99": 20790,
+              "max": 20790
+            },
+            "Ad Prebid ias offpage End": {
+              "median": 20276,
+              "mean": 19084,
+              "mdev": 1197.9148,
+              "stddev": 2075,
+              "min": 16166,
+              "p10": 16166,
+              "p90": 20810,
+              "p99": 20810,
+              "max": 20810
+            },
+            "prebidAddonInitStart": {
+              "median": 19991,
+              "mean": 20404,
+              "mdev": 391.1733,
+              "stddev": 678,
+              "min": 19861,
+              "p10": 19861,
+              "p90": 21359,
+              "p99": 21359,
+              "max": 21359
+            },
+            "prebidAddonInitEnd": {
+              "median": 20013,
+              "mean": 20428,
+              "mdev": 390.9604,
+              "stddev": 677,
+              "min": 19888,
+              "p10": 19888,
+              "p90": 21383,
+              "p99": 21383,
+              "max": 21383
+            },
+            "Ad Prebid amazon Mobile Sticky Lower HP End": {
+              "median": 19364,
+              "mean": 20055,
+              "mdev": 646.1812,
+              "stddev": 1119,
+              "min": 19167,
+              "p10": 19167,
+              "p90": 21634,
+              "p99": 21634,
+              "max": 21634
+            },
+            "Ad Prebid rubicon Mobile Sticky Lower HP End": {
+              "median": 19381,
+              "mean": 20073,
+              "mdev": 644.3882,
+              "stddev": 1116,
+              "min": 19191,
+              "p10": 19191,
+              "p90": 21648,
+              "p99": 21648,
+              "max": 21648
+            },
+            "Ad Prebid ias Mobile Sticky Lower HP End": {
+              "median": 21031,
+              "mean": 21406,
+              "mdev": 577.9986,
+              "stddev": 1001,
+              "min": 20412,
+              "p10": 20412,
+              "p90": 22776,
+              "p99": 22776,
+              "max": 22776
+            },
+            "Ad Slot Render -- Mobile Sticky Lower HP": {
+              "median": 20906,
+              "mean": 21517,
+              "mdev": 554.8715,
+              "stddev": 961,
+              "min": 20771,
+              "p10": 20771,
+              "p90": 22873,
+              "p99": 22873,
+              "max": 22873
+            },
+            "LUX_end": {
+              "median": 190747,
+              "mean": 190747,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 190747,
+              "p10": 190747,
+              "p90": 190747,
+              "p99": 190747,
+              "max": 190747
+            }
+          },
+          "measures": {
+            "facebookPixelAddonLoadingtime": {
+              "median": 3978,
+              "mean": 4092,
+              "mdev": 263.426,
+              "stddev": 456,
+              "min": 3600,
+              "p10": 3600,
+              "p90": 4700,
+              "p99": 4700,
+              "max": 4700
+            },
+            "Ad Prebid ias Mobile Header": {
+              "median": 7750,
+              "mean": 7047,
+              "mdev": 787.0215,
+              "stddev": 1363,
+              "min": 5141,
+              "p10": 5141,
+              "p90": 8251,
+              "p99": 8251,
+              "max": 8251
+            },
+            "Ad Prebid ias offpage": {
+              "median": 7711,
+              "mean": 7024,
+              "mdev": 783.1687,
+              "stddev": 1356,
+              "min": 5129,
+              "p10": 5129,
+              "p90": 8231,
+              "p99": 8231,
+              "max": 8231
+            },
+            "Ad Prebid rubicon Mobile Header": {
+              "median": 83,
+              "mean": 83,
+              "mdev": 5.113,
+              "stddev": 9,
+              "min": 73,
+              "p10": 73,
+              "p90": 95,
+              "p99": 95,
+              "max": 95
+            },
+            "Ad Prebid rubicon offpage": {
+              "median": 33,
+              "mean": 32,
+              "mdev": 2.7118,
+              "stddev": 5,
+              "min": 25,
+              "p10": 25,
+              "p90": 36,
+              "p99": 36,
+              "max": 36
+            },
+            "lteu": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0573,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "ltpq": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0163,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "Ad Prebid ias Mobile Sticky Lower HP": {
+              "median": 3252,
+              "mean": 3224,
+              "mdev": 146.4513,
+              "stddev": 254,
+              "min": 2900,
+              "p10": 2900,
+              "p90": 3520,
+              "p99": 3520,
+              "max": 3520
+            },
+            "Ad Prebid amazon Mobile Sticky Lower HP": {
+              "median": 1825,
+              "mean": 1838,
+              "mdev": 235.7267,
+              "stddev": 408,
+              "min": 1345,
+              "p10": 1345,
+              "p90": 2345,
+              "p99": 2345,
+              "max": 2345
+            },
+            "Ad Prebid rubicon Mobile Sticky Lower HP": {
+              "median": 1773,
+              "mean": 1789,
+              "mdev": 234.2618,
+              "stddev": 406,
+              "min": 1301,
+              "p10": 1301,
+              "p90": 2294,
+              "p99": 2294,
+              "max": 2294
+            },
+            "prebidAddonLoadingtime": {
+              "median": 24,
+              "mean": 24,
+              "mdev": 1.0179,
+              "stddev": 2,
+              "min": 22,
+              "p10": 22,
+              "p90": 26,
+              "p99": 26,
+              "max": 26
+            }
+          }
+        },
+        "timeToFirstInteractive": {
+          "median": 51060,
+          "mean": 51060,
+          "mdev": 280.3678,
+          "stddev": 397,
+          "min": 50663,
+          "p10": 50663,
+          "p90": 51456,
+          "p99": 51456,
+          "max": 51456
+        }
+      }
+    }
+  }
+]

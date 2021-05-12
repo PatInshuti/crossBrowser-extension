@@ -1,0 +1,3554 @@
+[
+  {
+    "info": {
+      "browsertime": {
+        "version": "8.4.0"
+      },
+      "url": "https://www.usnews.com/",
+      "timestamp": "2021-05-09T02:51:35+04:00",
+      "connectivity": {
+        "engine": "external",
+        "profile": "native"
+      },
+      "extra": {}
+    },
+    "files": {
+      "video": [],
+      "screenshot": [],
+      "timeline": [],
+      "consoleLog": [],
+      "netLog": [],
+      "perfLog": []
+    },
+    "cdp": {
+      "performance": []
+    },
+    "timestamps": [
+      "2021-05-09T02:50:18+04:00",
+      "2021-05-09T02:51:47+04:00",
+      "2021-05-09T02:53:12+04:00"
+    ],
+    "browserScripts": [
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 13545,
+          "documentSize": {
+            "decodedBodySize": 1133652,
+            "encodedBodySize": 128651,
+            "transferSize": 130260
+          },
+          "documentTitle": "U.S. News & World Report: News, Rankings and Analysis on Politics, Education, Healthcare and More",
+          "documentWidth": 360,
+          "domElements": 2094,
+          "navigationStartTime": 1620514218193,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.usnews.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "usn-logo-large.svg",
+                "height": 40,
+                "name": "LargestImage",
+                "width": 156,
+                "x": 102,
+                "y": 283
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 1487,
+          "loadEventEnd": 70139,
+          "navigationTiming": {
+            "connectStart": 39,
+            "domComplete": 70065,
+            "domContentLoadedEventEnd": 8275,
+            "domContentLoadedEventStart": 8256,
+            "domInteractive": 1453,
+            "domainLookupEnd": 38,
+            "domainLookupStart": 38,
+            "duration": 70139,
+            "fetchStart": 4,
+            "loadEventEnd": 70139,
+            "loadEventStart": 70065,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 154,
+            "responseEnd": 479,
+            "responseStart": 479,
+            "secureConnectionStart": 56,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 479,
+            "domContentLoadedTime": 8256,
+            "domInteractiveTime": 1453,
+            "domainLookupTime": 0,
+            "frontEndTime": 69586,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 70065,
+            "redirectionTime": 0,
+            "serverConnectionTime": 114,
+            "serverResponseTime": 325
+          },
+          "rumSpeedIndex": 479,
+          "timeToContentfulPaint": 1708,
+          "timeToDomContentFlushed": 7906,
+          "timeToFirstInteractive": 37259,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "ttfb",
+                "startTime": 701.44
+              },
+              {
+                "name": "ad_manager_start_start",
+                "startTime": 6827.04
+              },
+              {
+                "name": "ad_manager_init_start",
+                "startTime": 6830.54
+              },
+              {
+                "name": "ad_manager_load-scripts_start",
+                "startTime": 6839.82
+              },
+              {
+                "name": "ad_manager_script_gpt_start",
+                "startTime": 7438.6
+              },
+              {
+                "name": "ad_manager_script_gdpr_start",
+                "startTime": 7593.94
+              },
+              {
+                "name": "ad_manager_script_gdpr_end",
+                "startTime": 7595.94
+              },
+              {
+                "name": "ad_manager_script_optimera_start",
+                "startTime": 7604.34
+              },
+              {
+                "name": "ad_manager_script_optimeraCookieLib_start",
+                "startTime": 7604.56
+              },
+              {
+                "name": "ad_manager_script_nativo_start",
+                "startTime": 7610.54
+              },
+              {
+                "name": "ad_manager_load-scripts_end",
+                "startTime": 7626.18
+              },
+              {
+                "name": "ad_manager_init_end",
+                "startTime": 7627.860000000001
+              },
+              {
+                "name": "ad_manager_script_optimeraCookieLib_end",
+                "startTime": 9689.4
+              },
+              {
+                "name": "ad_manager_script_gpt_end",
+                "startTime": 9862.54
+              },
+              {
+                "name": "ad_manager_script_optimera_end",
+                "startTime": 9909.54
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_start",
+                "startTime": 10139.64
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_end",
+                "startTime": 10295
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_start",
+                "startTime": 10297.16
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_end",
+                "startTime": 10331.26
+              },
+              {
+                "name": "ad_manager_script_nativo_end",
+                "startTime": 11289.34
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 12181.48
+              },
+              {
+                "name": "ad_manager_process_start",
+                "startTime": 12442.32
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_start",
+                "startTime": 13100.94
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_end",
+                "startTime": 16622.86
+              },
+              {
+                "name": "ad_manager_process_end",
+                "startTime": 16724.66
+              },
+              {
+                "name": "ad_manager_process_start",
+                "startTime": 16726.48
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_start",
+                "startTime": 17286.88
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 18222.84
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 18223.26
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 18223.44
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 18223.58
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_end",
+                "startTime": 18863.84
+              },
+              {
+                "name": "ad_manager_process_end",
+                "startTime": 18925.02
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 19343.54
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_bfad_start",
+                "startTime": 19373.94
+              },
+              {
+                "name": "ad_manager_first_ad_render_start",
+                "startTime": 19374.1
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1_start",
+                "startTime": 19374.86
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1_start",
+                "startTime": 19375.36
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2_start",
+                "startTime": 19376.34
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3_start",
+                "startTime": 19376.9
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4_start",
+                "startTime": 19377.7
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5_start",
+                "startTime": 19378.08
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 22019.56
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4_end",
+                "startTime": 22060.02
+              },
+              {
+                "name": "ad_manager_first_ad_render_end",
+                "startTime": 22060.34
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5_end",
+                "startTime": 22061.3
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_bfad_end",
+                "startTime": 22326.3
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1_end",
+                "startTime": 23378.94
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1_end",
+                "startTime": 23379.3
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2_end",
+                "startTime": 23379.58
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3_end",
+                "startTime": 23379.84
+              }
+            ],
+            "measures": [
+              {
+                "duration": 6894.5,
+                "name": "ttfb_ad_manager_script_gdpr",
+                "startTime": 701.44
+              },
+              {
+                "duration": 6924.74,
+                "name": "ttfb_ad_manager_load-scripts",
+                "startTime": 701.44
+              },
+              {
+                "duration": 6926.42,
+                "name": "ttfb_ad_manager_init",
+                "startTime": 701.44
+              },
+              {
+                "duration": 8987.96,
+                "name": "ttfb_ad_manager_script_optimeraCookieLib",
+                "startTime": 701.44
+              },
+              {
+                "duration": 9161.1,
+                "name": "ttfb_ad_manager_script_gpt",
+                "startTime": 701.44
+              },
+              {
+                "duration": 9208.1,
+                "name": "ttfb_ad_manager_script_optimera",
+                "startTime": 701.44
+              },
+              {
+                "duration": 9593.56,
+                "name": "ttfb_ad_manager_transformation_multiFormat",
+                "startTime": 701.44
+              },
+              {
+                "duration": 9629.82,
+                "name": "ttfb_ad_manager_transformation_multiFormat",
+                "startTime": 701.44
+              },
+              {
+                "duration": 10587.9,
+                "name": "ttfb_ad_manager_script_nativo",
+                "startTime": 701.44
+              },
+              {
+                "duration": 15921.42,
+                "name": "ttfb_ad_manager_bid_call_multiFormat",
+                "startTime": 701.44
+              },
+              {
+                "duration": 16023.22,
+                "name": "ttfb_ad_manager_process",
+                "startTime": 701.44
+              },
+              {
+                "duration": 18162.4,
+                "name": "ttfb_ad_manager_bid_call_multiFormat",
+                "startTime": 701.44
+              },
+              {
+                "duration": 18223.58,
+                "name": "ttfb_ad_manager_process",
+                "startTime": 701.44
+              },
+              {
+                "duration": 21358.58,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_4",
+                "startTime": 701.44
+              },
+              {
+                "duration": 21358.9,
+                "name": "ttfb_ad_manager_first_ad_render",
+                "startTime": 701.44
+              },
+              {
+                "duration": 21359.86,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_5",
+                "startTime": 701.44
+              },
+              {
+                "duration": 21624.86,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_bfad",
+                "startTime": 701.44
+              },
+              {
+                "duration": 22677.5,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_madh_1",
+                "startTime": 701.44
+              },
+              {
+                "duration": 22677.86,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_1",
+                "startTime": 701.44
+              },
+              {
+                "duration": 22678.140000000003,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_2",
+                "startTime": 701.44
+              },
+              {
+                "duration": 22678.4,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_3",
+                "startTime": 701.44
+              },
+              {
+                "duration": 797.3200000000006,
+                "name": "ad_manager_init",
+                "startTime": 6830.54
+              },
+              {
+                "duration": 786.3600000000006,
+                "name": "ad_manager_load-scripts",
+                "startTime": 6839.82
+              },
+              {
+                "duration": 2423.9400000000005,
+                "name": "ad_manager_script_gpt",
+                "startTime": 7438.6
+              },
+              {
+                "duration": 2,
+                "name": "ad_manager_script_gdpr",
+                "startTime": 7593.94
+              },
+              {
+                "duration": 2305.2000000000007,
+                "name": "ad_manager_script_optimera",
+                "startTime": 7604.34
+              },
+              {
+                "duration": 2084.8399999999992,
+                "name": "ad_manager_script_optimeraCookieLib",
+                "startTime": 7604.56
+              },
+              {
+                "duration": 3678.8,
+                "name": "ad_manager_script_nativo",
+                "startTime": 7610.54
+              },
+              {
+                "duration": 155.36000000000058,
+                "name": "ad_manager_transformation_multiFormat",
+                "startTime": 10139.64
+              },
+              {
+                "duration": 34.100000000000364,
+                "name": "ad_manager_transformation_multiFormat",
+                "startTime": 10297.16
+              },
+              {
+                "duration": 4282.34,
+                "name": "ad_manager_process",
+                "startTime": 12442.32
+              },
+              {
+                "duration": 3521.92,
+                "name": "ad_manager_bid_call_multiFormat",
+                "startTime": 13100.94
+              },
+              {
+                "duration": 2198.540000000001,
+                "name": "ad_manager_process",
+                "startTime": 16726.48
+              },
+              {
+                "duration": 1576.9599999999991,
+                "name": "ad_manager_bid_call_multiFormat",
+                "startTime": 17286.88
+              },
+              {
+                "duration": 0.42000000000189175,
+                "name": "lteu",
+                "startTime": 18222.84
+              },
+              {
+                "duration": 0.1400000000030559,
+                "name": "ltpq",
+                "startTime": 18223.44
+              },
+              {
+                "duration": 2952.3600000000006,
+                "name": "ad_manager_script_gpt_slot_rendered_bfad",
+                "startTime": 19373.94
+              },
+              {
+                "duration": 2686.239999999998,
+                "name": "ad_manager_first_ad_render",
+                "startTime": 19374.1
+              },
+              {
+                "duration": 4004.079999999998,
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1",
+                "startTime": 19374.86
+              },
+              {
+                "duration": 4003.9399999999982,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1",
+                "startTime": 19375.36
+              },
+              {
+                "duration": 4003.2400000000016,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2",
+                "startTime": 19376.34
+              },
+              {
+                "duration": 4002.9399999999982,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3",
+                "startTime": 19376.9
+              },
+              {
+                "duration": 2682.3199999999997,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4",
+                "startTime": 19377.7
+              },
+              {
+                "duration": 2683.2199999999975,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5",
+                "startTime": 19378.08
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 13545,
+          "documentSize": {
+            "decodedBodySize": 1133652,
+            "encodedBodySize": 128651,
+            "transferSize": 130255
+          },
+          "documentTitle": "U.S. News & World Report: News, Rankings and Analysis on Politics, Education, Healthcare and More",
+          "documentWidth": 360,
+          "domElements": 2096,
+          "navigationStartTime": 1620514307743,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.usnews.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "usn-logo-large.svg",
+                "height": 40,
+                "name": "LargestImage",
+                "width": 156,
+                "x": 102,
+                "y": 283
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 993,
+          "loadEventEnd": 65010,
+          "navigationTiming": {
+            "connectStart": 32,
+            "domComplete": 64931,
+            "domContentLoadedEventEnd": 6379,
+            "domContentLoadedEventStart": 6366,
+            "domInteractive": 940,
+            "domainLookupEnd": 32,
+            "domainLookupStart": 32,
+            "duration": 65010,
+            "fetchStart": 3,
+            "loadEventEnd": 65010,
+            "loadEventStart": 64931,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 126,
+            "responseEnd": 155,
+            "responseStart": 155,
+            "secureConnectionStart": 46,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 155,
+            "domContentLoadedTime": 6366,
+            "domInteractiveTime": 940,
+            "domainLookupTime": 0,
+            "frontEndTime": 64776,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 64931,
+            "redirectionTime": 0,
+            "serverConnectionTime": 93,
+            "serverResponseTime": 29
+          },
+          "rumSpeedIndex": 155,
+          "timeToContentfulPaint": 1146,
+          "timeToDomContentFlushed": 6204,
+          "timeToFirstInteractive": 37441,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "ttfb",
+                "startTime": 271.8
+              },
+              {
+                "name": "ad_manager_start_start",
+                "startTime": 5357.38
+              },
+              {
+                "name": "ad_manager_init_start",
+                "startTime": 5358.7
+              },
+              {
+                "name": "ad_manager_load-scripts_start",
+                "startTime": 5363.74
+              },
+              {
+                "name": "ad_manager_script_gpt_start",
+                "startTime": 5824.36
+              },
+              {
+                "name": "ad_manager_script_gdpr_start",
+                "startTime": 5955.6
+              },
+              {
+                "name": "ad_manager_script_gdpr_end",
+                "startTime": 5957.34
+              },
+              {
+                "name": "ad_manager_script_optimera_start",
+                "startTime": 5961.6
+              },
+              {
+                "name": "ad_manager_script_optimeraCookieLib_start",
+                "startTime": 5961.84
+              },
+              {
+                "name": "ad_manager_script_nativo_start",
+                "startTime": 5970.52
+              },
+              {
+                "name": "ad_manager_load-scripts_end",
+                "startTime": 5981.4400000000005
+              },
+              {
+                "name": "ad_manager_init_end",
+                "startTime": 5987.16
+              },
+              {
+                "name": "ad_manager_script_optimeraCookieLib_end",
+                "startTime": 7793.76
+              },
+              {
+                "name": "ad_manager_script_gpt_end",
+                "startTime": 7943.7
+              },
+              {
+                "name": "ad_manager_script_optimera_end",
+                "startTime": 7988.92
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_start",
+                "startTime": 8061.400000000001
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_end",
+                "startTime": 8158.02
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_start",
+                "startTime": 8159.88
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_end",
+                "startTime": 8182.56
+              },
+              {
+                "name": "ad_manager_script_nativo_end",
+                "startTime": 13512.2
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 14221.32
+              },
+              {
+                "name": "ad_manager_process_start",
+                "startTime": 14863.7
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_start",
+                "startTime": 15512.44
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_end",
+                "startTime": 17004.08
+              },
+              {
+                "name": "ad_manager_process_end",
+                "startTime": 17074.760000000002
+              },
+              {
+                "name": "ad_manager_process_start",
+                "startTime": 17077.48
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_start",
+                "startTime": 17426.14
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 17693.18
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 17693.44
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 17693.58
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 17693.66
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 18872.26
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_bfad_start",
+                "startTime": 18906.78
+              },
+              {
+                "name": "ad_manager_first_ad_render_start",
+                "startTime": 18907.98
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1_start",
+                "startTime": 18909.58
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1_start",
+                "startTime": 18910.82
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2_start",
+                "startTime": 18911.86
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3_start",
+                "startTime": 18913.04
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_end",
+                "startTime": 19301.38
+              },
+              {
+                "name": "ad_manager_process_end",
+                "startTime": 19343.32
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4_start",
+                "startTime": 19432.82
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5_start",
+                "startTime": 19434.1
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 21273.72
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4_end",
+                "startTime": 21320.58
+              },
+              {
+                "name": "ad_manager_first_ad_render_end",
+                "startTime": 21320.96
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5_end",
+                "startTime": 21321.46
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_bfad_end",
+                "startTime": 21942.96
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1_end",
+                "startTime": 21943.82
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1_end",
+                "startTime": 23496.08
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2_end",
+                "startTime": 23496.66
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3_end",
+                "startTime": 23497.16
+              }
+            ],
+            "measures": [
+              {
+                "duration": 5685.54,
+                "name": "ttfb_ad_manager_script_gdpr",
+                "startTime": 271.8
+              },
+              {
+                "duration": 5709.64,
+                "name": "ttfb_ad_manager_load-scripts",
+                "startTime": 271.8
+              },
+              {
+                "duration": 5715.36,
+                "name": "ttfb_ad_manager_init",
+                "startTime": 271.8
+              },
+              {
+                "duration": 7521.96,
+                "name": "ttfb_ad_manager_script_optimeraCookieLib",
+                "startTime": 271.8
+              },
+              {
+                "duration": 7671.9,
+                "name": "ttfb_ad_manager_script_gpt",
+                "startTime": 271.8
+              },
+              {
+                "duration": 7717.12,
+                "name": "ttfb_ad_manager_script_optimera",
+                "startTime": 271.8
+              },
+              {
+                "duration": 7886.22,
+                "name": "ttfb_ad_manager_transformation_multiFormat",
+                "startTime": 271.8
+              },
+              {
+                "duration": 7910.76,
+                "name": "ttfb_ad_manager_transformation_multiFormat",
+                "startTime": 271.8
+              },
+              {
+                "duration": 13240.4,
+                "name": "ttfb_ad_manager_script_nativo",
+                "startTime": 271.8
+              },
+              {
+                "duration": 16732.280000000002,
+                "name": "ttfb_ad_manager_bid_call_multiFormat",
+                "startTime": 271.8
+              },
+              {
+                "duration": 16802.960000000003,
+                "name": "ttfb_ad_manager_process",
+                "startTime": 271.8
+              },
+              {
+                "duration": 19029.58,
+                "name": "ttfb_ad_manager_bid_call_multiFormat",
+                "startTime": 271.8
+              },
+              {
+                "duration": 19071.52,
+                "name": "ttfb_ad_manager_process",
+                "startTime": 271.8
+              },
+              {
+                "duration": 21048.78,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_4",
+                "startTime": 271.8
+              },
+              {
+                "duration": 21049.16,
+                "name": "ttfb_ad_manager_first_ad_render",
+                "startTime": 271.8
+              },
+              {
+                "duration": 21049.66,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_5",
+                "startTime": 271.8
+              },
+              {
+                "duration": 21671.16,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_bfad",
+                "startTime": 271.8
+              },
+              {
+                "duration": 21672.02,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_madh_1",
+                "startTime": 271.8
+              },
+              {
+                "duration": 23224.28,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_1",
+                "startTime": 271.8
+              },
+              {
+                "duration": 23224.86,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_2",
+                "startTime": 271.8
+              },
+              {
+                "duration": 23225.36,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_3",
+                "startTime": 271.8
+              },
+              {
+                "duration": 628.46,
+                "name": "ad_manager_init",
+                "startTime": 5358.7
+              },
+              {
+                "duration": 617.7000000000007,
+                "name": "ad_manager_load-scripts",
+                "startTime": 5363.74
+              },
+              {
+                "duration": 2119.34,
+                "name": "ad_manager_script_gpt",
+                "startTime": 5824.36
+              },
+              {
+                "duration": 1.7399999999997815,
+                "name": "ad_manager_script_gdpr",
+                "startTime": 5955.6
+              },
+              {
+                "duration": 2027.3199999999997,
+                "name": "ad_manager_script_optimera",
+                "startTime": 5961.6
+              },
+              {
+                "duration": 1831.92,
+                "name": "ad_manager_script_optimeraCookieLib",
+                "startTime": 5961.84
+              },
+              {
+                "duration": 7541.68,
+                "name": "ad_manager_script_nativo",
+                "startTime": 5970.52
+              },
+              {
+                "duration": 96.61999999999988,
+                "name": "ad_manager_transformation_multiFormat",
+                "startTime": 8061.400000000001
+              },
+              {
+                "duration": 22.68000000000029,
+                "name": "ad_manager_transformation_multiFormat",
+                "startTime": 8159.88
+              },
+              {
+                "duration": 2211.0600000000013,
+                "name": "ad_manager_process",
+                "startTime": 14863.7
+              },
+              {
+                "duration": 1491.6400000000012,
+                "name": "ad_manager_bid_call_multiFormat",
+                "startTime": 15512.44
+              },
+              {
+                "duration": 2265.84,
+                "name": "ad_manager_process",
+                "startTime": 17077.48
+              },
+              {
+                "duration": 1875.2400000000016,
+                "name": "ad_manager_bid_call_multiFormat",
+                "startTime": 17426.14
+              },
+              {
+                "duration": 0.2599999999983993,
+                "name": "lteu",
+                "startTime": 17693.18
+              },
+              {
+                "duration": 0.07999999999810825,
+                "name": "ltpq",
+                "startTime": 17693.58
+              },
+              {
+                "duration": 3036.1800000000003,
+                "name": "ad_manager_script_gpt_slot_rendered_bfad",
+                "startTime": 18906.78
+              },
+              {
+                "duration": 2412.9799999999996,
+                "name": "ad_manager_first_ad_render",
+                "startTime": 18907.98
+              },
+              {
+                "duration": 3034.239999999998,
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1",
+                "startTime": 18909.58
+              },
+              {
+                "duration": 4585.260000000002,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1",
+                "startTime": 18910.82
+              },
+              {
+                "duration": 4584.799999999999,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2",
+                "startTime": 18911.86
+              },
+              {
+                "duration": 4584.119999999999,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3",
+                "startTime": 18913.04
+              },
+              {
+                "duration": 1887.760000000002,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4",
+                "startTime": 19432.82
+              },
+              {
+                "duration": 1887.359999999997,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5",
+                "startTime": 19434.1
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 13545,
+          "documentSize": {
+            "decodedBodySize": 1133652,
+            "encodedBodySize": 128651,
+            "transferSize": 130255
+          },
+          "documentTitle": "U.S. News & World Report: News, Rankings and Analysis on Politics, Education, Healthcare and More",
+          "documentWidth": 360,
+          "domElements": 2096,
+          "navigationStartTime": 1620514392360,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.usnews.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "usn-logo-large.svg",
+                "height": 40,
+                "name": "LargestImage",
+                "width": 156,
+                "x": 102,
+                "y": 283
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 942,
+          "loadEventEnd": 63974,
+          "navigationTiming": {
+            "connectStart": 36,
+            "domComplete": 63897,
+            "domContentLoadedEventEnd": 6260,
+            "domContentLoadedEventStart": 6247,
+            "domInteractive": 924,
+            "domainLookupEnd": 35,
+            "domainLookupStart": 35,
+            "duration": 63974,
+            "fetchStart": 3,
+            "loadEventEnd": 63974,
+            "loadEventStart": 63897,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 120,
+            "responseEnd": 146,
+            "responseStart": 146,
+            "secureConnectionStart": 47,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 146,
+            "domContentLoadedTime": 6247,
+            "domInteractiveTime": 924,
+            "domainLookupTime": 0,
+            "frontEndTime": 63751,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 63897,
+            "redirectionTime": 0,
+            "serverConnectionTime": 81,
+            "serverResponseTime": 26
+          },
+          "rumSpeedIndex": 146,
+          "timeToContentfulPaint": 1094,
+          "timeToDomContentFlushed": 6091,
+          "timeToFirstInteractive": 41182,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "ttfb",
+                "startTime": 221.2
+              },
+              {
+                "name": "ad_manager_start_start",
+                "startTime": 5256.72
+              },
+              {
+                "name": "ad_manager_init_start",
+                "startTime": 5257.96
+              },
+              {
+                "name": "ad_manager_load-scripts_start",
+                "startTime": 5263.1
+              },
+              {
+                "name": "ad_manager_script_gpt_start",
+                "startTime": 5722.96
+              },
+              {
+                "name": "ad_manager_script_gdpr_start",
+                "startTime": 5849.66
+              },
+              {
+                "name": "ad_manager_script_gdpr_end",
+                "startTime": 5853.4400000000005
+              },
+              {
+                "name": "ad_manager_script_optimera_start",
+                "startTime": 5858.4400000000005
+              },
+              {
+                "name": "ad_manager_script_optimeraCookieLib_start",
+                "startTime": 5858.58
+              },
+              {
+                "name": "ad_manager_script_nativo_start",
+                "startTime": 5863.62
+              },
+              {
+                "name": "ad_manager_load-scripts_end",
+                "startTime": 5877.24
+              },
+              {
+                "name": "ad_manager_init_end",
+                "startTime": 5878.66
+              },
+              {
+                "name": "ad_manager_script_optimeraCookieLib_end",
+                "startTime": 8144.400000000001
+              },
+              {
+                "name": "ad_manager_script_optimera_end",
+                "startTime": 8281.8
+              },
+              {
+                "name": "ad_manager_script_gpt_end",
+                "startTime": 8381.5
+              },
+              {
+                "name": "ad_manager_script_nativo_end",
+                "startTime": 8531.1
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_start",
+                "startTime": 8804.22
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_end",
+                "startTime": 8923.44
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_start",
+                "startTime": 8925.6
+              },
+              {
+                "name": "ad_manager_transformation_multiFormat_end",
+                "startTime": 8948.16
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 10011.38
+              },
+              {
+                "name": "ad_manager_process_start",
+                "startTime": 10292.28
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_start",
+                "startTime": 10788.98
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_end",
+                "startTime": 12604.88
+              },
+              {
+                "name": "ad_manager_process_end",
+                "startTime": 12678.72
+              },
+              {
+                "name": "ad_manager_process_start",
+                "startTime": 12680.96
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_start",
+                "startTime": 13014.28
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 13459.32
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 13459.56
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 13459.7
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 13459.8
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 14284.5
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_bfad_start",
+                "startTime": 14306.3
+              },
+              {
+                "name": "ad_manager_first_ad_render_start",
+                "startTime": 14306.5
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1_start",
+                "startTime": 14307.32
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1_start",
+                "startTime": 14307.76
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2_start",
+                "startTime": 14309
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3_start",
+                "startTime": 14309.84
+              },
+              {
+                "name": "ad_manager_bid_call_multiFormat_end",
+                "startTime": 14510.8
+              },
+              {
+                "name": "ad_manager_process_end",
+                "startTime": 14544.56
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4_start",
+                "startTime": 14630.18
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5_start",
+                "startTime": 14630.68
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 17266.16
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4_end",
+                "startTime": 17297.420000000002
+              },
+              {
+                "name": "ad_manager_first_ad_render_end",
+                "startTime": 17297.78
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5_end",
+                "startTime": 17298.260000000002
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_bfad_end",
+                "startTime": 17742.38
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1_end",
+                "startTime": 17742.68
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1_end",
+                "startTime": 18651.94
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2_end",
+                "startTime": 18654.56
+              },
+              {
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3_end",
+                "startTime": 18655.18
+              }
+            ],
+            "measures": [
+              {
+                "duration": 5632.240000000001,
+                "name": "ttfb_ad_manager_script_gdpr",
+                "startTime": 221.2
+              },
+              {
+                "duration": 5656.04,
+                "name": "ttfb_ad_manager_load-scripts",
+                "startTime": 221.2
+              },
+              {
+                "duration": 5657.46,
+                "name": "ttfb_ad_manager_init",
+                "startTime": 221.2
+              },
+              {
+                "duration": 7923.200000000001,
+                "name": "ttfb_ad_manager_script_optimeraCookieLib",
+                "startTime": 221.2
+              },
+              {
+                "duration": 8060.599999999999,
+                "name": "ttfb_ad_manager_script_optimera",
+                "startTime": 221.2
+              },
+              {
+                "duration": 8160.3,
+                "name": "ttfb_ad_manager_script_gpt",
+                "startTime": 221.2
+              },
+              {
+                "duration": 8309.9,
+                "name": "ttfb_ad_manager_script_nativo",
+                "startTime": 221.2
+              },
+              {
+                "duration": 8702.24,
+                "name": "ttfb_ad_manager_transformation_multiFormat",
+                "startTime": 221.2
+              },
+              {
+                "duration": 8726.96,
+                "name": "ttfb_ad_manager_transformation_multiFormat",
+                "startTime": 221.2
+              },
+              {
+                "duration": 12383.68,
+                "name": "ttfb_ad_manager_bid_call_multiFormat",
+                "startTime": 221.2
+              },
+              {
+                "duration": 12457.52,
+                "name": "ttfb_ad_manager_process",
+                "startTime": 221.2
+              },
+              {
+                "duration": 14289.6,
+                "name": "ttfb_ad_manager_bid_call_multiFormat",
+                "startTime": 221.2
+              },
+              {
+                "duration": 14323.36,
+                "name": "ttfb_ad_manager_process",
+                "startTime": 221.2
+              },
+              {
+                "duration": 17076.22,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_4",
+                "startTime": 221.2
+              },
+              {
+                "duration": 17076.579999999998,
+                "name": "ttfb_ad_manager_first_ad_render",
+                "startTime": 221.2
+              },
+              {
+                "duration": 17077.06,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_5",
+                "startTime": 221.2
+              },
+              {
+                "duration": 17521.18,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_bfad",
+                "startTime": 221.2
+              },
+              {
+                "duration": 17521.48,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_madh_1",
+                "startTime": 221.2
+              },
+              {
+                "duration": 18430.74,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_1",
+                "startTime": 221.2
+              },
+              {
+                "duration": 18433.36,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_2",
+                "startTime": 221.2
+              },
+              {
+                "duration": 18433.98,
+                "name": "ttfb_ad_manager_script_gpt_slot_rendered_mrect_3",
+                "startTime": 221.2
+              },
+              {
+                "duration": 620.6999999999998,
+                "name": "ad_manager_init",
+                "startTime": 5257.96
+              },
+              {
+                "duration": 614.1399999999994,
+                "name": "ad_manager_load-scripts",
+                "startTime": 5263.1
+              },
+              {
+                "duration": 2658.54,
+                "name": "ad_manager_script_gpt",
+                "startTime": 5722.96
+              },
+              {
+                "duration": 3.780000000000655,
+                "name": "ad_manager_script_gdpr",
+                "startTime": 5849.66
+              },
+              {
+                "duration": 2423.3599999999988,
+                "name": "ad_manager_script_optimera",
+                "startTime": 5858.4400000000005
+              },
+              {
+                "duration": 2285.8200000000006,
+                "name": "ad_manager_script_optimeraCookieLib",
+                "startTime": 5858.58
+              },
+              {
+                "duration": 2667.4800000000005,
+                "name": "ad_manager_script_nativo",
+                "startTime": 5863.62
+              },
+              {
+                "duration": 119.22000000000116,
+                "name": "ad_manager_transformation_multiFormat",
+                "startTime": 8804.22
+              },
+              {
+                "duration": 22.55999999999949,
+                "name": "ad_manager_transformation_multiFormat",
+                "startTime": 8925.6
+              },
+              {
+                "duration": 2386.4400000000005,
+                "name": "ad_manager_process",
+                "startTime": 10292.28
+              },
+              {
+                "duration": 1815.9000000000017,
+                "name": "ad_manager_bid_call_multiFormat",
+                "startTime": 10788.98
+              },
+              {
+                "duration": 1863.5999999999983,
+                "name": "ad_manager_process",
+                "startTime": 12680.96
+              },
+              {
+                "duration": 1496.5200000000004,
+                "name": "ad_manager_bid_call_multiFormat",
+                "startTime": 13014.28
+              },
+              {
+                "duration": 0.23999999999978172,
+                "name": "lteu",
+                "startTime": 13459.32
+              },
+              {
+                "duration": 0.1000000000003638,
+                "name": "ltpq",
+                "startTime": 13459.7
+              },
+              {
+                "duration": 3436.08,
+                "name": "ad_manager_script_gpt_slot_rendered_bfad",
+                "startTime": 14306.3
+              },
+              {
+                "duration": 2991.279999999999,
+                "name": "ad_manager_first_ad_render",
+                "startTime": 14306.5
+              },
+              {
+                "duration": 3435.3600000000006,
+                "name": "ad_manager_script_gpt_slot_rendered_madh_1",
+                "startTime": 14307.32
+              },
+              {
+                "duration": 4344.1799999999985,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_1",
+                "startTime": 14307.76
+              },
+              {
+                "duration": 4345.560000000001,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_2",
+                "startTime": 14309
+              },
+              {
+                "duration": 4345.34,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_3",
+                "startTime": 14309.84
+              },
+              {
+                "duration": 2667.2400000000016,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_4",
+                "startTime": 14630.18
+              },
+              {
+                "duration": 2667.5800000000017,
+                "name": "ad_manager_script_gpt_slot_rendered_mrect_5",
+                "startTime": 14630.68
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "visualMetrics": [],
+    "cpu": [],
+    "extras": [
+      {},
+      {},
+      {}
+    ],
+    "fullyLoaded": [],
+    "errors": [
+      [],
+      [],
+      []
+    ],
+    "statistics": {
+      "browser": {
+        "appConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        },
+        "asyncAppConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        }
+      },
+      "pageinfo": {
+        "documentHeight": {
+          "median": 13545,
+          "mean": 13545,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 13545,
+          "p10": 13545,
+          "p90": 13545,
+          "p99": 13545,
+          "max": 13545
+        },
+        "documentSize": {
+          "decodedBodySize": {
+            "median": 1133652,
+            "mean": 1133652,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 1133652,
+            "p10": 1133652,
+            "p90": 1133652,
+            "p99": 1133652,
+            "max": 1133652
+          },
+          "encodedBodySize": {
+            "median": 128651,
+            "mean": 128651,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 128651,
+            "p10": 128651,
+            "p90": 128651,
+            "p99": 128651,
+            "max": 128651
+          },
+          "transferSize": {
+            "median": 130255,
+            "mean": 130257,
+            "mdev": 1.3608,
+            "stddev": 2,
+            "min": 130255,
+            "p10": 130255,
+            "p90": 130260,
+            "p99": 130260,
+            "max": 130260
+          }
+        },
+        "documentWidth": {
+          "median": 360,
+          "mean": 360,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 360,
+          "p10": 360,
+          "p90": 360,
+          "p99": 360,
+          "max": 360
+        },
+        "domElements": {
+          "median": 2096,
+          "mean": 2095,
+          "mdev": 0.5443,
+          "stddev": 1,
+          "min": 2094,
+          "p10": 2094,
+          "p90": 2096,
+          "p99": 2096,
+          "max": 2096
+        },
+        "navigationStartTime": {
+          "median": 1620514307743,
+          "mean": 1620514306099,
+          "mdev": 41830.6286,
+          "stddev": 72453,
+          "min": 1620514218193,
+          "p10": 1620514218193,
+          "p90": 1620514392360,
+          "p99": 1620514392360,
+          "max": 1620514392360
+        },
+        "resources": {
+          "count": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "duration": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "visualElements": {
+          "heroes": [
+            {
+              "height": {
+                "median": 40,
+                "mean": 40,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 40,
+                "p10": 40,
+                "p90": 40,
+                "p99": 40,
+                "max": 40
+              },
+              "width": {
+                "median": 156,
+                "mean": 156,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 156,
+                "p10": 156,
+                "p90": 156,
+                "p99": 156,
+                "max": 156
+              },
+              "x": {
+                "median": 102,
+                "mean": 102,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 102,
+                "p10": 102,
+                "p90": 102,
+                "p99": 102,
+                "max": 102
+              },
+              "y": {
+                "median": 283,
+                "mean": 283,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 283,
+                "p10": 283,
+                "p90": 283,
+                "p99": 283,
+                "max": 283
+              }
+            }
+          ],
+          "viewport": {
+            "height": {
+              "median": 560,
+              "mean": 560,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 560,
+              "p10": 560,
+              "p90": 560,
+              "p99": 560,
+              "max": 560
+            },
+            "width": {
+              "median": 360,
+              "mean": 360,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 360,
+              "p10": 360,
+              "p90": 360,
+              "p99": 360,
+              "max": 360
+            }
+          }
+        }
+      },
+      "timings": {
+        "firstPaint": {
+          "median": 993,
+          "mean": 1141,
+          "mdev": 141.9001,
+          "stddev": 246,
+          "min": 942,
+          "p10": 942,
+          "p90": 1487,
+          "p99": 1487,
+          "max": 1487
+        },
+        "loadEventEnd": {
+          "median": 65010,
+          "mean": 66374,
+          "mdev": 1556.1962,
+          "stddev": 2695,
+          "min": 63974,
+          "p10": 63974,
+          "p90": 70139,
+          "p99": 70139,
+          "max": 70139
+        },
+        "navigationTiming": {
+          "connectStart": {
+            "median": 36,
+            "mean": 36,
+            "mdev": 1.6555,
+            "stddev": 3,
+            "min": 32,
+            "p10": 32,
+            "p90": 39,
+            "p99": 39,
+            "max": 39
+          },
+          "domComplete": {
+            "median": 64931,
+            "mean": 66298,
+            "mdev": 1557.1976,
+            "stddev": 2697,
+            "min": 63897,
+            "p10": 63897,
+            "p90": 70065,
+            "p99": 70065,
+            "max": 70065
+          },
+          "domContentLoadedEventEnd": {
+            "median": 6379,
+            "mean": 6971,
+            "mdev": 532.9583,
+            "stddev": 923,
+            "min": 6260,
+            "p10": 6260,
+            "p90": 8275,
+            "p99": 8275,
+            "max": 8275
+          },
+          "domContentLoadedEventStart": {
+            "median": 6366,
+            "mean": 6956,
+            "mdev": 531.3275,
+            "stddev": 920,
+            "min": 6247,
+            "p10": 6247,
+            "p90": 8256,
+            "p99": 8256,
+            "max": 8256
+          },
+          "domInteractive": {
+            "median": 940,
+            "mean": 1106,
+            "mdev": 141.8484,
+            "stddev": 246,
+            "min": 924,
+            "p10": 924,
+            "p90": 1453,
+            "p99": 1453,
+            "max": 1453
+          },
+          "domainLookupEnd": {
+            "median": 35,
+            "mean": 35,
+            "mdev": 1.4142,
+            "stddev": 2,
+            "min": 32,
+            "p10": 32,
+            "p90": 38,
+            "p99": 38,
+            "max": 38
+          },
+          "domainLookupStart": {
+            "median": 35,
+            "mean": 35,
+            "mdev": 1.4142,
+            "stddev": 2,
+            "min": 32,
+            "p10": 32,
+            "p90": 38,
+            "p99": 38,
+            "max": 38
+          },
+          "duration": {
+            "median": 65010,
+            "mean": 66374,
+            "mdev": 1556.1962,
+            "stddev": 2695,
+            "min": 63974,
+            "p10": 63974,
+            "p90": 70139,
+            "p99": 70139,
+            "max": 70139
+          },
+          "fetchStart": {
+            "median": 3,
+            "mean": 3,
+            "mdev": 0.2722,
+            "stddev": 0,
+            "min": 3,
+            "p10": 3,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          },
+          "loadEventEnd": {
+            "median": 65010,
+            "mean": 66374,
+            "mdev": 1556.1962,
+            "stddev": 2695,
+            "min": 63974,
+            "p10": 63974,
+            "p90": 70139,
+            "p99": 70139,
+            "max": 70139
+          },
+          "loadEventStart": {
+            "median": 64931,
+            "mean": 66298,
+            "mdev": 1557.1976,
+            "stddev": 2697,
+            "min": 63897,
+            "p10": 63897,
+            "p90": 70065,
+            "p99": 70065,
+            "max": 70065
+          },
+          "redirectEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "redirectStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "requestStart": {
+            "median": 126,
+            "mean": 133,
+            "mdev": 8.5548,
+            "stddev": 15,
+            "min": 120,
+            "p10": 120,
+            "p90": 154,
+            "p99": 154,
+            "max": 154
+          },
+          "responseEnd": {
+            "median": 155,
+            "mean": 260,
+            "mdev": 89.4315,
+            "stddev": 155,
+            "min": 146,
+            "p10": 146,
+            "p90": 479,
+            "p99": 479,
+            "max": 479
+          },
+          "responseStart": {
+            "median": 155,
+            "mean": 260,
+            "mdev": 89.4315,
+            "stddev": 155,
+            "min": 146,
+            "p10": 146,
+            "p90": 479,
+            "p99": 479,
+            "max": 479
+          },
+          "secureConnectionStart": {
+            "median": 47,
+            "mean": 50,
+            "mdev": 2.5963,
+            "stddev": 4,
+            "min": 46,
+            "p10": 46,
+            "p90": 56,
+            "p99": 56,
+            "max": 56
+          },
+          "startTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "workerStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "pageTimings": {
+          "backEndTime": {
+            "median": 155,
+            "mean": 260,
+            "mdev": 89.4315,
+            "stddev": 155,
+            "min": 146,
+            "p10": 146,
+            "p90": 479,
+            "p99": 479,
+            "max": 479
+          },
+          "domContentLoadedTime": {
+            "median": 6366,
+            "mean": 6956,
+            "mdev": 531.3275,
+            "stddev": 920,
+            "min": 6247,
+            "p10": 6247,
+            "p90": 8256,
+            "p99": 8256,
+            "max": 8256
+          },
+          "domInteractiveTime": {
+            "median": 940,
+            "mean": 1106,
+            "mdev": 141.8484,
+            "stddev": 246,
+            "min": 924,
+            "p10": 924,
+            "p90": 1453,
+            "p99": 1453,
+            "max": 1453
+          },
+          "domainLookupTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "frontEndTime": {
+            "median": 64776,
+            "mean": 66038,
+            "mdev": 1468.6092,
+            "stddev": 2544,
+            "min": 63751,
+            "p10": 63751,
+            "p90": 69586,
+            "p99": 69586,
+            "max": 69586
+          },
+          "pageDownloadTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "pageLoadTime": {
+            "median": 64931,
+            "mean": 66298,
+            "mdev": 1557.1976,
+            "stddev": 2697,
+            "min": 63897,
+            "p10": 63897,
+            "p90": 70065,
+            "p99": 70065,
+            "max": 70065
+          },
+          "redirectionTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "serverConnectionTime": {
+            "median": 93,
+            "mean": 96,
+            "mdev": 7.874,
+            "stddev": 14,
+            "min": 81,
+            "p10": 81,
+            "p90": 114,
+            "p99": 114,
+            "max": 114
+          },
+          "serverResponseTime": {
+            "median": 29,
+            "mean": 127,
+            "mdev": 80.9723,
+            "stddev": 140,
+            "min": 26,
+            "p10": 26,
+            "p90": 325,
+            "p99": 325,
+            "max": 325
+          }
+        },
+        "rumSpeedIndex": {
+          "median": 155,
+          "mean": 260,
+          "mdev": 89.4315,
+          "stddev": 155,
+          "min": 146,
+          "p10": 146,
+          "p90": 479,
+          "p99": 479,
+          "max": 479
+        },
+        "timeToContentfulPaint": {
+          "median": 1146,
+          "mean": 1316,
+          "mdev": 160.502,
+          "stddev": 278,
+          "min": 1094,
+          "p10": 1094,
+          "p90": 1708,
+          "p99": 1708,
+          "max": 1708
+        },
+        "timeToDomContentFlushed": {
+          "median": 6204,
+          "mean": 6734,
+          "mdev": 479.3436,
+          "stddev": 830,
+          "min": 6091,
+          "p10": 6091,
+          "p90": 7906,
+          "p99": 7906,
+          "max": 7906
+        },
+        "timeToFirstInteractive": {
+          "median": 37441,
+          "mean": 38627,
+          "mdev": 1043.8202,
+          "stddev": 1808,
+          "min": 37259,
+          "p10": 37259,
+          "p90": 41182,
+          "p99": 41182,
+          "max": 41182
+        },
+        "userTimings": {
+          "marks": {
+            "ttfb": {
+              "median": 272,
+              "mean": 398,
+              "mdev": 124.3921,
+              "stddev": 215,
+              "min": 221,
+              "p10": 221,
+              "p90": 701,
+              "p99": 701,
+              "max": 701
+            },
+            "ad_manager_start_start": {
+              "median": 5357,
+              "mean": 5814,
+              "mdev": 414.3687,
+              "stddev": 718,
+              "min": 5257,
+              "p10": 5257,
+              "p90": 6827,
+              "p99": 6827,
+              "max": 6827
+            },
+            "ad_manager_init_start": {
+              "median": 5359,
+              "mean": 5816,
+              "mdev": 414.973,
+              "stddev": 719,
+              "min": 5258,
+              "p10": 5258,
+              "p90": 6831,
+              "p99": 6831,
+              "max": 6831
+            },
+            "ad_manager_load-scripts_start": {
+              "median": 5364,
+              "mean": 5822,
+              "mdev": 416.1101,
+              "stddev": 721,
+              "min": 5263,
+              "p10": 5263,
+              "p90": 6840,
+              "p99": 6840,
+              "max": 6840
+            },
+            "ad_manager_script_gpt_start": {
+              "median": 5824,
+              "mean": 6329,
+              "mdev": 453.7691,
+              "stddev": 786,
+              "min": 5723,
+              "p10": 5723,
+              "p90": 7439,
+              "p99": 7439,
+              "max": 7439
+            },
+            "ad_manager_script_gdpr_start": {
+              "median": 5956,
+              "mean": 6466,
+              "mdev": 460.993,
+              "stddev": 798,
+              "min": 5850,
+              "p10": 5850,
+              "p90": 7594,
+              "p99": 7594,
+              "max": 7594
+            },
+            "ad_manager_script_gdpr_end": {
+              "median": 5957,
+              "mean": 6469,
+              "mdev": 460.7607,
+              "stddev": 798,
+              "min": 5853,
+              "p10": 5853,
+              "p90": 7596,
+              "p99": 7596,
+              "max": 7596
+            },
+            "ad_manager_script_optimera_start": {
+              "median": 5962,
+              "mean": 6475,
+              "mdev": 461.7761,
+              "stddev": 800,
+              "min": 5858,
+              "p10": 5858,
+              "p90": 7604,
+              "p99": 7604,
+              "max": 7604
+            },
+            "ad_manager_script_optimeraCookieLib_start": {
+              "median": 5962,
+              "mean": 6475,
+              "mdev": 461.7855,
+              "stddev": 800,
+              "min": 5859,
+              "p10": 5859,
+              "p90": 7605,
+              "p99": 7605,
+              "max": 7605
+            },
+            "ad_manager_script_nativo_start": {
+              "median": 5971,
+              "mean": 6482,
+              "mdev": 461.5924,
+              "stddev": 800,
+              "min": 5864,
+              "p10": 5864,
+              "p90": 7611,
+              "p99": 7611,
+              "max": 7611
+            },
+            "ad_manager_load-scripts_end": {
+              "median": 5981,
+              "mean": 6495,
+              "mdev": 462.474,
+              "stddev": 801,
+              "min": 5877,
+              "p10": 5877,
+              "p90": 7626,
+              "p99": 7626,
+              "max": 7626
+            },
+            "ad_manager_init_end": {
+              "median": 5987,
+              "mean": 6498,
+              "mdev": 462.0153,
+              "stddev": 800,
+              "min": 5879,
+              "p10": 5879,
+              "p90": 7628,
+              "p99": 7628,
+              "max": 7628
+            },
+            "ad_manager_script_optimeraCookieLib_end": {
+              "median": 8144,
+              "mean": 8543,
+              "mdev": 475.4501,
+              "stddev": 824,
+              "min": 7794,
+              "p10": 7794,
+              "p90": 9689,
+              "p99": 9689,
+              "max": 9689
+            },
+            "ad_manager_script_gpt_end": {
+              "median": 8382,
+              "mean": 8729,
+              "mdev": 474.0329,
+              "stddev": 821,
+              "min": 7944,
+              "p10": 7944,
+              "p90": 9863,
+              "p99": 9863,
+              "max": 9863
+            },
+            "ad_manager_script_optimera_end": {
+              "median": 8282,
+              "mean": 8727,
+              "mdev": 487.7802,
+              "stddev": 845,
+              "min": 7989,
+              "p10": 7989,
+              "p90": 9910,
+              "p99": 9910,
+              "max": 9910
+            },
+            "ad_manager_transformation_multiFormat_start": {
+              "median": 8926,
+              "mean": 9128,
+              "mdev": 510.4635,
+              "stddev": 884,
+              "min": 8160,
+              "p10": 8160,
+              "p90": 10297,
+              "p99": 10297,
+              "max": 10297
+            },
+            "ad_manager_transformation_multiFormat_end": {
+              "median": 8948,
+              "mean": 9154,
+              "mdev": 513.3774,
+              "stddev": 889,
+              "min": 8183,
+              "p10": 8183,
+              "p90": 10331,
+              "p99": 10331,
+              "max": 10331
+            },
+            "ad_manager_script_nativo_end": {
+              "median": 11289,
+              "mean": 11111,
+              "mdev": 1176.3149,
+              "stddev": 2037,
+              "min": 8531,
+              "p10": 8531,
+              "p90": 13512,
+              "p99": 13512,
+              "max": 13512
+            },
+            "gpt-tag-load": {
+              "median": 12181,
+              "mean": 12138,
+              "mdev": 992.4507,
+              "stddev": 1719,
+              "min": 10011,
+              "p10": 10011,
+              "p90": 14221,
+              "p99": 14221,
+              "max": 14221
+            },
+            "ad_manager_process_start": {
+              "median": 16726,
+              "mean": 15495,
+              "mdev": 1151.7912,
+              "stddev": 1995,
+              "min": 12681,
+              "p10": 12681,
+              "p90": 17077,
+              "p99": 17077,
+              "max": 17077
+            },
+            "ad_manager_bid_call_multiFormat_start": {
+              "median": 17287,
+              "mean": 15909,
+              "mdev": 1182.2611,
+              "stddev": 2048,
+              "min": 13014,
+              "p10": 13014,
+              "p90": 17426,
+              "p99": 17426,
+              "max": 17426
+            },
+            "ad_manager_bid_call_multiFormat_end": {
+              "median": 18864,
+              "mean": 17559,
+              "mdev": 1248.5555,
+              "stddev": 2163,
+              "min": 14511,
+              "p10": 14511,
+              "p90": 19301,
+              "p99": 19301,
+              "max": 19301
+            },
+            "ad_manager_process_end": {
+              "median": 18925,
+              "mean": 17604,
+              "mdev": 1253.0186,
+              "stddev": 2170,
+              "min": 14545,
+              "p10": 14545,
+              "p90": 19343,
+              "p99": 19343,
+              "max": 19343
+            },
+            "loadStarteventUtils": {
+              "median": 17693,
+              "mean": 16458,
+              "mdev": 1230.7365,
+              "stddev": 2132,
+              "min": 13459,
+              "p10": 13459,
+              "p90": 18223,
+              "p99": 18223,
+              "max": 18223
+            },
+            "loadEndeventUtils": {
+              "median": 17693,
+              "mean": 16459,
+              "mdev": 1230.7674,
+              "stddev": 2132,
+              "min": 13460,
+              "p10": 13460,
+              "p90": 18223,
+              "p99": 18223,
+              "max": 18223
+            },
+            "loadStartpixelQueue": {
+              "median": 17694,
+              "mean": 16459,
+              "mdev": 1230.7738,
+              "stddev": 2132,
+              "min": 13460,
+              "p10": 13460,
+              "p90": 18223,
+              "p99": 18223,
+              "max": 18223
+            },
+            "loadEndpixelQueue": {
+              "median": 17694,
+              "mean": 16459,
+              "mdev": 1230.7779,
+              "stddev": 2132,
+              "min": 13460,
+              "p10": 13460,
+              "p90": 18224,
+              "p99": 18224,
+              "max": 18224
+            },
+            "gpt-first-ad-request": {
+              "median": 18872,
+              "mean": 17500,
+              "mdev": 1317.4545,
+              "stddev": 2282,
+              "min": 14285,
+              "p10": 14285,
+              "p90": 19344,
+              "p99": 19344,
+              "max": 19344
+            },
+            "ad_manager_script_gpt_slot_rendered_bfad_start": {
+              "median": 18907,
+              "mean": 17529,
+              "mdev": 1320.2641,
+              "stddev": 2287,
+              "min": 14306,
+              "p10": 14306,
+              "p90": 19374,
+              "p99": 19374,
+              "max": 19374
+            },
+            "ad_manager_first_ad_render_start": {
+              "median": 18908,
+              "mean": 17530,
+              "mdev": 1320.3739,
+              "stddev": 2287,
+              "min": 14307,
+              "p10": 14307,
+              "p90": 19374,
+              "p99": 19374,
+              "max": 19374
+            },
+            "ad_manager_script_gpt_slot_rendered_madh_1_start": {
+              "median": 18910,
+              "mean": 17531,
+              "mdev": 1320.4551,
+              "stddev": 2287,
+              "min": 14307,
+              "p10": 14307,
+              "p90": 19375,
+              "p99": 19375,
+              "max": 19375
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_1_start": {
+              "median": 18911,
+              "mean": 17531,
+              "mdev": 1320.5572,
+              "stddev": 2287,
+              "min": 14308,
+              "p10": 14308,
+              "p90": 19375,
+              "p99": 19375,
+              "max": 19375
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_2_start": {
+              "median": 18912,
+              "mean": 17532,
+              "mdev": 1320.4937,
+              "stddev": 2287,
+              "min": 14309,
+              "p10": 14309,
+              "p90": 19376,
+              "p99": 19376,
+              "max": 19376
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_3_start": {
+              "median": 18913,
+              "mean": 17533,
+              "mdev": 1320.4897,
+              "stddev": 2287,
+              "min": 14310,
+              "p10": 14310,
+              "p90": 19377,
+              "p99": 19377,
+              "max": 19377
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_4_start": {
+              "median": 19378,
+              "mean": 17814,
+              "mdev": 1299.6771,
+              "stddev": 2251,
+              "min": 14630,
+              "p10": 14630,
+              "p90": 19433,
+              "p99": 19433,
+              "max": 19433
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_5_start": {
+              "median": 19378,
+              "mean": 17814,
+              "mdev": 1299.769,
+              "stddev": 2251,
+              "min": 14631,
+              "p10": 14631,
+              "p90": 19434,
+              "p99": 19434,
+              "max": 19434
+            },
+            "gpt-first-ad-render": {
+              "median": 21274,
+              "mean": 20186,
+              "mdev": 1205.1068,
+              "stddev": 2087,
+              "min": 17266,
+              "p10": 17266,
+              "p90": 22020,
+              "p99": 22020,
+              "max": 22020
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_4_end": {
+              "median": 21321,
+              "mean": 20226,
+              "mdev": 1208.2271,
+              "stddev": 2093,
+              "min": 17297,
+              "p10": 17297,
+              "p90": 22060,
+              "p99": 22060,
+              "max": 22060
+            },
+            "ad_manager_first_ad_render_end": {
+              "median": 21321,
+              "mean": 20226,
+              "mdev": 1208.2224,
+              "stddev": 2093,
+              "min": 17298,
+              "p10": 17298,
+              "p90": 22060,
+              "p99": 22060,
+              "max": 22060
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_5_end": {
+              "median": 21321,
+              "mean": 20227,
+              "mdev": 1208.3054,
+              "stddev": 2093,
+              "min": 17298,
+              "p10": 17298,
+              "p90": 22061,
+              "p99": 22061,
+              "max": 22061
+            },
+            "ad_manager_script_gpt_slot_rendered_bfad_end": {
+              "median": 21943,
+              "mean": 20671,
+              "mdev": 1198.8288,
+              "stddev": 2076,
+              "min": 17742,
+              "p10": 17742,
+              "p90": 22326,
+              "p99": 22326,
+              "max": 22326
+            },
+            "ad_manager_script_gpt_slot_rendered_madh_1_end": {
+              "median": 21944,
+              "mean": 21022,
+              "mdev": 1380.7751,
+              "stddev": 2392,
+              "min": 17743,
+              "p10": 17743,
+              "p90": 23379,
+              "p99": 23379,
+              "max": 23379
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_1_end": {
+              "median": 23379,
+              "mean": 21842,
+              "mdev": 1302.807,
+              "stddev": 2257,
+              "min": 18652,
+              "p10": 18652,
+              "p90": 23496,
+              "p99": 23496,
+              "max": 23496
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_2_end": {
+              "median": 23380,
+              "mean": 21844,
+              "mdev": 1302.2126,
+              "stddev": 2255,
+              "min": 18655,
+              "p10": 18655,
+              "p90": 23497,
+              "p99": 23497,
+              "max": 23497
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_3_end": {
+              "median": 23380,
+              "mean": 21844,
+              "mdev": 1302.1485,
+              "stddev": 2255,
+              "min": 18655,
+              "p10": 18655,
+              "p90": 23497,
+              "p99": 23497,
+              "max": 23497
+            }
+          },
+          "measures": {
+            "ttfb_ad_manager_script_gdpr": {
+              "median": 5686,
+              "mean": 6071,
+              "mdev": 336.525,
+              "stddev": 583,
+              "min": 5632,
+              "p10": 5632,
+              "p90": 6895,
+              "p99": 6895,
+              "max": 6895
+            },
+            "ttfb_ad_manager_load-scripts": {
+              "median": 5710,
+              "mean": 6097,
+              "mdev": 338.2384,
+              "stddev": 586,
+              "min": 5656,
+              "p10": 5656,
+              "p90": 6925,
+              "p99": 6925,
+              "max": 6925
+            },
+            "ttfb_ad_manager_init": {
+              "median": 5715,
+              "mean": 6100,
+              "mdev": 337.7638,
+              "stddev": 585,
+              "min": 5657,
+              "p10": 5657,
+              "p90": 6926,
+              "p99": 6926,
+              "max": 6926
+            },
+            "ttfb_ad_manager_script_optimeraCookieLib": {
+              "median": 7923,
+              "mean": 8144,
+              "mdev": 357.1421,
+              "stddev": 619,
+              "min": 7522,
+              "p10": 7522,
+              "p90": 8988,
+              "p99": 8988,
+              "max": 8988
+            },
+            "ttfb_ad_manager_script_gpt": {
+              "median": 8160,
+              "mean": 8331,
+              "mdev": 357.8667,
+              "stddev": 620,
+              "min": 7672,
+              "p10": 7672,
+              "p90": 9161,
+              "p99": 9161,
+              "max": 9161
+            },
+            "ttfb_ad_manager_script_optimera": {
+              "median": 8061,
+              "mean": 8329,
+              "mdev": 368.0658,
+              "stddev": 638,
+              "min": 7717,
+              "p10": 7717,
+              "p90": 9208,
+              "p99": 9208,
+              "max": 9208
+            },
+            "ttfb_ad_manager_transformation_multiFormat": {
+              "median": 8727,
+              "mean": 8756,
+              "mdev": 405.3579,
+              "stddev": 702,
+              "min": 7911,
+              "p10": 7911,
+              "p90": 9630,
+              "p99": 9630,
+              "max": 9630
+            },
+            "ttfb_ad_manager_script_nativo": {
+              "median": 10588,
+              "mean": 10713,
+              "mdev": 1163.2469,
+              "stddev": 2015,
+              "min": 8310,
+              "p10": 8310,
+              "p90": 13240,
+              "p99": 13240,
+              "max": 13240
+            },
+            "ttfb_ad_manager_bid_call_multiFormat": {
+              "median": 18162,
+              "mean": 17161,
+              "mdev": 1189.74,
+              "stddev": 2061,
+              "min": 14290,
+              "p10": 14290,
+              "p90": 19030,
+              "p99": 19030,
+              "max": 19030
+            },
+            "ttfb_ad_manager_process": {
+              "median": 18224,
+              "mean": 17206,
+              "mdev": 1193.7451,
+              "stddev": 2068,
+              "min": 14323,
+              "p10": 14323,
+              "p90": 19072,
+              "p99": 19072,
+              "max": 19072
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_mrect_4": {
+              "median": 21049,
+              "mean": 19828,
+              "mdev": 1125.7231,
+              "stddev": 1950,
+              "min": 17076,
+              "p10": 17076,
+              "p90": 21359,
+              "p99": 21359,
+              "max": 21359
+            },
+            "ttfb_ad_manager_first_ad_render": {
+              "median": 21049,
+              "mean": 19828,
+              "mdev": 1125.7194,
+              "stddev": 1950,
+              "min": 17077,
+              "p10": 17077,
+              "p90": 21359,
+              "p99": 21359,
+              "max": 21359
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_mrect_5": {
+              "median": 21050,
+              "mean": 19829,
+              "mdev": 1125.7944,
+              "stddev": 1950,
+              "min": 17077,
+              "p10": 17077,
+              "p90": 21360,
+              "p99": 21360,
+              "max": 21360
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_bfad": {
+              "median": 21625,
+              "mean": 20272,
+              "mdev": 1123.2339,
+              "stddev": 1945,
+              "min": 17521,
+              "p10": 17521,
+              "p90": 21671,
+              "p99": 21671,
+              "max": 21671
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_madh_1": {
+              "median": 21672,
+              "mean": 20624,
+              "mdev": 1288.446,
+              "stddev": 2232,
+              "min": 17521,
+              "p10": 17521,
+              "p90": 22678,
+              "p99": 22678,
+              "max": 22678
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_mrect_1": {
+              "median": 22678,
+              "mean": 21444,
+              "mdev": 1237.001,
+              "stddev": 2143,
+              "min": 18431,
+              "p10": 18431,
+              "p90": 23224,
+              "p99": 23224,
+              "max": 23224
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_mrect_2": {
+              "median": 22678,
+              "mean": 21445,
+              "mdev": 1236.4156,
+              "stddev": 2142,
+              "min": 18433,
+              "p10": 18433,
+              "p90": 23225,
+              "p99": 23225,
+              "max": 23225
+            },
+            "ttfb_ad_manager_script_gpt_slot_rendered_mrect_3": {
+              "median": 22678,
+              "mean": 21446,
+              "mdev": 1236.3565,
+              "stddev": 2141,
+              "min": 18434,
+              "p10": 18434,
+              "p90": 23225,
+              "p99": 23225,
+              "max": 23225
+            },
+            "ad_manager_init": {
+              "median": 628,
+              "mean": 682,
+              "mdev": 47.0494,
+              "stddev": 81,
+              "min": 621,
+              "p10": 621,
+              "p90": 797,
+              "p99": 797,
+              "max": 797
+            },
+            "ad_manager_load-scripts": {
+              "median": 618,
+              "mean": 673,
+              "mdev": 46.3955,
+              "stddev": 80,
+              "min": 614,
+              "p10": 614,
+              "p90": 786,
+              "p99": 786,
+              "max": 786
+            },
+            "ad_manager_script_gpt": {
+              "median": 2424,
+              "mean": 2401,
+              "mdev": 127.4472,
+              "stddev": 221,
+              "min": 2119,
+              "p10": 2119,
+              "p90": 2659,
+              "p99": 2659,
+              "max": 2659
+            },
+            "ad_manager_script_gdpr": {
+              "median": 2,
+              "mean": 3,
+              "mdev": 0.5234,
+              "stddev": 1,
+              "min": 2,
+              "p10": 2,
+              "p90": 4,
+              "p99": 4,
+              "max": 4
+            },
+            "ad_manager_script_optimera": {
+              "median": 2305,
+              "mean": 2252,
+              "mdev": 95.8445,
+              "stddev": 166,
+              "min": 2027,
+              "p10": 2027,
+              "p90": 2423,
+              "p99": 2423,
+              "max": 2423
+            },
+            "ad_manager_script_optimeraCookieLib": {
+              "median": 2085,
+              "mean": 2068,
+              "mdev": 107.2185,
+              "stddev": 186,
+              "min": 1832,
+              "p10": 1832,
+              "p90": 2286,
+              "p99": 2286,
+              "max": 2286
+            },
+            "ad_manager_script_nativo": {
+              "median": 3679,
+              "mean": 4629,
+              "mdev": 1212.6255,
+              "stddev": 2100,
+              "min": 2667,
+              "p10": 2667,
+              "p90": 7542,
+              "p99": 7542,
+              "max": 7542
+            },
+            "ad_manager_transformation_multiFormat": {
+              "median": 23,
+              "mean": 26,
+              "mdev": 3.1246,
+              "stddev": 5,
+              "min": 23,
+              "p10": 23,
+              "p90": 34,
+              "p99": 34,
+              "max": 34
+            },
+            "ad_manager_process": {
+              "median": 2199,
+              "mean": 2109,
+              "mdev": 101.5639,
+              "stddev": 176,
+              "min": 1864,
+              "p10": 1864,
+              "p90": 2266,
+              "p99": 2266,
+              "max": 2266
+            },
+            "ad_manager_bid_call_multiFormat": {
+              "median": 1577,
+              "mean": 1650,
+              "mdev": 94.0588,
+              "stddev": 163,
+              "min": 1497,
+              "p10": 1497,
+              "p90": 1875,
+              "p99": 1875,
+              "max": 1875
+            },
+            "lteu": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0465,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "ltpq": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0144,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "ad_manager_script_gpt_slot_rendered_bfad": {
+              "median": 3036,
+              "mean": 3142,
+              "mdev": 121.8577,
+              "stddev": 211,
+              "min": 2952,
+              "p10": 2952,
+              "p90": 3436,
+              "p99": 3436,
+              "max": 3436
+            },
+            "ad_manager_first_ad_render": {
+              "median": 2686,
+              "mean": 2697,
+              "mdev": 136.3752,
+              "stddev": 236,
+              "min": 2413,
+              "p10": 2413,
+              "p90": 2991,
+              "p99": 2991,
+              "max": 2991
+            },
+            "ad_manager_script_gpt_slot_rendered_madh_1": {
+              "median": 3435,
+              "mean": 3491,
+              "mdev": 229.7284,
+              "stddev": 398,
+              "min": 3034,
+              "p10": 3034,
+              "p90": 4004,
+              "p99": 4004,
+              "max": 4004
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_1": {
+              "median": 4344,
+              "mean": 4311,
+              "mdev": 137.6813,
+              "stddev": 238,
+              "min": 4004,
+              "p10": 4004,
+              "p90": 4585,
+              "p99": 4585,
+              "max": 4585
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_2": {
+              "median": 4346,
+              "mean": 4311,
+              "mdev": 137.7909,
+              "stddev": 239,
+              "min": 4003,
+              "p10": 4003,
+              "p90": 4585,
+              "p99": 4585,
+              "max": 4585
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_3": {
+              "median": 4345,
+              "mean": 4311,
+              "mdev": 137.7093,
+              "stddev": 239,
+              "min": 4003,
+              "p10": 4003,
+              "p90": 4584,
+              "p99": 4584,
+              "max": 4584
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_4": {
+              "median": 2667,
+              "mean": 2412,
+              "mdev": 214.2292,
+              "stddev": 371,
+              "min": 1888,
+              "p10": 1888,
+              "p90": 2682,
+              "p99": 2682,
+              "max": 2682
+            },
+            "ad_manager_script_gpt_slot_rendered_mrect_5": {
+              "median": 2668,
+              "mean": 2413,
+              "mdev": 214.509,
+              "stddev": 372,
+              "min": 1887,
+              "p10": 1887,
+              "p90": 2683,
+              "p99": 2683,
+              "max": 2683
+            }
+          }
+        }
+      }
+    }
+  }
+]

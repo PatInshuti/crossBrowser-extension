@@ -1,0 +1,3261 @@
+[
+  {
+    "info": {
+      "browsertime": {
+        "version": "8.4.0"
+      },
+      "url": "https://edition.cnn.com/",
+      "timestamp": "2021-05-08T01:16:25+04:00",
+      "connectivity": {
+        "engine": "external",
+        "profile": "native"
+      },
+      "extra": {}
+    },
+    "files": {
+      "video": [],
+      "screenshot": [],
+      "timeline": [],
+      "consoleLog": [],
+      "netLog": [],
+      "perfLog": []
+    },
+    "cdp": {
+      "performance": []
+    },
+    "timestamps": [
+      "2021-05-08T01:15:33+04:00",
+      "2021-05-08T01:16:37+04:00",
+      "2021-05-08T01:17:38+04:00"
+    ],
+    "browserScripts": [
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 5723,
+          "documentSize": {
+            "decodedBodySize": 1117703,
+            "encodedBodySize": 150654,
+            "transferSize": 152205
+          },
+          "documentTitle": "CNN International - Breaking News, US News, World News and Video",
+          "documentWidth": 360,
+          "domElements": 1457,
+          "navigationStartTime": 1620422133299,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://edition.cnn.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "210507114259-white-house-south-lawn-0409-large-tease.jpg",
+                "height": 191,
+                "name": "LargestImage",
+                "width": 340,
+                "x": 10,
+                "y": 185
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 3220,
+          "loadEventEnd": 44858,
+          "navigationTiming": {
+            "connectStart": 288,
+            "domComplete": 44762,
+            "domContentLoadedEventEnd": 7176,
+            "domContentLoadedEventStart": 6395,
+            "domInteractive": 6362,
+            "domainLookupEnd": 287,
+            "domainLookupStart": 287,
+            "duration": 44858,
+            "fetchStart": 9,
+            "loadEventEnd": 44858,
+            "loadEventStart": 44762,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 373,
+            "responseEnd": 387,
+            "responseStart": 387,
+            "secureConnectionStart": 303,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 387,
+            "domContentLoadedTime": 6395,
+            "domInteractiveTime": 6362,
+            "domainLookupTime": 0,
+            "frontEndTime": 44375,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 44762,
+            "redirectionTime": 0,
+            "serverConnectionTime": 84,
+            "serverResponseTime": 14
+          },
+          "rumSpeedIndex": 387,
+          "timeToContentfulPaint": 14395,
+          "timeToDomContentFlushed": 6364,
+          "timeToFirstInteractive": 38520,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "optimizelyStart",
+                "startTime": 3250.4
+              },
+              {
+                "name": "optimizely:blockBegin",
+                "startTime": 3379.4
+              },
+              {
+                "name": "optimizelyEnd",
+                "startTime": 4088.72
+              },
+              {
+                "name": "headEnd",
+                "startTime": 4089.2
+              },
+              {
+                "name": "footerStart",
+                "startTime": 4120.82
+              },
+              {
+                "name": "footerEnd",
+                "startTime": 5488.88
+              },
+              {
+                "name": "[ADFUEL] AdFuel Initialized",
+                "startTime": 5962.04
+              },
+              {
+                "name": "domReady",
+                "startTime": 6464.4400000000005
+              },
+              {
+                "name": "[ADFUEL] AdFuel DOMContentLoaded",
+                "startTime": 7129.06
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 7131.16
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 8696.3
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 12984.1
+              },
+              {
+                "name": "zonesReady",
+                "startTime": 14375.3
+              },
+              {
+                "name": "zonesAndDomReady",
+                "startTime": 14512.2
+              },
+              {
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] Start",
+                "startTime": 17573.28
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Prebid Module v4.0.32",
+                "startTime": 20344.6
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Amazon A9 Module v4.0.21",
+                "startTime": 20495.78
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Proximic Module v4.0.5",
+                "startTime": 20498.7
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Krux Module v4.1.4",
+                "startTime": 20504.18
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Integral Ad Science Module v4.0.5",
+                "startTime": 20510.62
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Beemray Module v4.0.3",
+                "startTime": 20747.66
+              },
+              {
+                "name": "[ADFUEL] Registering Module: CEP Module v4.0.4",
+                "startTime": 20755.2
+              },
+              {
+                "name": "[ADFUEL] Registering Module: In View Refresh v4.0.3",
+                "startTime": 20757.22
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Malvertising Detection v4.0.6",
+                "startTime": 20759.32
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Sourcepoint Add-on: Ad Blocking v4.0.2",
+                "startTime": 20761.18
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Transaction ID Module v4.0.2",
+                "startTime": 20765.08
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Turner GUID Module v4.0.2",
+                "startTime": 22401.66
+              },
+              {
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] End",
+                "startTime": 23588.92
+              },
+              {
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 3225225435] Start",
+                "startTime": 23594.5
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01] Start",
+                "startTime": 26509.04
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01] End",
+                "startTime": 26560.9
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02] Start",
+                "startTime": 26562.32
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02] End",
+                "startTime": 26576.94
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_nat_atf_01] Start",
+                "startTime": 26577.62
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_nat_atf_01] End",
+                "startTime": 26596.16
+              },
+              {
+                "name": "one-tap-video::embedRequest",
+                "startTime": 26849.2
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 27595.7
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 27596.12
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 27596.34
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 27596.48
+              },
+              {
+                "name": "one-tap-video::playerReady",
+                "startTime": 29879.88
+              },
+              {
+                "name": "faveReady_mark",
+                "startTime": 29908.62
+              },
+              {
+                "name": "faveReady_mark",
+                "startTime": 29909.86
+              },
+              {
+                "name": "[ADFUEL] Applying Page-Level Targeting",
+                "startTime": 30097.4
+              },
+              {
+                "name": "[ADFUEL] Applying Window Site-Level Options.",
+                "startTime": 30098.04
+              },
+              {
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 3225225435] End",
+                "startTime": 30100.34
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 30101.2
+              },
+              {
+                "name": "[ADFUEL] Page-Level GPT Build Start",
+                "startTime": 30187.98
+              },
+              {
+                "name": "[ADFUEL] Page-Level GPT Build End",
+                "startTime": 30206.06
+              },
+              {
+                "name": "[ADFUEL] Sending Request Start",
+                "startTime": 30206.54
+              },
+              {
+                "name": "[ADFUEL] Sending Request End",
+                "startTime": 30293.72
+              },
+              {
+                "name": "[ADFUEL] AdFuel Request Complete",
+                "startTime": 30294.68
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue End",
+                "startTime": 30295.1
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 32680.24
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 33893.9
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_bnr_atf_01]",
+                "startTime": 33910.98
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_bnr_atf_02]",
+                "startTime": 34028.12
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_nat_atf_01]",
+                "startTime": 34038.2
+              },
+              {
+                "name": "[ADFUEL] AdFuel window.load",
+                "startTime": 44809.28
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 44811.6
+              }
+            ],
+            "measures": [
+              {
+                "duration": 3657.2,
+                "name": "headTime",
+                "startTime": 432
+              },
+              {
+                "duration": 13943.3,
+                "name": "timeToZonesComplete",
+                "startTime": 432
+              },
+              {
+                "duration": 5929,
+                "name": "timeToInteractive",
+                "startTime": 432
+              },
+              {
+                "duration": 6032.4400000000005,
+                "name": "timeToDomReady",
+                "startTime": 432
+              },
+              {
+                "duration": 14080.2,
+                "name": "timeToZonesAndDomReady",
+                "startTime": 432
+              },
+              {
+                "duration": 29476.62,
+                "name": "faveReady",
+                "startTime": 432
+              },
+              {
+                "duration": 29477.86,
+                "name": "faveReady",
+                "startTime": 432
+              },
+              {
+                "duration": 838.3200000000002,
+                "name": "optimizelyTime",
+                "startTime": 3250.4
+              },
+              {
+                "duration": 31.619999999999436,
+                "name": "domTime",
+                "startTime": 4089.2
+              },
+              {
+                "duration": 1368.0600000000004,
+                "name": "footerTime",
+                "startTime": 4120.82
+              },
+              {
+                "duration": 6015.640000000003,
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json]",
+                "startTime": 17573.28
+              },
+              {
+                "duration": 6505.84,
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 3225225435]",
+                "startTime": 23594.5
+              },
+              {
+                "duration": 51.86000000000058,
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01]",
+                "startTime": 26509.04
+              },
+              {
+                "duration": 14.62000000000262,
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02]",
+                "startTime": 26562.32
+              },
+              {
+                "duration": 18.540000000000873,
+                "name": "[ADFUEL] Building Slot [ad_nat_atf_01]",
+                "startTime": 26577.62
+              },
+              {
+                "duration": 0.41999999999825377,
+                "name": "lteu",
+                "startTime": 27595.7
+              },
+              {
+                "duration": 0.13999999999941792,
+                "name": "ltpq",
+                "startTime": 27596.34
+              },
+              {
+                "duration": 193.90000000000143,
+                "name": "[ADFUEL] Dispatch Queue",
+                "startTime": 30101.2
+              },
+              {
+                "duration": 18.080000000001743,
+                "name": "[ADFUEL] Page-Level GPT Build",
+                "startTime": 30187.98
+              },
+              {
+                "duration": 87.18000000000029,
+                "name": "[ADFUEL] Sending Request",
+                "startTime": 30206.54
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 5723,
+          "documentSize": {
+            "decodedBodySize": 1117703,
+            "encodedBodySize": 150654,
+            "transferSize": 152205
+          },
+          "documentTitle": "CNN International - Breaking News, US News, World News and Video",
+          "documentWidth": 360,
+          "domElements": 1458,
+          "navigationStartTime": 1620422197665,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://edition.cnn.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "210507114259-white-house-south-lawn-0409-large-tease.jpg",
+                "height": 191,
+                "name": "LargestImage",
+                "width": 340,
+                "x": 10,
+                "y": 185
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 1370,
+          "loadEventEnd": 41655,
+          "navigationTiming": {
+            "connectStart": 39,
+            "domComplete": 41553,
+            "domContentLoadedEventEnd": 7073,
+            "domContentLoadedEventStart": 6441,
+            "domInteractive": 6410,
+            "domainLookupEnd": 38,
+            "domainLookupStart": 38,
+            "duration": 41655,
+            "fetchStart": 3,
+            "loadEventEnd": 41655,
+            "loadEventStart": 41554,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 139,
+            "responseEnd": 154,
+            "responseStart": 154,
+            "secureConnectionStart": 51,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 154,
+            "domContentLoadedTime": 6441,
+            "domInteractiveTime": 6410,
+            "domainLookupTime": 0,
+            "frontEndTime": 41399,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 41554,
+            "redirectionTime": 0,
+            "serverConnectionTime": 99,
+            "serverResponseTime": 15
+          },
+          "rumSpeedIndex": 154,
+          "timeToContentfulPaint": 13154,
+          "timeToDomContentFlushed": 6413,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "optimizelyStart",
+                "startTime": 2230.6
+              },
+              {
+                "name": "optimizely:blockBegin",
+                "startTime": 2340.82
+              },
+              {
+                "name": "optimizelyEnd",
+                "startTime": 2927.78
+              },
+              {
+                "name": "headEnd",
+                "startTime": 2928.04
+              },
+              {
+                "name": "footerStart",
+                "startTime": 2956.02
+              },
+              {
+                "name": "footerEnd",
+                "startTime": 5608.56
+              },
+              {
+                "name": "[ADFUEL] AdFuel Initialized",
+                "startTime": 6196.28
+              },
+              {
+                "name": "domReady",
+                "startTime": 6505.62
+              },
+              {
+                "name": "[ADFUEL] AdFuel DOMContentLoaded",
+                "startTime": 7035.82
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 7039.2
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 7326.400000000001
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 12278.84
+              },
+              {
+                "name": "zonesReady",
+                "startTime": 13107.36
+              },
+              {
+                "name": "zonesAndDomReady",
+                "startTime": 13212.94
+              },
+              {
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] Start",
+                "startTime": 14641.58
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Prebid Module v4.0.32",
+                "startTime": 18074
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Amazon A9 Module v4.0.21",
+                "startTime": 18076.4
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Proximic Module v4.0.5",
+                "startTime": 18088.34
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Krux Module v4.1.4",
+                "startTime": 18090.84
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Integral Ad Science Module v4.0.5",
+                "startTime": 18097.04
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Beemray Module v4.0.3",
+                "startTime": 18106.82
+              },
+              {
+                "name": "[ADFUEL] Registering Module: CEP Module v4.0.4",
+                "startTime": 18109.4
+              },
+              {
+                "name": "[ADFUEL] Registering Module: In View Refresh v4.0.3",
+                "startTime": 18111.68
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Malvertising Detection v4.0.6",
+                "startTime": 18113.56
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Sourcepoint Add-on: Ad Blocking v4.0.2",
+                "startTime": 18120.42
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Transaction ID Module v4.0.2",
+                "startTime": 18122.76
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Turner GUID Module v4.0.2",
+                "startTime": 19823.7
+              },
+              {
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] End",
+                "startTime": 21547.48
+              },
+              {
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 1668125143] Start",
+                "startTime": 21556
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01] Start",
+                "startTime": 22637.8
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01] End",
+                "startTime": 22692.3
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02] Start",
+                "startTime": 22693.32
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02] End",
+                "startTime": 22711.56
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_nat_atf_01] Start",
+                "startTime": 22712.36
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_nat_atf_01] End",
+                "startTime": 22743.78
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 26142.74
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 26143.04
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 26143.24
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 26143.38
+              },
+              {
+                "name": "[ADFUEL] Applying Page-Level Targeting",
+                "startTime": 26515.36
+              },
+              {
+                "name": "[ADFUEL] Applying Window Site-Level Options.",
+                "startTime": 26516.86
+              },
+              {
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 1668125143] End",
+                "startTime": 26520.3
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 26521
+              },
+              {
+                "name": "[ADFUEL] Page-Level GPT Build Start",
+                "startTime": 26627.8
+              },
+              {
+                "name": "[ADFUEL] Page-Level GPT Build End",
+                "startTime": 26654.18
+              },
+              {
+                "name": "[ADFUEL] Sending Request Start",
+                "startTime": 26654.88
+              },
+              {
+                "name": "[ADFUEL] Sending Request End",
+                "startTime": 26793.66
+              },
+              {
+                "name": "[ADFUEL] AdFuel Request Complete",
+                "startTime": 26794.98
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue End",
+                "startTime": 26795.64
+              },
+              {
+                "name": "one-tap-video::embedRequest",
+                "startTime": 27458.36
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 29399.08
+              },
+              {
+                "name": "one-tap-video::playerReady",
+                "startTime": 29622.5
+              },
+              {
+                "name": "faveReady_mark",
+                "startTime": 29646.84
+              },
+              {
+                "name": "faveReady_mark",
+                "startTime": 29647.48
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 31428.42
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_bnr_atf_01]",
+                "startTime": 31447.02
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_bnr_atf_02]",
+                "startTime": 31542.02
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_nat_atf_01]",
+                "startTime": 31548.04
+              },
+              {
+                "name": "[ADFUEL] AdFuel window.load",
+                "startTime": 41606
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 41606.96
+              }
+            ],
+            "measures": [
+              {
+                "duration": 2739.04,
+                "name": "headTime",
+                "startTime": 189
+              },
+              {
+                "duration": 12918.36,
+                "name": "timeToZonesComplete",
+                "startTime": 189
+              },
+              {
+                "duration": 6220,
+                "name": "timeToInteractive",
+                "startTime": 189
+              },
+              {
+                "duration": 6316.62,
+                "name": "timeToDomReady",
+                "startTime": 189
+              },
+              {
+                "duration": 13023.94,
+                "name": "timeToZonesAndDomReady",
+                "startTime": 189
+              },
+              {
+                "duration": 29457.84,
+                "name": "faveReady",
+                "startTime": 189
+              },
+              {
+                "duration": 29458.48,
+                "name": "faveReady",
+                "startTime": 189
+              },
+              {
+                "duration": 697.1800000000003,
+                "name": "optimizelyTime",
+                "startTime": 2230.6
+              },
+              {
+                "duration": 27.980000000000015,
+                "name": "domTime",
+                "startTime": 2928.04
+              },
+              {
+                "duration": 2652.5400000000004,
+                "name": "footerTime",
+                "startTime": 2956.02
+              },
+              {
+                "duration": 6905.9,
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json]",
+                "startTime": 14641.58
+              },
+              {
+                "duration": 4964.299999999999,
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 1668125143]",
+                "startTime": 21556
+              },
+              {
+                "duration": 54.5,
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01]",
+                "startTime": 22637.8
+              },
+              {
+                "duration": 18.2400000000016,
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02]",
+                "startTime": 22693.32
+              },
+              {
+                "duration": 31.419999999998257,
+                "name": "[ADFUEL] Building Slot [ad_nat_atf_01]",
+                "startTime": 22712.36
+              },
+              {
+                "duration": 0.2999999999992724,
+                "name": "lteu",
+                "startTime": 26142.74
+              },
+              {
+                "duration": 0.13999999999941792,
+                "name": "ltpq",
+                "startTime": 26143.24
+              },
+              {
+                "duration": 274.6399999999994,
+                "name": "[ADFUEL] Dispatch Queue",
+                "startTime": 26521
+              },
+              {
+                "duration": 26.38000000000102,
+                "name": "[ADFUEL] Page-Level GPT Build",
+                "startTime": 26627.8
+              },
+              {
+                "duration": 138.77999999999884,
+                "name": "[ADFUEL] Sending Request",
+                "startTime": 26654.88
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 8.1.0; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x560"
+        },
+        "pageinfo": {
+          "documentHeight": 5723,
+          "documentSize": {
+            "decodedBodySize": 1117703,
+            "encodedBodySize": 150654,
+            "transferSize": 152205
+          },
+          "documentTitle": "CNN International - Breaking News, US News, World News and Video",
+          "documentWidth": 360,
+          "domElements": 1455,
+          "navigationStartTime": 1620422258432,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://edition.cnn.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "210507114259-white-house-south-lawn-0409-large-tease.jpg",
+                "height": 191,
+                "name": "LargestImage",
+                "width": 340,
+                "x": 10,
+                "y": 185
+              }
+            ],
+            "viewport": {
+              "height": 560,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 1305,
+          "loadEventEnd": 32847,
+          "navigationTiming": {
+            "connectStart": 9,
+            "domComplete": 32763,
+            "domContentLoadedEventEnd": 5605,
+            "domContentLoadedEventStart": 4948,
+            "domInteractive": 4919,
+            "domainLookupEnd": 9,
+            "domainLookupStart": 4,
+            "duration": 32847,
+            "fetchStart": 2,
+            "loadEventEnd": 32847,
+            "loadEventStart": 32763,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 107,
+            "responseEnd": 115,
+            "responseStart": 115,
+            "secureConnectionStart": 19,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 115,
+            "domContentLoadedTime": 4948,
+            "domInteractiveTime": 4919,
+            "domainLookupTime": 5,
+            "frontEndTime": 32647,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 32763,
+            "redirectionTime": 0,
+            "serverConnectionTime": 96,
+            "serverResponseTime": 9
+          },
+          "rumSpeedIndex": 115,
+          "timeToContentfulPaint": 8984,
+          "timeToDomContentFlushed": 4923,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "optimizelyStart",
+                "startTime": 2176.94
+              },
+              {
+                "name": "optimizely:blockBegin",
+                "startTime": 2292.18
+              },
+              {
+                "name": "optimizelyEnd",
+                "startTime": 2854.94
+              },
+              {
+                "name": "headEnd",
+                "startTime": 2855.28
+              },
+              {
+                "name": "footerStart",
+                "startTime": 2878.96
+              },
+              {
+                "name": "footerEnd",
+                "startTime": 4105.08
+              },
+              {
+                "name": "[ADFUEL] AdFuel Initialized",
+                "startTime": 4509.82
+              },
+              {
+                "name": "domReady",
+                "startTime": 5028.58
+              },
+              {
+                "name": "[ADFUEL] AdFuel DOMContentLoaded",
+                "startTime": 5563.4400000000005
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 5565.88
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 5901.68
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 11245.48
+              },
+              {
+                "name": "zonesReady",
+                "startTime": 11440.42
+              },
+              {
+                "name": "zonesAndDomReady",
+                "startTime": 11531.52
+              },
+              {
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] Start",
+                "startTime": 13871.78
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Prebid Module v4.0.32",
+                "startTime": 16278.02
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Amazon A9 Module v4.0.21",
+                "startTime": 16281.14
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Proximic Module v4.0.5",
+                "startTime": 16287.16
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Krux Module v4.1.4",
+                "startTime": 16294.02
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Integral Ad Science Module v4.0.5",
+                "startTime": 16301.64
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Beemray Module v4.0.3",
+                "startTime": 16314.08
+              },
+              {
+                "name": "[ADFUEL] Registering Module: CEP Module v4.0.4",
+                "startTime": 16316.24
+              },
+              {
+                "name": "[ADFUEL] Registering Module: In View Refresh v4.0.3",
+                "startTime": 16337.48
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Malvertising Detection v4.0.6",
+                "startTime": 16339.28
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Sourcepoint Add-on: Ad Blocking v4.0.2",
+                "startTime": 16342.28
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Transaction ID Module v4.0.2",
+                "startTime": 16343.82
+              },
+              {
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] End",
+                "startTime": 20749.62
+              },
+              {
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 6338815884] Start",
+                "startTime": 20759.04
+              },
+              {
+                "name": "one-tap-video::embedRequest",
+                "startTime": 22862.1
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 23950.22
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 23950.74
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 23951
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 23951.22
+              },
+              {
+                "name": "[ADFUEL] Registering Module: Turner GUID Module v4.0.2",
+                "startTime": 24233.7
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01] Start",
+                "startTime": 24409.04
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01] End",
+                "startTime": 24460.98
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02] Start",
+                "startTime": 24462.58
+              },
+              {
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02] End",
+                "startTime": 24486.46
+              },
+              {
+                "name": "one-tap-video::playerReady",
+                "startTime": 26495.58
+              },
+              {
+                "name": "faveReady_mark",
+                "startTime": 26521.14
+              },
+              {
+                "name": "faveReady_mark",
+                "startTime": 26523.44
+              },
+              {
+                "name": "[ADFUEL] Applying Page-Level Targeting",
+                "startTime": 26608.32
+              },
+              {
+                "name": "[ADFUEL] Applying Window Site-Level Options.",
+                "startTime": 26609.12
+              },
+              {
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 6338815884] End",
+                "startTime": 26610.36
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 26610.88
+              },
+              {
+                "name": "[ADFUEL] Page-Level GPT Build Start",
+                "startTime": 26714.56
+              },
+              {
+                "name": "[ADFUEL] Page-Level GPT Build End",
+                "startTime": 26742.98
+              },
+              {
+                "name": "[ADFUEL] Sending Request Start",
+                "startTime": 26743.56
+              },
+              {
+                "name": "[ADFUEL] Sending Request End",
+                "startTime": 26836.6
+              },
+              {
+                "name": "[ADFUEL] AdFuel Request Complete",
+                "startTime": 26838.82
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue End",
+                "startTime": 26839.64
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 28396.2
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 29827.42
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_bnr_atf_01]",
+                "startTime": 29844.42
+              },
+              {
+                "name": "[ADFUEL] Ad Rendered [ad_bnr_atf_02]",
+                "startTime": 29963.54
+              },
+              {
+                "name": "[ADFUEL] AdFuel window.load",
+                "startTime": 32804.66
+              },
+              {
+                "name": "[ADFUEL] Dispatch Queue Start",
+                "startTime": 32806.76
+              }
+            ],
+            "measures": [
+              {
+                "duration": 2706.28,
+                "name": "headTime",
+                "startTime": 149
+              },
+              {
+                "duration": 11291.42,
+                "name": "timeToZonesComplete",
+                "startTime": 149
+              },
+              {
+                "duration": 4770,
+                "name": "timeToInteractive",
+                "startTime": 149
+              },
+              {
+                "duration": 4879.58,
+                "name": "timeToDomReady",
+                "startTime": 149
+              },
+              {
+                "duration": 11382.52,
+                "name": "timeToZonesAndDomReady",
+                "startTime": 149
+              },
+              {
+                "duration": 26372.14,
+                "name": "faveReady",
+                "startTime": 149
+              },
+              {
+                "duration": 26374.44,
+                "name": "faveReady",
+                "startTime": 149
+              },
+              {
+                "duration": 678,
+                "name": "optimizelyTime",
+                "startTime": 2176.94
+              },
+              {
+                "duration": 23.679999999999836,
+                "name": "domTime",
+                "startTime": 2855.28
+              },
+              {
+                "duration": 1226.12,
+                "name": "footerTime",
+                "startTime": 2878.96
+              },
+              {
+                "duration": 6877.839999999998,
+                "name": "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json]",
+                "startTime": 13871.78
+              },
+              {
+                "duration": 5851.32,
+                "name": "[ADFUEL] Queue Registry [cnni_homepage - 6338815884]",
+                "startTime": 20759.04
+              },
+              {
+                "duration": 0.5200000000004366,
+                "name": "lteu",
+                "startTime": 23950.22
+              },
+              {
+                "duration": 0.22000000000116415,
+                "name": "ltpq",
+                "startTime": 23951
+              },
+              {
+                "duration": 51.93999999999869,
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_01]",
+                "startTime": 24409.04
+              },
+              {
+                "duration": 23.87999999999738,
+                "name": "[ADFUEL] Building Slot [ad_bnr_atf_02]",
+                "startTime": 24462.58
+              },
+              {
+                "duration": 228.7599999999984,
+                "name": "[ADFUEL] Dispatch Queue",
+                "startTime": 26610.88
+              },
+              {
+                "duration": 28.419999999998257,
+                "name": "[ADFUEL] Page-Level GPT Build",
+                "startTime": 26714.56
+              },
+              {
+                "duration": 93.04000000000087,
+                "name": "[ADFUEL] Sending Request",
+                "startTime": 26743.56
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "visualMetrics": [],
+    "cpu": [],
+    "extras": [
+      {},
+      {},
+      {}
+    ],
+    "fullyLoaded": [],
+    "errors": [
+      [],
+      [],
+      []
+    ],
+    "statistics": {
+      "browser": {
+        "appConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        },
+        "asyncAppConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        }
+      },
+      "pageinfo": {
+        "documentHeight": {
+          "median": 5723,
+          "mean": 5723,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 5723,
+          "p10": 5723,
+          "p90": 5723,
+          "p99": 5723,
+          "max": 5723
+        },
+        "documentSize": {
+          "decodedBodySize": {
+            "median": 1117703,
+            "mean": 1117703,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 1117703,
+            "p10": 1117703,
+            "p90": 1117703,
+            "p99": 1117703,
+            "max": 1117703
+          },
+          "encodedBodySize": {
+            "median": 150654,
+            "mean": 150654,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 150654,
+            "p10": 150654,
+            "p90": 150654,
+            "p99": 150654,
+            "max": 150654
+          },
+          "transferSize": {
+            "median": 152205,
+            "mean": 152205,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 152205,
+            "p10": 152205,
+            "p90": 152205,
+            "p99": 152205,
+            "max": 152205
+          }
+        },
+        "documentWidth": {
+          "median": 360,
+          "mean": 360,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 360,
+          "p10": 360,
+          "p90": 360,
+          "p99": 360,
+          "max": 360
+        },
+        "domElements": {
+          "median": 1457,
+          "mean": 1457,
+          "mdev": 0.7201,
+          "stddev": 1,
+          "min": 1455,
+          "p10": 1455,
+          "p90": 1458,
+          "p99": 1458,
+          "max": 1458
+        },
+        "navigationStartTime": {
+          "median": 1620422197665,
+          "mean": 1620422196465,
+          "mdev": 28202.2041,
+          "stddev": 48848,
+          "min": 1620422133299,
+          "p10": 1620422133299,
+          "p90": 1620422258432,
+          "p99": 1620422258432,
+          "max": 1620422258432
+        },
+        "resources": {
+          "count": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "duration": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "visualElements": {
+          "heroes": [
+            {
+              "height": {
+                "median": 191,
+                "mean": 191,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 191,
+                "p10": 191,
+                "p90": 191,
+                "p99": 191,
+                "max": 191
+              },
+              "width": {
+                "median": 340,
+                "mean": 340,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 340,
+                "p10": 340,
+                "p90": 340,
+                "p99": 340,
+                "max": 340
+              },
+              "x": {
+                "median": 10,
+                "mean": 10,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 10,
+                "p10": 10,
+                "p90": 10,
+                "p99": 10,
+                "max": 10
+              },
+              "y": {
+                "median": 185,
+                "mean": 185,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 185,
+                "p10": 185,
+                "p90": 185,
+                "p99": 185,
+                "max": 185
+              }
+            }
+          ],
+          "viewport": {
+            "height": {
+              "median": 560,
+              "mean": 560,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 560,
+              "p10": 560,
+              "p90": 560,
+              "p99": 560,
+              "max": 560
+            },
+            "width": {
+              "median": 360,
+              "mean": 360,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 360,
+              "p10": 360,
+              "p90": 360,
+              "p99": 360,
+              "max": 360
+            }
+          }
+        }
+      },
+      "timings": {
+        "firstPaint": {
+          "median": 1370,
+          "mean": 1965,
+          "mdev": 512.5806,
+          "stddev": 888,
+          "min": 1305,
+          "p10": 1305,
+          "p90": 3220,
+          "p99": 3220,
+          "max": 3220
+        },
+        "loadEventEnd": {
+          "median": 41655,
+          "mean": 39787,
+          "mdev": 2931.9706,
+          "stddev": 5078,
+          "min": 32847,
+          "p10": 32847,
+          "p90": 44858,
+          "p99": 44858,
+          "max": 44858
+        },
+        "navigationTiming": {
+          "connectStart": {
+            "median": 39,
+            "mean": 112,
+            "mdev": 72.1988,
+            "stddev": 125,
+            "min": 9,
+            "p10": 9,
+            "p90": 288,
+            "p99": 288,
+            "max": 288
+          },
+          "domComplete": {
+            "median": 41553,
+            "mean": 39693,
+            "mdev": 2928.3909,
+            "stddev": 5072,
+            "min": 32763,
+            "p10": 32763,
+            "p90": 44762,
+            "p99": 44762,
+            "max": 44762
+          },
+          "domContentLoadedEventEnd": {
+            "median": 7073,
+            "mean": 6618,
+            "mdev": 414.2675,
+            "stddev": 718,
+            "min": 5605,
+            "p10": 5605,
+            "p90": 7176,
+            "p99": 7176,
+            "max": 7176
+          },
+          "domContentLoadedEventStart": {
+            "median": 6395,
+            "mean": 5928,
+            "mdev": 400.2302,
+            "stddev": 693,
+            "min": 4948,
+            "p10": 4948,
+            "p90": 6441,
+            "p99": 6441,
+            "max": 6441
+          },
+          "domInteractive": {
+            "median": 6362,
+            "mean": 5897,
+            "mdev": 399.4271,
+            "stddev": 692,
+            "min": 4919,
+            "p10": 4919,
+            "p90": 6410,
+            "p99": 6410,
+            "max": 6410
+          },
+          "domainLookupEnd": {
+            "median": 38,
+            "mean": 111,
+            "mdev": 72.0406,
+            "stddev": 125,
+            "min": 9,
+            "p10": 9,
+            "p90": 287,
+            "p99": 287,
+            "max": 287
+          },
+          "domainLookupStart": {
+            "median": 38,
+            "mean": 110,
+            "mdev": 72.8382,
+            "stddev": 126,
+            "min": 4,
+            "p10": 4,
+            "p90": 287,
+            "p99": 287,
+            "max": 287
+          },
+          "duration": {
+            "median": 41655,
+            "mean": 39787,
+            "mdev": 2931.9706,
+            "stddev": 5078,
+            "min": 32847,
+            "p10": 32847,
+            "p90": 44858,
+            "p99": 44858,
+            "max": 44858
+          },
+          "fetchStart": {
+            "median": 3,
+            "mean": 5,
+            "mdev": 1.7847,
+            "stddev": 3,
+            "min": 2,
+            "p10": 2,
+            "p90": 9,
+            "p99": 9,
+            "max": 9
+          },
+          "loadEventEnd": {
+            "median": 41655,
+            "mean": 39787,
+            "mdev": 2931.9706,
+            "stddev": 5078,
+            "min": 32847,
+            "p10": 32847,
+            "p90": 44858,
+            "p99": 44858,
+            "max": 44858
+          },
+          "loadEventStart": {
+            "median": 41554,
+            "mean": 39693,
+            "mdev": 2928.4615,
+            "stddev": 5072,
+            "min": 32763,
+            "p10": 32763,
+            "p90": 44762,
+            "p99": 44762,
+            "max": 44762
+          },
+          "redirectEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "redirectStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "requestStart": {
+            "median": 139,
+            "mean": 206,
+            "mdev": 68.4582,
+            "stddev": 119,
+            "min": 107,
+            "p10": 107,
+            "p90": 373,
+            "p99": 373,
+            "max": 373
+          },
+          "responseEnd": {
+            "median": 154,
+            "mean": 219,
+            "mdev": 69.3339,
+            "stddev": 120,
+            "min": 115,
+            "p10": 115,
+            "p90": 387,
+            "p99": 387,
+            "max": 387
+          },
+          "responseStart": {
+            "median": 154,
+            "mean": 219,
+            "mdev": 69.3339,
+            "stddev": 120,
+            "min": 115,
+            "p10": 115,
+            "p90": 387,
+            "p99": 387,
+            "max": 387
+          },
+          "secureConnectionStart": {
+            "median": 51,
+            "mean": 124,
+            "mdev": 73.3293,
+            "stddev": 127,
+            "min": 19,
+            "p10": 19,
+            "p90": 303,
+            "p99": 303,
+            "max": 303
+          },
+          "startTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "workerStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "pageTimings": {
+          "backEndTime": {
+            "median": 154,
+            "mean": 219,
+            "mdev": 69.3339,
+            "stddev": 120,
+            "min": 115,
+            "p10": 115,
+            "p90": 387,
+            "p99": 387,
+            "max": 387
+          },
+          "domContentLoadedTime": {
+            "median": 6395,
+            "mean": 5928,
+            "mdev": 400.2302,
+            "stddev": 693,
+            "min": 4948,
+            "p10": 4948,
+            "p90": 6441,
+            "p99": 6441,
+            "max": 6441
+          },
+          "domInteractiveTime": {
+            "median": 6362,
+            "mean": 5897,
+            "mdev": 399.4271,
+            "stddev": 692,
+            "min": 4919,
+            "p10": 4919,
+            "p90": 6410,
+            "p99": 6410,
+            "max": 6410
+          },
+          "domainLookupTime": {
+            "median": 0,
+            "mean": 2,
+            "mdev": 1.3608,
+            "stddev": 2,
+            "min": 0,
+            "p10": 0,
+            "p90": 5,
+            "p99": 5,
+            "max": 5
+          },
+          "frontEndTime": {
+            "median": 41399,
+            "mean": 39474,
+            "mdev": 2873.8931,
+            "stddev": 4978,
+            "min": 32647,
+            "p10": 32647,
+            "p90": 44375,
+            "p99": 44375,
+            "max": 44375
+          },
+          "pageDownloadTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "pageLoadTime": {
+            "median": 41554,
+            "mean": 39693,
+            "mdev": 2928.4615,
+            "stddev": 5072,
+            "min": 32763,
+            "p10": 32763,
+            "p90": 44762,
+            "p99": 44762,
+            "max": 44762
+          },
+          "redirectionTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "serverConnectionTime": {
+            "median": 96,
+            "mean": 93,
+            "mdev": 3.7417,
+            "stddev": 6,
+            "min": 84,
+            "p10": 84,
+            "p90": 99,
+            "p99": 99,
+            "max": 99
+          },
+          "serverResponseTime": {
+            "median": 14,
+            "mean": 13,
+            "mdev": 1.5154,
+            "stddev": 3,
+            "min": 9,
+            "p10": 9,
+            "p90": 15,
+            "p99": 15,
+            "max": 15
+          }
+        },
+        "rumSpeedIndex": {
+          "median": 154,
+          "mean": 219,
+          "mdev": 69.3339,
+          "stddev": 120,
+          "min": 115,
+          "p10": 115,
+          "p90": 387,
+          "p99": 387,
+          "max": 387
+        },
+        "timeToContentfulPaint": {
+          "median": 13154,
+          "mean": 12178,
+          "mdev": 1336.2177,
+          "stddev": 2314,
+          "min": 8984,
+          "p10": 8984,
+          "p90": 14395,
+          "p99": 14395,
+          "max": 14395
+        },
+        "timeToDomContentFlushed": {
+          "median": 6364,
+          "mean": 5900,
+          "mdev": 399.0258,
+          "stddev": 691,
+          "min": 4923,
+          "p10": 4923,
+          "p90": 6413,
+          "p99": 6413,
+          "max": 6413
+        },
+        "timeToFirstInteractive": {
+          "median": 38520,
+          "mean": 38520,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 38520,
+          "p10": 38520,
+          "p90": 38520,
+          "p99": 38520,
+          "max": 38520
+        },
+        "userTimings": {
+          "marks": {
+            "optimizelyStart": {
+              "median": 2231,
+              "mean": 2553,
+              "mdev": 285.1373,
+              "stddev": 494,
+              "min": 2177,
+              "p10": 2177,
+              "p90": 3250,
+              "p99": 3250,
+              "max": 3250
+            },
+            "optimizely:blockBegin": {
+              "median": 2341,
+              "mean": 2671,
+              "mdev": 289.5118,
+              "stddev": 501,
+              "min": 2292,
+              "p10": 2292,
+              "p90": 3379,
+              "p99": 3379,
+              "max": 3379
+            },
+            "optimizelyEnd": {
+              "median": 2928,
+              "mean": 3290,
+              "mdev": 326.3321,
+              "stddev": 565,
+              "min": 2855,
+              "p10": 2855,
+              "p90": 4089,
+              "p99": 4089,
+              "max": 4089
+            },
+            "headEnd": {
+              "median": 2928,
+              "mean": 3291,
+              "mdev": 326.38,
+              "stddev": 565,
+              "min": 2855,
+              "p10": 2855,
+              "p90": 4089,
+              "p99": 4089,
+              "max": 4089
+            },
+            "footerStart": {
+              "median": 2956,
+              "mean": 3319,
+              "mdev": 328.0082,
+              "stddev": 568,
+              "min": 2879,
+              "p10": 2879,
+              "p90": 4121,
+              "p99": 4121,
+              "max": 4121
+            },
+            "footerEnd": {
+              "median": 5489,
+              "mean": 5068,
+              "mdev": 393.9204,
+              "stddev": 682,
+              "min": 4105,
+              "p10": 4105,
+              "p90": 5609,
+              "p99": 5609,
+              "max": 5609
+            },
+            "[ADFUEL] AdFuel Initialized": {
+              "median": 5962,
+              "mean": 5556,
+              "mdev": 430.6738,
+              "stddev": 746,
+              "min": 4510,
+              "p10": 4510,
+              "p90": 6196,
+              "p99": 6196,
+              "max": 6196
+            },
+            "domReady": {
+              "median": 6464,
+              "mean": 6000,
+              "mdev": 396.5143,
+              "stddev": 687,
+              "min": 5029,
+              "p10": 5029,
+              "p90": 6506,
+              "p99": 6506,
+              "max": 6506
+            },
+            "[ADFUEL] AdFuel DOMContentLoaded": {
+              "median": 7036,
+              "mean": 6576,
+              "mdev": 414.0032,
+              "stddev": 717,
+              "min": 5563,
+              "p10": 5563,
+              "p90": 7129,
+              "p99": 7129,
+              "max": 7129
+            },
+            "[ADFUEL] Dispatch Queue Start": {
+              "median": 41607,
+              "mean": 39742,
+              "mdev": 2930.2346,
+              "stddev": 5075,
+              "min": 32807,
+              "p10": 32807,
+              "p90": 44812,
+              "p99": 44812,
+              "max": 44812
+            },
+            "gpt-tag-load": {
+              "median": 12279,
+              "mean": 12169,
+              "mdev": 412.2218,
+              "stddev": 714,
+              "min": 11245,
+              "p10": 11245,
+              "p90": 12984,
+              "p99": 12984,
+              "max": 12984
+            },
+            "zonesReady": {
+              "median": 13107,
+              "mean": 12974,
+              "mdev": 693.8855,
+              "stddev": 1202,
+              "min": 11440,
+              "p10": 11440,
+              "p90": 14375,
+              "p99": 14375,
+              "max": 14375
+            },
+            "zonesAndDomReady": {
+              "median": 13213,
+              "mean": 13086,
+              "mdev": 704.4752,
+              "stddev": 1220,
+              "min": 11532,
+              "p10": 11532,
+              "p90": 14512,
+              "p99": 14512,
+              "max": 14512
+            },
+            "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] Start": {
+              "median": 14642,
+              "mean": 15362,
+              "mdev": 920.7195,
+              "stddev": 1595,
+              "min": 13872,
+              "p10": 13872,
+              "p90": 17573,
+              "p99": 17573,
+              "max": 17573
+            },
+            "[ADFUEL] Registering Module: Prebid Module v4.0.32": {
+              "median": 18074,
+              "mean": 18232,
+              "mdev": 960.6757,
+              "stddev": 1664,
+              "min": 16278,
+              "p10": 16278,
+              "p90": 20345,
+              "p99": 20345,
+              "max": 20345
+            },
+            "[ADFUEL] Registering Module: Amazon A9 Module v4.0.21": {
+              "median": 18076,
+              "mean": 18284,
+              "mdev": 997.0242,
+              "stddev": 1727,
+              "min": 16281,
+              "p10": 16281,
+              "p90": 20496,
+              "p99": 20496,
+              "max": 20496
+            },
+            "[ADFUEL] Registering Module: Proximic Module v4.0.5": {
+              "median": 18088,
+              "mean": 18291,
+              "mdev": 996.125,
+              "stddev": 1725,
+              "min": 16287,
+              "p10": 16287,
+              "p90": 20499,
+              "p99": 20499,
+              "max": 20499
+            },
+            "[ADFUEL] Registering Module: Krux Module v4.1.4": {
+              "median": 18091,
+              "mean": 18296,
+              "mdev": 995.8845,
+              "stddev": 1725,
+              "min": 16294,
+              "p10": 16294,
+              "p90": 20504,
+              "p99": 20504,
+              "max": 20504
+            },
+            "[ADFUEL] Registering Module: Integral Ad Science Module v4.0.5": {
+              "median": 18097,
+              "mean": 18303,
+              "mdev": 995.6264,
+              "stddev": 1724,
+              "min": 16302,
+              "p10": 16302,
+              "p90": 20511,
+              "p99": 20511,
+              "max": 20511
+            },
+            "[ADFUEL] Registering Module: Beemray Module v4.0.3": {
+              "median": 18107,
+              "mean": 18390,
+              "mdev": 1051.3586,
+              "stddev": 1821,
+              "min": 16314,
+              "p10": 16314,
+              "p90": 20748,
+              "p99": 20748,
+              "max": 20748
+            },
+            "[ADFUEL] Registering Module: CEP Module v4.0.4": {
+              "median": 18109,
+              "mean": 18394,
+              "mdev": 1052.687,
+              "stddev": 1823,
+              "min": 16316,
+              "p10": 16316,
+              "p90": 20755,
+              "p99": 20755,
+              "max": 20755
+            },
+            "[ADFUEL] Registering Module: In View Refresh v4.0.3": {
+              "median": 18112,
+              "mean": 18402,
+              "mdev": 1048.4692,
+              "stddev": 1816,
+              "min": 16337,
+              "p10": 16337,
+              "p90": 20757,
+              "p99": 20757,
+              "max": 20757
+            },
+            "[ADFUEL] Registering Module: Malvertising Detection v4.0.6": {
+              "median": 18114,
+              "mean": 18404,
+              "mdev": 1048.5417,
+              "stddev": 1816,
+              "min": 16339,
+              "p10": 16339,
+              "p90": 20759,
+              "p99": 20759,
+              "max": 20759
+            },
+            "[ADFUEL] Registering Module: Sourcepoint Add-on: Ad Blocking v4.0.2": {
+              "median": 18120,
+              "mean": 18408,
+              "mdev": 1048.139,
+              "stddev": 1815,
+              "min": 16342,
+              "p10": 16342,
+              "p90": 20761,
+              "p99": 20761,
+              "max": 20761
+            },
+            "[ADFUEL] Registering Module: Transaction ID Module v4.0.2": {
+              "median": 18123,
+              "mean": 18411,
+              "mdev": 1048.7033,
+              "stddev": 1816,
+              "min": 16344,
+              "p10": 16344,
+              "p90": 20765,
+              "p99": 20765,
+              "max": 20765
+            },
+            "[ADFUEL] Registering Module: Turner GUID Module v4.0.2": {
+              "median": 22402,
+              "mean": 22153,
+              "mdev": 1044.3915,
+              "stddev": 1809,
+              "min": 19824,
+              "p10": 19824,
+              "p90": 24234,
+              "p99": 24234,
+              "max": 24234
+            },
+            "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json] End": {
+              "median": 21547,
+              "mean": 21962,
+              "mdev": 690.2947,
+              "stddev": 1196,
+              "min": 20750,
+              "p10": 20750,
+              "p90": 23589,
+              "p99": 23589,
+              "max": 23589
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 3225225435] Start": {
+              "median": 23595,
+              "mean": 23595,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 23595,
+              "p10": 23595,
+              "p90": 23595,
+              "p99": 23595,
+              "max": 23595
+            },
+            "[ADFUEL] Building Slot [ad_bnr_atf_01] Start": {
+              "median": 24409,
+              "mean": 24519,
+              "mdev": 913.5561,
+              "stddev": 1582,
+              "min": 22638,
+              "p10": 22638,
+              "p90": 26509,
+              "p99": 26509,
+              "max": 26509
+            },
+            "[ADFUEL] Building Slot [ad_bnr_atf_01] End": {
+              "median": 24461,
+              "mean": 24571,
+              "mdev": 912.9512,
+              "stddev": 1581,
+              "min": 22692,
+              "p10": 22692,
+              "p90": 26561,
+              "p99": 26561,
+              "max": 26561
+            },
+            "[ADFUEL] Building Slot [ad_bnr_atf_02] Start": {
+              "median": 24463,
+              "mean": 24573,
+              "mdev": 913.0403,
+              "stddev": 1581,
+              "min": 22693,
+              "p10": 22693,
+              "p90": 26562,
+              "p99": 26562,
+              "max": 26562
+            },
+            "[ADFUEL] Building Slot [ad_bnr_atf_02] End": {
+              "median": 24486,
+              "mean": 24592,
+              "mdev": 912.0904,
+              "stddev": 1580,
+              "min": 22712,
+              "p10": 22712,
+              "p90": 26577,
+              "p99": 26577,
+              "max": 26577
+            },
+            "[ADFUEL] Building Slot [ad_nat_atf_01] Start": {
+              "median": 24645,
+              "mean": 24645,
+              "mdev": 1366.5758,
+              "stddev": 1933,
+              "min": 22712,
+              "p10": 22712,
+              "p90": 26578,
+              "p99": 26578,
+              "max": 26578
+            },
+            "[ADFUEL] Building Slot [ad_nat_atf_01] End": {
+              "median": 24670,
+              "mean": 24670,
+              "mdev": 1362.022,
+              "stddev": 1926,
+              "min": 22744,
+              "p10": 22744,
+              "p90": 26596,
+              "p99": 26596,
+              "max": 26596
+            },
+            "one-tap-video::embedRequest": {
+              "median": 26849,
+              "mean": 25723,
+              "mdev": 1176.839,
+              "stddev": 2038,
+              "min": 22862,
+              "p10": 22862,
+              "p90": 27458,
+              "p99": 27458,
+              "max": 27458
+            },
+            "loadStarteventUtils": {
+              "median": 26143,
+              "mean": 25896,
+              "mdev": 865.1217,
+              "stddev": 1498,
+              "min": 23950,
+              "p10": 23950,
+              "p90": 27596,
+              "p99": 27596,
+              "max": 27596
+            },
+            "loadEndeventUtils": {
+              "median": 26143,
+              "mean": 25897,
+              "mdev": 865.0929,
+              "stddev": 1498,
+              "min": 23951,
+              "p10": 23951,
+              "p90": 27596,
+              "p99": 27596,
+              "max": 27596
+            },
+            "loadStartpixelQueue": {
+              "median": 26143,
+              "mean": 25897,
+              "mdev": 865.0823,
+              "stddev": 1498,
+              "min": 23951,
+              "p10": 23951,
+              "p90": 27596,
+              "p99": 27596,
+              "max": 27596
+            },
+            "loadEndpixelQueue": {
+              "median": 26143,
+              "mean": 25897,
+              "mdev": 865.0623,
+              "stddev": 1498,
+              "min": 23951,
+              "p10": 23951,
+              "p90": 27596,
+              "p99": 27596,
+              "max": 27596
+            },
+            "one-tap-video::playerReady": {
+              "median": 29623,
+              "mean": 28666,
+              "mdev": 888.1391,
+              "stddev": 1538,
+              "min": 26496,
+              "p10": 26496,
+              "p90": 29880,
+              "p99": 29880,
+              "max": 29880
+            },
+            "faveReady_mark": {
+              "median": 29647,
+              "mean": 28694,
+              "mdev": 888.1172,
+              "stddev": 1538,
+              "min": 26523,
+              "p10": 26523,
+              "p90": 29910,
+              "p99": 29910,
+              "max": 29910
+            },
+            "[ADFUEL] Applying Page-Level Targeting": {
+              "median": 26608,
+              "mean": 27740,
+              "mdev": 962.507,
+              "stddev": 1667,
+              "min": 26515,
+              "p10": 26515,
+              "p90": 30097,
+              "p99": 30097,
+              "max": 30097
+            },
+            "[ADFUEL] Applying Window Site-Level Options.": {
+              "median": 26609,
+              "mean": 27741,
+              "mdev": 962.3645,
+              "stddev": 1667,
+              "min": 26517,
+              "p10": 26517,
+              "p90": 30098,
+              "p99": 30098,
+              "max": 30098
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 3225225435] End": {
+              "median": 30100,
+              "mean": 30100,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 30100,
+              "p10": 30100,
+              "p90": 30100,
+              "p99": 30100,
+              "max": 30100
+            },
+            "[ADFUEL] Page-Level GPT Build Start": {
+              "median": 26715,
+              "mean": 27843,
+              "mdev": 957.3702,
+              "stddev": 1658,
+              "min": 26628,
+              "p10": 26628,
+              "p90": 30188,
+              "p99": 30188,
+              "max": 30188
+            },
+            "[ADFUEL] Page-Level GPT Build End": {
+              "median": 26743,
+              "mean": 27868,
+              "mdev": 954.8446,
+              "stddev": 1654,
+              "min": 26654,
+              "p10": 26654,
+              "p90": 30206,
+              "p99": 30206,
+              "max": 30206
+            },
+            "[ADFUEL] Sending Request Start": {
+              "median": 26744,
+              "mean": 27868,
+              "mdev": 954.8004,
+              "stddev": 1654,
+              "min": 26655,
+              "p10": 26655,
+              "p90": 30207,
+              "p99": 30207,
+              "max": 30207
+            },
+            "[ADFUEL] Sending Request End": {
+              "median": 26837,
+              "mean": 27975,
+              "mdev": 946.8064,
+              "stddev": 1640,
+              "min": 26794,
+              "p10": 26794,
+              "p90": 30294,
+              "p99": 30294,
+              "max": 30294
+            },
+            "[ADFUEL] AdFuel Request Complete": {
+              "median": 26839,
+              "mean": 27976,
+              "mdev": 946.5882,
+              "stddev": 1640,
+              "min": 26795,
+              "p10": 26795,
+              "p90": 30295,
+              "p99": 30295,
+              "max": 30295
+            },
+            "[ADFUEL] Dispatch Queue End": {
+              "median": 26840,
+              "mean": 27977,
+              "mdev": 946.5016,
+              "stddev": 1639,
+              "min": 26796,
+              "p10": 26796,
+              "p90": 30295,
+              "p99": 30295,
+              "max": 30295
+            },
+            "gpt-first-ad-request": {
+              "median": 29399,
+              "mean": 30159,
+              "mdev": 1056.2824,
+              "stddev": 1830,
+              "min": 28396,
+              "p10": 28396,
+              "p90": 32680,
+              "p99": 32680,
+              "max": 32680
+            },
+            "gpt-first-ad-render": {
+              "median": 31428,
+              "mean": 31717,
+              "mdev": 965.671,
+              "stddev": 1673,
+              "min": 29827,
+              "p10": 29827,
+              "p90": 33894,
+              "p99": 33894,
+              "max": 33894
+            },
+            "[ADFUEL] Ad Rendered [ad_bnr_atf_01]": {
+              "median": 31447,
+              "mean": 31734,
+              "mdev": 965.6381,
+              "stddev": 1673,
+              "min": 29844,
+              "p10": 29844,
+              "p90": 33911,
+              "p99": 33911,
+              "max": 33911
+            },
+            "[ADFUEL] Ad Rendered [ad_bnr_atf_02]": {
+              "median": 31542,
+              "mean": 31845,
+              "mdev": 965.9596,
+              "stddev": 1673,
+              "min": 29964,
+              "p10": 29964,
+              "p90": 34028,
+              "p99": 34028,
+              "max": 34028
+            },
+            "[ADFUEL] Ad Rendered [ad_nat_atf_01]": {
+              "median": 32793,
+              "mean": 32793,
+              "mdev": 880.4045,
+              "stddev": 1245,
+              "min": 31548,
+              "p10": 31548,
+              "p90": 34038,
+              "p99": 34038,
+              "max": 34038
+            },
+            "[ADFUEL] AdFuel window.load": {
+              "median": 41606,
+              "mean": 39740,
+              "mdev": 2930.273,
+              "stddev": 5075,
+              "min": 32805,
+              "p10": 32805,
+              "p90": 44809,
+              "p99": 44809,
+              "max": 44809
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 1668125143] Start": {
+              "median": 21556,
+              "mean": 21556,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 21556,
+              "p10": 21556,
+              "p90": 21556,
+              "p99": 21556,
+              "max": 21556
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 1668125143] End": {
+              "median": 26520,
+              "mean": 26520,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 26520,
+              "p10": 26520,
+              "p90": 26520,
+              "p99": 26520,
+              "max": 26520
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 6338815884] Start": {
+              "median": 20759,
+              "mean": 20759,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 20759,
+              "p10": 20759,
+              "p90": 20759,
+              "p99": 20759,
+              "max": 20759
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 6338815884] End": {
+              "median": 26610,
+              "mean": 26610,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 26610,
+              "p10": 26610,
+              "p90": 26610,
+              "p99": 26610,
+              "max": 26610
+            }
+          },
+          "measures": {
+            "headTime": {
+              "median": 2739,
+              "mean": 3034,
+              "mdev": 254.4668,
+              "stddev": 441,
+              "min": 2706,
+              "p10": 2706,
+              "p90": 3657,
+              "p99": 3657,
+              "max": 3657
+            },
+            "timeToZonesComplete": {
+              "median": 12918,
+              "mean": 12718,
+              "mdev": 630.3997,
+              "stddev": 1092,
+              "min": 11291,
+              "p10": 11291,
+              "p90": 13943,
+              "p99": 13943,
+              "max": 13943
+            },
+            "timeToInteractive": {
+              "median": 5929,
+              "mean": 5640,
+              "mdev": 361.6046,
+              "stddev": 626,
+              "min": 4770,
+              "p10": 4770,
+              "p90": 6220,
+              "p99": 6220,
+              "max": 6220
+            },
+            "timeToDomReady": {
+              "median": 6032,
+              "mean": 5743,
+              "mdev": 358.7493,
+              "stddev": 621,
+              "min": 4880,
+              "p10": 4880,
+              "p90": 6317,
+              "p99": 6317,
+              "max": 6317
+            },
+            "timeToZonesAndDomReady": {
+              "median": 13024,
+              "mean": 12829,
+              "mdev": 640.8161,
+              "stddev": 1110,
+              "min": 11383,
+              "p10": 11383,
+              "p90": 14080,
+              "p99": 14080,
+              "max": 14080
+            },
+            "faveReady": {
+              "median": 29458,
+              "mean": 28437,
+              "mdev": 842.019,
+              "stddev": 1458,
+              "min": 26374,
+              "p10": 26374,
+              "p90": 29478,
+              "p99": 29478,
+              "max": 29478
+            },
+            "optimizelyTime": {
+              "median": 697,
+              "mean": 738,
+              "mdev": 41.2719,
+              "stddev": 71,
+              "min": 678,
+              "p10": 678,
+              "p90": 838,
+              "p99": 838,
+              "max": 838
+            },
+            "domTime": {
+              "median": 28,
+              "mean": 28,
+              "mdev": 1.8736,
+              "stddev": 3,
+              "min": 24,
+              "p10": 24,
+              "p90": 32,
+              "p99": 32,
+              "max": 32
+            },
+            "footerTime": {
+              "median": 1368,
+              "mean": 1749,
+              "mdev": 370.4207,
+              "stddev": 642,
+              "min": 1226,
+              "p10": 1226,
+              "p90": 2653,
+              "p99": 2653,
+              "max": 2653
+            },
+            "[ADFUEL] Registry Load [//cdn.cnn.com/ads/cnni/cnni_homepage.json]": {
+              "median": 6878,
+              "mean": 6600,
+              "mdev": 238.5713,
+              "stddev": 413,
+              "min": 6016,
+              "p10": 6016,
+              "p90": 6906,
+              "p99": 6906,
+              "max": 6906
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 3225225435]": {
+              "median": 6506,
+              "mean": 6506,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 6506,
+              "p10": 6506,
+              "p90": 6506,
+              "p99": 6506,
+              "max": 6506
+            },
+            "[ADFUEL] Building Slot [ad_bnr_atf_01]": {
+              "median": 52,
+              "mean": 53,
+              "mdev": 0.7079,
+              "stddev": 1,
+              "min": 52,
+              "p10": 52,
+              "p90": 55,
+              "p99": 55,
+              "max": 55
+            },
+            "[ADFUEL] Building Slot [ad_bnr_atf_02]": {
+              "median": 18,
+              "mean": 19,
+              "mdev": 2.1998,
+              "stddev": 4,
+              "min": 15,
+              "p10": 15,
+              "p90": 24,
+              "p99": 24,
+              "max": 24
+            },
+            "[ADFUEL] Building Slot [ad_nat_atf_01]": {
+              "median": 25,
+              "mean": 25,
+              "mdev": 4.5538,
+              "stddev": 6,
+              "min": 19,
+              "p10": 19,
+              "p90": 31,
+              "p99": 31,
+              "max": 31
+            },
+            "lteu": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0519,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 1,
+              "p99": 1,
+              "max": 1
+            },
+            "ltpq": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0218,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "[ADFUEL] Dispatch Queue": {
+              "median": 229,
+              "mean": 232,
+              "mdev": 19.0896,
+              "stddev": 33,
+              "min": 194,
+              "p10": 194,
+              "p90": 275,
+              "p99": 275,
+              "max": 275
+            },
+            "[ADFUEL] Page-Level GPT Build": {
+              "median": 26,
+              "mean": 24,
+              "mdev": 2.5818,
+              "stddev": 4,
+              "min": 18,
+              "p10": 18,
+              "p90": 28,
+              "p99": 28,
+              "max": 28
+            },
+            "[ADFUEL] Sending Request": {
+              "median": 93,
+              "mean": 106,
+              "mdev": 13.3181,
+              "stddev": 23,
+              "min": 87,
+              "p10": 87,
+              "p90": 139,
+              "p99": 139,
+              "max": 139
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 1668125143]": {
+              "median": 4964,
+              "mean": 4964,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 4964,
+              "p10": 4964,
+              "p90": 4964,
+              "p99": 4964,
+              "max": 4964
+            },
+            "[ADFUEL] Queue Registry [cnni_homepage - 6338815884]": {
+              "median": 5851,
+              "mean": 5851,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 5851,
+              "p10": 5851,
+              "p90": 5851,
+              "p99": 5851,
+              "max": 5851
+            }
+          }
+        }
+      }
+    }
+  }
+]
