@@ -1,10 +1,12 @@
 const express = require('express');
 const fs = require('fs');
-const bodyParser = require('body-parser');
-
 let app = express();
 let port = 4444;
-app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json()) 
+
 
 app.post('/receivelogs',  (req, res) => {
   console.log("receiving logs...")
@@ -15,6 +17,16 @@ app.post('/receivelogs',  (req, res) => {
 
 });
 
+// Accepting Requests for a Broken Page
+app.post("/report_broken_page",(req, res)=>{
+  const userId = req.body.user;
+  const brokenPage = req.body.data;
+})
+
+app.post("/send_data_report",(req, res)=>{
+  const userId = req.body.user;
+  const data = req.body.data;
+})
 
 app.get("/test", (req,res)=>{
     console.log("test route hit")

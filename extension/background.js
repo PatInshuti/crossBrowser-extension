@@ -560,7 +560,6 @@ const retrieve_SendBlockingInformation = () =>{
 
 const getByteSize = str => new Blob([str]).size;
 
-
 let getFeatures = (_path) => {
     return new Promise((resolve, reject) => {
         fetch(_path, {mode:'same-origin'})
@@ -591,15 +590,6 @@ const setupDB = async (data) =>{
         }
 
         else{
-            // Fetch Features Locally
-            // await getFeatures('selectedFeatures.txt').then(_res => {
-
-            //     lines = _res.split('\n');
-                
-            //     lines.forEach(async line=>{
-            //         await featuresList.push(line)
-            //     })
-            // })
         
             //open the db 
             const request = window.indexedDB.open(db_name,db_version);
@@ -632,7 +622,6 @@ const setupDB = async (data) =>{
 }
 
 
-
 const runScriptLabelling = (db) =>{
 
     browser.webRequest.onBeforeRequest.addListener( (details) => {
@@ -641,45 +630,25 @@ const runScriptLabelling = (db) =>{
 
             return new Promise(async (resolve, reject) => {
 
-                let categoriesToBlock = [];
+                let categoriesToBlock = ["ads+marketing","social","analytics"];
 
-                if (localStorage.getItem('scriptBlockSettings') !== null){
-    
-                    let scriptBlockSettings = JSON.parse(localStorage.getItem('scriptBlockSettings'));
+                hashValue = details.url;
+                var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+                var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+                var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
+                
+                getAllhashCodeToScript.onsuccess = async (event) =>{
+                    // Start intercepting requests
+                    theMapping = event.target.result;
 
-                    if (scriptBlockSettings == true){
-                        categoriesToBlock = ["ads+marketing","social","analytics"]
+                    if (theMapping != undefined){
+                        resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
                     }
 
-                    console.log(categoriesToBlock)
-
-                    hashValue = details.url;
-                    var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-                    var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-                    var getAllhashCodeToScript = hashCodeToScriptDBStore.get(hashValue);
-                    
-                    getAllhashCodeToScript.onsuccess = async (event) =>{
-                        // Start intercepting requests
-                        theMapping = event.target.result;
-    
-                        if (theMapping != undefined){
-                            resolve({cancel: categoriesToBlock.includes(theMapping.label) ? true:false  })
-                        }
-    
-                        else{
-                            resolve({cancel:false})
-                        }
+                    else{
+                        resolve({cancel:false})
                     }
-
                 }
-
-                else{
-                    resolve({cancel:false})
-                }
-            
-                // End of settings retrieval 
-
-
 
 
             })
@@ -757,3 +726,73 @@ const labelOnComplete = (db) =>{
     }, { urls: ['<all_urls>'] }, []) 
 
 }
+
+
+const getLocalIPs = (callback) => {
+    var ips = [];
+
+    var RTCPeerConnection = window.RTCPeerConnection ||
+        window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+
+    var pc = new RTCPeerConnection({
+        // Don't specify any stun/turn servers, otherwise you will
+        // also find your public IP addresses.
+        iceServers: []
+    });
+    // Add a media line, this is needed to activate candidate gathering.
+    pc.createDataChannel('');
+    
+    // onicecandidate is triggered whenever a candidate has been found.
+    pc.onicecandidate = function(e) {
+        if (!e.candidate) { // Candidate gathering completed.
+            pc.close();
+            callback(ips);
+            return;
+        }
+        var ip = /^candidate:.+ (\S+) \d+ typ/.exec(e.candidate.candidate)[1];
+        if (ips.indexOf(ip) == -1) // avoid duplicate entries (tcp/udp)
+            ips.push(ip);
+    };
+    pc.createOffer(function(sdp) {
+        pc.setLocalDescription(sdp);
+    }, function onerror() {});
+}
+
+
+const hashString = async(message) => {
+    const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
+    const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+    return hashHex;
+}
+
+const createUniqueIdentification = async() =>{
+
+    let hashedTime = await hashString(Date.now()) //create a hash of time
+    let randomString = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15); //create random string
+
+    getLocalIPs(async(ips) => {
+        let hashedLocalIpAddress  = await hashString(ips[0])
+        let uniqueUserIdentification = hashedTime+randomString+hashedLocalIpAddress;
+
+        // Save the unique user Identification to localstorage
+        localStorage.setItem("uniqueUserIdentificationPlugin",uniqueUserIdentification);
+    });
+    
+    console.log("creating new identification...")
+}
+
+// check if user identification is already set
+const checkforUserIdentifications = async() =>{
+    if(localStorage.getItem("uniqueUserIdentificationPlugin") == null){
+        await createUniqueIdentification();
+    }
+
+    else{
+        console.log("identification exists already....")
+    }
+
+}
+
+checkforUserIdentifications();

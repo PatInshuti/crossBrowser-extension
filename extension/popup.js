@@ -1,49 +1,88 @@
+
+let db_name = "capstone_plugin_v13"
+let db_version = 1
+let hashCodeToScriptStore = "hashCodeToScriptStore"
+let serverDomain = "10.225.86.123"
+let port = "4444"
+let apiUrl=`http://${serverDomain}`;
+let testUrl = `http://127.0.0.1:4444`
+
 browser = (function () {
     return window.browser || window.chrome;
 })();
 
 document.addEventListener('DOMContentLoaded', function(){
-    // let button = document.getElementById("submit-button");
-    let appleSwitchButton =  document.getElementById("apple-switch")
+
+    let uniqueUserIdentification = localStorage.getItem("uniqueUserIdentificationPlugin");
+    
+    let report_broken_pageButton =  document.getElementById("report_broken_page");
+    let send_dataButton = document.getElementById("send_data")
+
+    report_broken_pageButton.addEventListener("click",()=>{
+
+        browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            var currTab = tabs[0];
+
+            if (currTab) { 
+
+                data = {
+                    "data":currTab.url,
+                    "user":uniqueUserIdentification
+                }
+
+                fetch(testUrl+"/report_broken_page", {
+                    method: 'POST', 
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            
+                    body: JSON.stringify(data)
+                });
+            }
+
+        })
+
+    })
 
 
-    // Just Setting the frontend
+    send_dataButton.addEventListener("click",()=>{
 
-    // check if website has blocking settings in localstorage
-    let retrievedSettings = localStorage.getItem('scriptBlockSettings');
-    retrievedSettings = JSON.parse(retrievedSettings);
+        const request = window.indexedDB.open(db_name,db_version);
 
-    if (retrievedSettings !== null){
+        request.onerror = (event) => {
+            console.log("error opening db...")
+        }
+    
+        request.onsuccess = (event) => {
+            db = event.target.result;
 
-        if (retrievedSettings !== undefined){
-            appleSwitchButton.checked = retrievedSettings;
+            var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
+            var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
+            var getAllhashCodeToScript = hashCodeToScriptDBStore.getAll();
+            
+            getAllhashCodeToScript.onsuccess = async (event) =>{
+                // Start intercepting requests
+                theMapping = event.target.result;
+
+                data = {
+                    "data":theMapping,
+                    "user":uniqueUserIdentification
+                }
+
+                fetch(testUrl+"/send_data_report", {
+                    method: 'POST', 
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            
+                    body: JSON.stringify(data)
+                });
+            }
         }
 
-        // change this to true later
-        else{
-            appleSwitchButton.checked = true;
-        }
+    })
 
-    }
-
-    else{
-        appleSwitchButton.checked = true;
-    }
-
-
-    appleSwitchButton.addEventListener("click", (event)=> {
-
-        if (appleSwitchButton.checked === true){
-            appleSwitchButton.checked = true;
-        }
-
-        else{
-            appleSwitchButton.checked = false;
-        }
-
-        // save the data on localstorage
-        localStorage.setItem('scriptBlockSettings', JSON.stringify(appleSwitchButton.checked));
-
-    });
 
 })
