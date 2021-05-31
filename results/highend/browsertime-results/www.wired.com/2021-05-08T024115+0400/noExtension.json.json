@@ -1,0 +1,2608 @@
+[
+  {
+    "info": {
+      "browsertime": {
+        "version": "8.4.0"
+      },
+      "url": "https://www.wired.com/",
+      "timestamp": "2021-05-08T02:42:06+04:00",
+      "connectivity": {
+        "engine": "external",
+        "profile": "native"
+      },
+      "extra": {}
+    },
+    "files": {
+      "video": [],
+      "screenshot": [],
+      "timeline": [],
+      "consoleLog": [],
+      "netLog": [],
+      "perfLog": []
+    },
+    "cdp": {
+      "performance": []
+    },
+    "timestamps": [
+      "2021-05-08T02:41:24+04:00",
+      "2021-05-08T02:42:13+04:00",
+      "2021-05-08T02:42:58+04:00"
+    ],
+    "browserScripts": [
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x612"
+        },
+        "pageinfo": {
+          "documentHeight": 15073,
+          "documentSize": {
+            "decodedBodySize": 745570,
+            "encodedBodySize": 146009,
+            "transferSize": 148220
+          },
+          "documentTitle": "WIRED",
+          "documentWidth": 360,
+          "domElements": 1388,
+          "navigationStartTime": 1620427284982,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.wired.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "business_epic_1316070680.jpg",
+                "height": 162,
+                "name": "LargestImage",
+                "width": 288,
+                "x": 36,
+                "y": 415
+              }
+            ],
+            "viewport": {
+              "height": 612,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 2013,
+          "loadEventEnd": 33779,
+          "navigationTiming": {
+            "connectStart": 200,
+            "domComplete": 33731,
+            "domContentLoadedEventEnd": 2459,
+            "domContentLoadedEventStart": 2439,
+            "domInteractive": 1414,
+            "domainLookupEnd": 199,
+            "domainLookupStart": 199,
+            "duration": 33779,
+            "fetchStart": 3,
+            "loadEventEnd": 33779,
+            "loadEventStart": 33732,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 519,
+            "responseEnd": 632,
+            "responseStart": 632,
+            "secureConnectionStart": 309,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 632,
+            "domContentLoadedTime": 2439,
+            "domInteractiveTime": 1414,
+            "domainLookupTime": 0,
+            "frontEndTime": 33100,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 33732,
+            "redirectionTime": 0,
+            "serverConnectionTime": 318,
+            "serverResponseTime": 113
+          },
+          "rumSpeedIndex": 631,
+          "timeToContentfulPaint": 2241,
+          "timeToDomContentFlushed": 2206,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "ATP-Init",
+                "startTime": 1401.46
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 3202.02
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 3202.38
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 3202.54
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 3202.64
+              },
+              {
+                "name": "react_render:start",
+                "startTime": 4235.76
+              },
+              {
+                "name": "action.@@router/LOCATION_CHANGE_start",
+                "startTime": 4252.58
+              },
+              {
+                "name": "action.@@router/LOCATION_CHANGE_end",
+                "startTime": 4252.9800000000005
+              },
+              {
+                "name": "action.NEW_AD_PAGE_CREATED_start",
+                "startTime": 5305.04
+              },
+              {
+                "name": "action.NEW_AD_PAGE_CREATED_end",
+                "startTime": 5305.68
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_start",
+                "startTime": 5308.58
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_end",
+                "startTime": 5308.9800000000005
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_start",
+                "startTime": 5314.42
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_end",
+                "startTime": 5315.08
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_start",
+                "startTime": 5385.64
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_end",
+                "startTime": 5386.18
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_start",
+                "startTime": 5409.32
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_end",
+                "startTime": 5409.74
+              },
+              {
+                "name": "action.PAGE_MOUNT_start",
+                "startTime": 5420.6
+              },
+              {
+                "name": "action.PAGE_MOUNT_end",
+                "startTime": 5425.82
+              },
+              {
+                "name": "react_render:end",
+                "startTime": 5630.54
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 5780.34
+              },
+              {
+                "name": "js_player_js_start_execution",
+                "startTime": 6445.68
+              },
+              {
+                "name": "fetchConfig_started",
+                "startTime": 6469.900000000001
+              },
+              {
+                "name": "GPT-Init",
+                "startTime": 6889.24
+              },
+              {
+                "name": "4d-load-user-start",
+                "startTime": 7675.96
+              },
+              {
+                "name": "4d-load-context-start",
+                "startTime": 7677.78
+              },
+              {
+                "name": "4d-load-start",
+                "startTime": 7679.02
+              },
+              {
+                "name": "fetchConfig_complete",
+                "startTime": 7798.900000000001
+              },
+              {
+                "name": "fetchPrebid_started",
+                "startTime": 7959.12
+              },
+              {
+                "name": "ATP-First-Prebid-Auction",
+                "startTime": 8329.880000000001
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 8566.98
+              },
+              {
+                "name": "ATP-First-A9-Auction",
+                "startTime": 9152.02
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 9418.88
+              },
+              {
+                "name": "ATP-First-Request",
+                "startTime": 9465.38
+              },
+              {
+                "name": "js_evaluatedJS",
+                "startTime": 10642.14
+              },
+              {
+                "name": "promise_resolution_loadEmbedPieces",
+                "startTime": 10643.6
+              },
+              {
+                "name": "ads_dfp_plugin_requestAdsLoader",
+                "startTime": 11086.6
+              },
+              {
+                "name": "createPlayer_started",
+                "startTime": 11168.08
+              },
+              {
+                "name": "ads_fetchVASTAd_started",
+                "startTime": 12185.88
+              },
+              {
+                "name": "4d-load-context-end",
+                "startTime": 13035.12
+              },
+              {
+                "name": "4d-load-user-end",
+                "startTime": 13035.86
+              },
+              {
+                "name": "4d-load-end",
+                "startTime": 13036.14
+              },
+              {
+                "name": "ATP-First-Money-Request",
+                "startTime": 14690.96
+              },
+              {
+                "name": "ATP-First-Impression",
+                "startTime": 15980.92
+              },
+              {
+                "name": "snaptr",
+                "startTime": 17876.4
+              },
+              {
+                "name": "ads_fetchVASTAd_complete",
+                "startTime": 18937.2
+              },
+              {
+                "name": "ads_dfp_plugin_requestAds",
+                "startTime": 18939.88
+              },
+              {
+                "name": "ATP-First-Money-Impression",
+                "startTime": 21356.14
+              },
+              {
+                "name": "ATP-First-Money-Viewable-Impression",
+                "startTime": 25808.58
+              },
+              {
+                "name": "ATP-First-Viewable-Impression",
+                "startTime": 25808.68
+              }
+            ],
+            "measures": [
+              {
+                "duration": 6445.68,
+                "name": "js_jsStarted_inline",
+                "startTime": 0
+              },
+              {
+                "duration": 6928.420000000001,
+                "name": "ATP-Init-To-First-Prebid-Auction",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 7750.56,
+                "name": "ATP-Init-To-First-A9-Auction",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 8063.920000000001,
+                "name": "ATP-Init-To-First-Request",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 13289.5,
+                "name": "ATP-Init-To-First-Money-Request",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 14579.46,
+                "name": "ATP-Init-To-First-Impression",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 19954.68,
+                "name": "ATP-Init-To-First-Money-Impression",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 24407.120000000003,
+                "name": "ATP-Init-To-Money-Viewable-Impression",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 24407.22,
+                "name": "ATP-Init-To-Viewable-Impression",
+                "startTime": 1401.46
+              },
+              {
+                "duration": 0.36000000000012733,
+                "name": "lteu",
+                "startTime": 3202.02
+              },
+              {
+                "duration": 0.09999999999990904,
+                "name": "ltpq",
+                "startTime": 3202.54
+              },
+              {
+                "duration": 1394.7799999999995,
+                "name": "react_render",
+                "startTime": 4235.76
+              },
+              {
+                "duration": 0.4000000000005457,
+                "name": "action.@@router/LOCATION_CHANGE",
+                "startTime": 4252.58
+              },
+              {
+                "duration": 0.6400000000003274,
+                "name": "action.NEW_AD_PAGE_CREATED",
+                "startTime": 5305.04
+              },
+              {
+                "duration": 0.4000000000005457,
+                "name": "action.AD_BLOCK_DETECTED",
+                "startTime": 5308.58
+              },
+              {
+                "duration": 0.6599999999998545,
+                "name": "action.SHOW_SOCIAL_NETWORK",
+                "startTime": 5314.42
+              },
+              {
+                "duration": 0.5399999999999636,
+                "name": "action.AD_BLOCK_DETECTED",
+                "startTime": 5385.64
+              },
+              {
+                "duration": 0.4200000000000728,
+                "name": "action.SHOW_SOCIAL_NETWORK",
+                "startTime": 5409.32
+              },
+              {
+                "duration": 5.219999999999345,
+                "name": "action.PAGE_MOUNT",
+                "startTime": 5420.6
+              },
+              {
+                "duration": 4196.459999999999,
+                "name": "js_timeToEvaluate_mobile",
+                "startTime": 6445.68
+              },
+              {
+                "duration": 1329,
+                "name": "fetchConfig_complete",
+                "startTime": 6469.900000000001
+              },
+              {
+                "duration": 5359.900000000001,
+                "name": "4d-load-user",
+                "startTime": 7675.96
+              },
+              {
+                "duration": 5357.340000000001,
+                "name": "4d-load-context",
+                "startTime": 7677.78
+              },
+              {
+                "duration": 5357.119999999999,
+                "name": "4d-load",
+                "startTime": 7679.02
+              },
+              {
+                "duration": 444.46000000000095,
+                "name": "ads_requestAdsLoader",
+                "startTime": 10642.14
+              },
+              {
+                "duration": 524.4799999999996,
+                "name": "createPlayer_started",
+                "startTime": 10643.6
+              },
+              {
+                "duration": 7853.280000000001,
+                "name": "ads_requestAds",
+                "startTime": 11086.6
+              },
+              {
+                "duration": 6751.32,
+                "name": "ads_vastAdDuration",
+                "startTime": 12185.88
+              }
+            ]
+          }
+        }
+      },
+      {
+        "browser": {
+          "appConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "asyncAppConstants": {
+            "ACCESSIBILITY": true,
+            "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+            "ASAN": false,
+            "ASAN_REPORTER": false,
+            "BROWSER_CHROME_URL": "chrome://browser/content/browser.xul",
+            "DEBUG": false,
+            "DEBUG_JS_MODULES": "",
+            "DLL_PREFIX": "lib",
+            "DLL_SUFFIX": ".so",
+            "EARLY_BETA_OR_EARLIER": false,
+            "FENNEC_NIGHTLY": false,
+            "HAVE_SHELL_SERVICE": false,
+            "HAVE_USR_LIB64_DIR": false,
+            "MENUBAR_CAN_AUTOHIDE": false,
+            "MOZILLA_OFFICIAL": true,
+            "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
+            "MOZ_ANDROID_ACTIVITY_STREAM": false,
+            "MOZ_ANDROID_HISTORY": true,
+            "MOZ_ANDROID_MOZILLA_ONLINE": false,
+            "MOZ_APP_NAME": "fennec",
+            "MOZ_APP_VERSION": "68.1.1",
+            "MOZ_APP_VERSION_DISPLAY": "68.1.1",
+            "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
+            "MOZ_BING_API_KEY": "no-bing-api-key",
+            "MOZ_BITS_DOWNLOAD": false,
+            "MOZ_BUILD_APP": "mobile/android",
+            "MOZ_CODE_COVERAGE": false,
+            "MOZ_CRASHREPORTER": true,
+            "MOZ_DATA_REPORTING": true,
+            "MOZ_DEV_EDITION": false,
+            "MOZ_GECKO_PROFILER": true,
+            "MOZ_GOOGLE_LOCATION_SERVICE_API_KEY": "AIzaSyB2h2OuRcUgy5N-5hsZqiPW6sH3n_rptiQ",
+            "MOZ_GOOGLE_SAFEBROWSING_API_KEY": "AIzaSyC7jsptDS3am4tPx4r3nxis7IMjBc5Dovo",
+            "MOZ_GRAPHENE": false,
+            "MOZ_MACBUNDLE_NAME": "Firefox.app",
+            "MOZ_MAINTENANCE_SERVICE": false,
+            "MOZ_MOZILLA_API_KEY": "3b4d27dd-703d-4094-8398-4de2c763505a",
+            "MOZ_NEW_CERT_STORAGE": false,
+            "MOZ_NEW_NOTIFICATION_STORE": false,
+            "MOZ_NEW_XULSTORE": false,
+            "MOZ_OFFICIAL_BRANDING": false,
+            "MOZ_PLACES": false,
+            "MOZ_REQUIRE_SIGNING": false,
+            "MOZ_SANDBOX": false,
+            "MOZ_SERVICES_HEALTHREPORT": true,
+            "MOZ_SERVICES_SYNC": false,
+            "MOZ_SWITCHBOARD": true,
+            "MOZ_SYSTEM_NSS": false,
+            "MOZ_TELEMETRY_ON_BY_DEFAULT": false,
+            "MOZ_TELEMETRY_REPORTING": true,
+            "MOZ_UNSIGNED_SCOPES": 0,
+            "MOZ_UPDATER": false,
+            "MOZ_UPDATE_CHANNEL": "release",
+            "MOZ_WEBRTC": true,
+            "MOZ_WIDGET_GTK": false,
+            "MOZ_WIDGET_TOOLKIT": "android",
+            "NIGHTLY_BUILD": false,
+            "OMNIJAR_NAME": "assets/omni.ja",
+            "RELEASE_OR_BETA": true,
+            "SOURCE_REVISION_URL": "https://hg.mozilla.org/releases/mozilla-esr68/rev/d2e0b9e17b9bc1ef02606c8006b73293f7892ad5",
+            "TELEMETRY_PING_FORMAT_VERSION": 4,
+            "XP_UNIX": true,
+            "isPlatformAndVersionAtLeast": {},
+            "isPlatformAndVersionAtMost": {},
+            "platform": "android"
+          },
+          "userAgent": "Mozilla/5.0 (Android 9; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0",
+          "windowSize": "360x612"
+        },
+        "pageinfo": {
+          "documentHeight": 15073,
+          "documentSize": {
+            "decodedBodySize": 745570,
+            "encodedBodySize": 146046,
+            "transferSize": 148257
+          },
+          "documentTitle": "WIRED",
+          "documentWidth": 360,
+          "domElements": 1388,
+          "navigationStartTime": 1620427333680,
+          "nextHopProtocol": "h2",
+          "resources": {
+            "count": 0,
+            "duration": 0
+          },
+          "responsive": true,
+          "url": "https://www.wired.com/",
+          "visualElements": {
+            "heroes": [
+              {
+                "filename": "business_epic_1316070680.jpg",
+                "height": 162,
+                "name": "LargestImage",
+                "width": 288,
+                "x": 36,
+                "y": 415
+              }
+            ],
+            "viewport": {
+              "height": 612,
+              "width": 360
+            }
+          }
+        },
+        "timings": {
+          "firstPaint": 2168,
+          "loadEventEnd": 31702,
+          "navigationTiming": {
+            "connectStart": 320,
+            "domComplete": 31660,
+            "domContentLoadedEventEnd": 2595,
+            "domContentLoadedEventStart": 2575,
+            "domInteractive": 1513,
+            "domainLookupEnd": 318,
+            "domainLookupStart": 318,
+            "duration": 31702,
+            "fetchStart": 3,
+            "loadEventEnd": 31702,
+            "loadEventStart": 31660,
+            "redirectEnd": 0,
+            "redirectStart": 0,
+            "requestStart": 610,
+            "responseEnd": 721,
+            "responseStart": 721,
+            "secureConnectionStart": 431,
+            "startTime": 0,
+            "unloadEventEnd": 0,
+            "unloadEventStart": 0,
+            "workerStart": 0
+          },
+          "pageTimings": {
+            "backEndTime": 721,
+            "domContentLoadedTime": 2575,
+            "domInteractiveTime": 1513,
+            "domainLookupTime": 0,
+            "frontEndTime": 30939,
+            "pageDownloadTime": 0,
+            "pageLoadTime": 31660,
+            "redirectionTime": 0,
+            "serverConnectionTime": 290,
+            "serverResponseTime": 111
+          },
+          "rumSpeedIndex": 721,
+          "timeToContentfulPaint": 2387,
+          "timeToDomContentFlushed": 2324,
+          "userTimings": {
+            "marks": [
+              {
+                "name": "ATP-Init",
+                "startTime": 1500.54
+              },
+              {
+                "name": "react_render:start",
+                "startTime": 4169.82
+              },
+              {
+                "name": "action.@@router/LOCATION_CHANGE_start",
+                "startTime": 4186.22
+              },
+              {
+                "name": "action.@@router/LOCATION_CHANGE_end",
+                "startTime": 4186.62
+              },
+              {
+                "name": "action.NEW_AD_PAGE_CREATED_start",
+                "startTime": 5229.5
+              },
+              {
+                "name": "action.NEW_AD_PAGE_CREATED_end",
+                "startTime": 5230.1
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_start",
+                "startTime": 5233.34
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_end",
+                "startTime": 5233.74
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_start",
+                "startTime": 5238.5
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_end",
+                "startTime": 5239.26
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_start",
+                "startTime": 5295.66
+              },
+              {
+                "name": "action.AD_BLOCK_DETECTED_end",
+                "startTime": 5296.400000000001
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_start",
+                "startTime": 5320.66
+              },
+              {
+                "name": "action.SHOW_SOCIAL_NETWORK_end",
+                "startTime": 5321
+              },
+              {
+                "name": "action.PAGE_MOUNT_start",
+                "startTime": 5331.38
+              },
+              {
+                "name": "action.PAGE_MOUNT_end",
+                "startTime": 5337.12
+              },
+              {
+                "name": "react_render:end",
+                "startTime": 5540.76
+              },
+              {
+                "name": "gpt-tag-load",
+                "startTime": 5685.52
+              },
+              {
+                "name": "js_player_js_start_execution",
+                "startTime": 6307.9800000000005
+              },
+              {
+                "name": "fetchConfig_started",
+                "startTime": 6332.56
+              },
+              {
+                "name": "GPT-Init",
+                "startTime": 6712.64
+              },
+              {
+                "name": "4d-load-user-start",
+                "startTime": 7200.38
+              },
+              {
+                "name": "4d-load-context-start",
+                "startTime": 7203.1
+              },
+              {
+                "name": "4d-load-start",
+                "startTime": 7204.4400000000005
+              },
+              {
+                "name": "fetchConfig_complete",
+                "startTime": 7688.04
+              },
+              {
+                "name": "fetchPrebid_started",
+                "startTime": 7793.400000000001
+              },
+              {
+                "name": "ATP-First-Prebid-Auction",
+                "startTime": 8117.28
+              },
+              {
+                "name": "loadStarteventUtils",
+                "startTime": 8170.62
+              },
+              {
+                "name": "loadEndeventUtils",
+                "startTime": 8170.8
+              },
+              {
+                "name": "loadStartpixelQueue",
+                "startTime": 8170.900000000001
+              },
+              {
+                "name": "loadEndpixelQueue",
+                "startTime": 8171.04
+              },
+              {
+                "name": "gpt-first-ad-request",
+                "startTime": 8460.1
+              },
+              {
+                "name": "ATP-First-A9-Auction",
+                "startTime": 8951.460000000001
+              },
+              {
+                "name": "4d-load-user-end",
+                "startTime": 9001.62
+              },
+              {
+                "name": "js_evaluatedJS",
+                "startTime": 9484.86
+              },
+              {
+                "name": "promise_resolution_loadEmbedPieces",
+                "startTime": 9545.58
+              },
+              {
+                "name": "ads_dfp_plugin_requestAdsLoader",
+                "startTime": 10000.6
+              },
+              {
+                "name": "createPlayer_started",
+                "startTime": 10081.84
+              },
+              {
+                "name": "ads_fetchVASTAd_started",
+                "startTime": 10934.26
+              },
+              {
+                "name": "4d-load-context-end",
+                "startTime": 10967.76
+              },
+              {
+                "name": "4d-load-end",
+                "startTime": 10968.28
+              },
+              {
+                "name": "gpt-first-ad-render",
+                "startTime": 11591.78
+              },
+              {
+                "name": "ATP-First-Request",
+                "startTime": 11622.2
+              },
+              {
+                "name": "ATP-First-Money-Request",
+                "startTime": 13776.26
+              },
+              {
+                "name": "ATP-First-Impression",
+                "startTime": 14476.78
+              },
+              {
+                "name": "ATP-First-Money-Impression",
+                "startTime": 17965.12
+              },
+              {
+                "name": "ads_fetchVASTAd_complete",
+                "startTime": 19046.62
+              },
+              {
+                "name": "ads_dfp_plugin_requestAds",
+                "startTime": 19048.78
+              },
+              {
+                "name": "snaptr",
+                "startTime": 19955.6
+              }
+            ],
+            "measures": [
+              {
+                "duration": 6307.9800000000005,
+                "name": "js_jsStarted_inline",
+                "startTime": 0
+              },
+              {
+                "duration": 6616.74,
+                "name": "ATP-Init-To-First-Prebid-Auction",
+                "startTime": 1500.54
+              },
+              {
+                "duration": 7450.920000000001,
+                "name": "ATP-Init-To-First-A9-Auction",
+                "startTime": 1500.54
+              },
+              {
+                "duration": 10121.66,
+                "name": "ATP-Init-To-First-Request",
+                "startTime": 1500.54
+              },
+              {
+                "duration": 12275.72,
+                "name": "ATP-Init-To-First-Money-Request",
+                "startTime": 1500.54
+              },
+              {
+                "duration": 12976.240000000002,
+                "name": "ATP-Init-To-First-Impression",
+                "startTime": 1500.54
+              },
+              {
+                "duration": 16464.579999999998,
+                "name": "ATP-Init-To-First-Money-Impression",
+                "startTime": 1500.54
+              },
+              {
+                "duration": 1370.9400000000005,
+                "name": "react_render",
+                "startTime": 4169.82
+              },
+              {
+                "duration": 0.3999999999996362,
+                "name": "action.@@router/LOCATION_CHANGE",
+                "startTime": 4186.22
+              },
+              {
+                "duration": 0.6000000000003638,
+                "name": "action.NEW_AD_PAGE_CREATED",
+                "startTime": 5229.5
+              },
+              {
+                "duration": 0.3999999999996362,
+                "name": "action.AD_BLOCK_DETECTED",
+                "startTime": 5233.34
+              },
+              {
+                "duration": 0.7600000000002183,
+                "name": "action.SHOW_SOCIAL_NETWORK",
+                "startTime": 5238.5
+              },
+              {
+                "duration": 0.7400000000006912,
+                "name": "action.AD_BLOCK_DETECTED",
+                "startTime": 5295.66
+              },
+              {
+                "duration": 0.3400000000001455,
+                "name": "action.SHOW_SOCIAL_NETWORK",
+                "startTime": 5320.66
+              },
+              {
+                "duration": 5.739999999999782,
+                "name": "action.PAGE_MOUNT",
+                "startTime": 5331.38
+              },
+              {
+                "duration": 3176.88,
+                "name": "js_timeToEvaluate_mobile",
+                "startTime": 6307.9800000000005
+              },
+              {
+                "duration": 1355.4799999999996,
+                "name": "fetchConfig_complete",
+                "startTime": 6332.56
+              },
+              {
+                "duration": 1801.2400000000007,
+                "name": "4d-load-user",
+                "startTime": 7200.38
+              },
+              {
+                "duration": 3764.66,
+                "name": "4d-load-context",
+                "startTime": 7203.1
+              },
+              {
+                "duration": 3763.84,
+                "name": "4d-load",
+                "startTime": 7204.4400000000005
+              },
+              {
+                "duration": 0.18000000000029104,
+                "name": "lteu",
+                "startTime": 8170.62
+              },
+              {
+                "duration": 0.13999999999941792,
+                "name": "ltpq",
+                "startTime": 8170.900000000001
+              },
+              {
+                "duration": 515.7399999999998,
+                "name": "ads_requestAdsLoader",
+                "startTime": 9484.86
+              },
+              {
+                "duration": 536.2600000000002,
+                "name": "createPlayer_started",
+                "startTime": 9545.58
+              },
+              {
+                "duration": 9048.179999999998,
+                "name": "ads_requestAds",
+                "startTime": 10000.6
+              },
+              {
+                "duration": 8112.359999999999,
+                "name": "ads_vastAdDuration",
+                "startTime": 10934.26
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "visualMetrics": [],
+    "cpu": [],
+    "extras": [
+      {},
+      {},
+      {}
+    ],
+    "fullyLoaded": [],
+    "errors": [
+      [],
+      [],
+      [
+        "UrlLoadError",
+        "Failed to load https://www.wired.com/"
+      ]
+    ],
+    "statistics": {
+      "browser": {
+        "appConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        },
+        "asyncAppConstants": {
+          "MOZ_UNSIGNED_SCOPES": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "TELEMETRY_PING_FORMAT_VERSION": {
+            "median": 4,
+            "mean": 4,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 4,
+            "p10": 4,
+            "p90": 4,
+            "p99": 4,
+            "max": 4
+          }
+        }
+      },
+      "pageinfo": {
+        "documentHeight": {
+          "median": 15073,
+          "mean": 15073,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 15073,
+          "p10": 15073,
+          "p90": 15073,
+          "p99": 15073,
+          "max": 15073
+        },
+        "documentSize": {
+          "decodedBodySize": {
+            "median": 745570,
+            "mean": 745570,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 745570,
+            "p10": 745570,
+            "p90": 745570,
+            "p99": 745570,
+            "max": 745570
+          },
+          "encodedBodySize": {
+            "median": 146028,
+            "mean": 146028,
+            "mdev": 13.0815,
+            "stddev": 19,
+            "min": 146009,
+            "p10": 146009,
+            "p90": 146046,
+            "p99": 146046,
+            "max": 146046
+          },
+          "transferSize": {
+            "median": 148239,
+            "mean": 148239,
+            "mdev": 13.0815,
+            "stddev": 19,
+            "min": 148220,
+            "p10": 148220,
+            "p90": 148257,
+            "p99": 148257,
+            "max": 148257
+          }
+        },
+        "documentWidth": {
+          "median": 360,
+          "mean": 360,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 360,
+          "p10": 360,
+          "p90": 360,
+          "p99": 360,
+          "max": 360
+        },
+        "domElements": {
+          "median": 1388,
+          "mean": 1388,
+          "mdev": 0,
+          "stddev": 0,
+          "min": 1388,
+          "p10": 1388,
+          "p90": 1388,
+          "p99": 1388,
+          "max": 1388
+        },
+        "navigationStartTime": {
+          "median": 1620427309331,
+          "mean": 1620427309331,
+          "mdev": 16384,
+          "stddev": 23170,
+          "min": 1620427284982,
+          "p10": 1620427284982,
+          "p90": 1620427333680,
+          "p99": 1620427333680,
+          "max": 1620427333680
+        },
+        "resources": {
+          "count": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "duration": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "visualElements": {
+          "heroes": [
+            {
+              "height": {
+                "median": 162,
+                "mean": 162,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 162,
+                "p10": 162,
+                "p90": 162,
+                "p99": 162,
+                "max": 162
+              },
+              "width": {
+                "median": 288,
+                "mean": 288,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 288,
+                "p10": 288,
+                "p90": 288,
+                "p99": 288,
+                "max": 288
+              },
+              "x": {
+                "median": 36,
+                "mean": 36,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 36,
+                "p10": 36,
+                "p90": 36,
+                "p99": 36,
+                "max": 36
+              },
+              "y": {
+                "median": 415,
+                "mean": 415,
+                "mdev": 0,
+                "stddev": 0,
+                "min": 415,
+                "p10": 415,
+                "p90": 415,
+                "p99": 415,
+                "max": 415
+              }
+            }
+          ],
+          "viewport": {
+            "height": {
+              "median": 612,
+              "mean": 612,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 612,
+              "p10": 612,
+              "p90": 612,
+              "p99": 612,
+              "max": 612
+            },
+            "width": {
+              "median": 360,
+              "mean": 360,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 360,
+              "p10": 360,
+              "p90": 360,
+              "p99": 360,
+              "max": 360
+            }
+          }
+        }
+      },
+      "timings": {
+        "firstPaint": {
+          "median": 2091,
+          "mean": 2091,
+          "mdev": 54.8008,
+          "stddev": 78,
+          "min": 2013,
+          "p10": 2013,
+          "p90": 2168,
+          "p99": 2168,
+          "max": 2168
+        },
+        "loadEventEnd": {
+          "median": 32741,
+          "mean": 32741,
+          "mdev": 734.3304,
+          "stddev": 1039,
+          "min": 31702,
+          "p10": 31702,
+          "p90": 33779,
+          "p99": 33779,
+          "max": 33779
+        },
+        "navigationTiming": {
+          "connectStart": {
+            "median": 260,
+            "mean": 260,
+            "mdev": 42.4264,
+            "stddev": 60,
+            "min": 200,
+            "p10": 200,
+            "p90": 320,
+            "p99": 320,
+            "max": 320
+          },
+          "domComplete": {
+            "median": 32696,
+            "mean": 32696,
+            "mdev": 732.2091,
+            "stddev": 1036,
+            "min": 31660,
+            "p10": 31660,
+            "p90": 33731,
+            "p99": 33731,
+            "max": 33731
+          },
+          "domContentLoadedEventEnd": {
+            "median": 2527,
+            "mean": 2527,
+            "mdev": 48.0833,
+            "stddev": 68,
+            "min": 2459,
+            "p10": 2459,
+            "p90": 2595,
+            "p99": 2595,
+            "max": 2595
+          },
+          "domContentLoadedEventStart": {
+            "median": 2507,
+            "mean": 2507,
+            "mdev": 48.0833,
+            "stddev": 68,
+            "min": 2439,
+            "p10": 2439,
+            "p90": 2575,
+            "p99": 2575,
+            "max": 2575
+          },
+          "domInteractive": {
+            "median": 1464,
+            "mean": 1464,
+            "mdev": 35.0018,
+            "stddev": 50,
+            "min": 1414,
+            "p10": 1414,
+            "p90": 1513,
+            "p99": 1513,
+            "max": 1513
+          },
+          "domainLookupEnd": {
+            "median": 259,
+            "mean": 259,
+            "mdev": 42.0729,
+            "stddev": 60,
+            "min": 199,
+            "p10": 199,
+            "p90": 318,
+            "p99": 318,
+            "max": 318
+          },
+          "domainLookupStart": {
+            "median": 259,
+            "mean": 259,
+            "mdev": 42.0729,
+            "stddev": 60,
+            "min": 199,
+            "p10": 199,
+            "p90": 318,
+            "p99": 318,
+            "max": 318
+          },
+          "duration": {
+            "median": 32741,
+            "mean": 32741,
+            "mdev": 734.3304,
+            "stddev": 1039,
+            "min": 31702,
+            "p10": 31702,
+            "p90": 33779,
+            "p99": 33779,
+            "max": 33779
+          },
+          "fetchStart": {
+            "median": 3,
+            "mean": 3,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 3,
+            "p10": 3,
+            "p90": 3,
+            "p99": 3,
+            "max": 3
+          },
+          "loadEventEnd": {
+            "median": 32741,
+            "mean": 32741,
+            "mdev": 734.3304,
+            "stddev": 1039,
+            "min": 31702,
+            "p10": 31702,
+            "p90": 33779,
+            "p99": 33779,
+            "max": 33779
+          },
+          "loadEventStart": {
+            "median": 32696,
+            "mean": 32696,
+            "mdev": 732.5626,
+            "stddev": 1036,
+            "min": 31660,
+            "p10": 31660,
+            "p90": 33732,
+            "p99": 33732,
+            "max": 33732
+          },
+          "redirectEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "redirectStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "requestStart": {
+            "median": 565,
+            "mean": 565,
+            "mdev": 32.1734,
+            "stddev": 46,
+            "min": 519,
+            "p10": 519,
+            "p90": 610,
+            "p99": 610,
+            "max": 610
+          },
+          "responseEnd": {
+            "median": 677,
+            "mean": 677,
+            "mdev": 31.4663,
+            "stddev": 45,
+            "min": 632,
+            "p10": 632,
+            "p90": 721,
+            "p99": 721,
+            "max": 721
+          },
+          "responseStart": {
+            "median": 677,
+            "mean": 677,
+            "mdev": 31.4663,
+            "stddev": 45,
+            "min": 632,
+            "p10": 632,
+            "p90": 721,
+            "p99": 721,
+            "max": 721
+          },
+          "secureConnectionStart": {
+            "median": 370,
+            "mean": 370,
+            "mdev": 43.1335,
+            "stddev": 61,
+            "min": 309,
+            "p10": 309,
+            "p90": 431,
+            "p99": 431,
+            "max": 431
+          },
+          "startTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventEnd": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "unloadEventStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "workerStart": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          }
+        },
+        "pageTimings": {
+          "backEndTime": {
+            "median": 677,
+            "mean": 677,
+            "mdev": 31.4663,
+            "stddev": 45,
+            "min": 632,
+            "p10": 632,
+            "p90": 721,
+            "p99": 721,
+            "max": 721
+          },
+          "domContentLoadedTime": {
+            "median": 2507,
+            "mean": 2507,
+            "mdev": 48.0833,
+            "stddev": 68,
+            "min": 2439,
+            "p10": 2439,
+            "p90": 2575,
+            "p99": 2575,
+            "max": 2575
+          },
+          "domInteractiveTime": {
+            "median": 1464,
+            "mean": 1464,
+            "mdev": 35.0018,
+            "stddev": 50,
+            "min": 1414,
+            "p10": 1414,
+            "p90": 1513,
+            "p99": 1513,
+            "max": 1513
+          },
+          "domainLookupTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "frontEndTime": {
+            "median": 32020,
+            "mean": 32020,
+            "mdev": 764.0289,
+            "stddev": 1081,
+            "min": 30939,
+            "p10": 30939,
+            "p90": 33100,
+            "p99": 33100,
+            "max": 33100
+          },
+          "pageDownloadTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "pageLoadTime": {
+            "median": 32696,
+            "mean": 32696,
+            "mdev": 732.5626,
+            "stddev": 1036,
+            "min": 31660,
+            "p10": 31660,
+            "p90": 33732,
+            "p99": 33732,
+            "max": 33732
+          },
+          "redirectionTime": {
+            "median": 0,
+            "mean": 0,
+            "mdev": 0,
+            "stddev": 0,
+            "min": 0,
+            "p10": 0,
+            "p90": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "serverConnectionTime": {
+            "median": 304,
+            "mean": 304,
+            "mdev": 9.8995,
+            "stddev": 14,
+            "min": 290,
+            "p10": 290,
+            "p90": 318,
+            "p99": 318,
+            "max": 318
+          },
+          "serverResponseTime": {
+            "median": 112,
+            "mean": 112,
+            "mdev": 0.7071,
+            "stddev": 1,
+            "min": 111,
+            "p10": 111,
+            "p90": 113,
+            "p99": 113,
+            "max": 113
+          }
+        },
+        "rumSpeedIndex": {
+          "median": 676,
+          "mean": 676,
+          "mdev": 31.8198,
+          "stddev": 45,
+          "min": 631,
+          "p10": 631,
+          "p90": 721,
+          "p99": 721,
+          "max": 721
+        },
+        "timeToContentfulPaint": {
+          "median": 2314,
+          "mean": 2314,
+          "mdev": 51.6188,
+          "stddev": 73,
+          "min": 2241,
+          "p10": 2241,
+          "p90": 2387,
+          "p99": 2387,
+          "max": 2387
+        },
+        "timeToDomContentFlushed": {
+          "median": 2265,
+          "mean": 2265,
+          "mdev": 41.7193,
+          "stddev": 59,
+          "min": 2206,
+          "p10": 2206,
+          "p90": 2324,
+          "p99": 2324,
+          "max": 2324
+        },
+        "userTimings": {
+          "marks": {
+            "ATP-Init": {
+              "median": 1451,
+              "mean": 1451,
+              "mdev": 35.0301,
+              "stddev": 50,
+              "min": 1401,
+              "p10": 1401,
+              "p90": 1501,
+              "p99": 1501,
+              "max": 1501
+            },
+            "loadStarteventUtils": {
+              "median": 5686,
+              "mean": 5686,
+              "mdev": 1756.6654,
+              "stddev": 2484,
+              "min": 3202,
+              "p10": 3202,
+              "p90": 8171,
+              "p99": 8171,
+              "max": 8171
+            },
+            "loadEndeventUtils": {
+              "median": 5687,
+              "mean": 5687,
+              "mdev": 1756.6017,
+              "stddev": 2484,
+              "min": 3202,
+              "p10": 3202,
+              "p90": 8171,
+              "p99": 8171,
+              "max": 8171
+            },
+            "loadStartpixelQueue": {
+              "median": 5687,
+              "mean": 5687,
+              "mdev": 1756.5805,
+              "stddev": 2484,
+              "min": 3203,
+              "p10": 3203,
+              "p90": 8171,
+              "p99": 8171,
+              "max": 8171
+            },
+            "loadEndpixelQueue": {
+              "median": 5687,
+              "mean": 5687,
+              "mdev": 1756.5947,
+              "stddev": 2484,
+              "min": 3203,
+              "p10": 3203,
+              "p90": 8171,
+              "p99": 8171,
+              "max": 8171
+            },
+            "react_render:start": {
+              "median": 4203,
+              "mean": 4203,
+              "mdev": 23.3133,
+              "stddev": 33,
+              "min": 4170,
+              "p10": 4170,
+              "p90": 4236,
+              "p99": 4236,
+              "max": 4236
+            },
+            "action.@@router/LOCATION_CHANGE_start": {
+              "median": 4219,
+              "mean": 4219,
+              "mdev": 23.4618,
+              "stddev": 33,
+              "min": 4186,
+              "p10": 4186,
+              "p90": 4253,
+              "p99": 4253,
+              "max": 4253
+            },
+            "action.@@router/LOCATION_CHANGE_end": {
+              "median": 4220,
+              "mean": 4220,
+              "mdev": 23.4618,
+              "stddev": 33,
+              "min": 4187,
+              "p10": 4187,
+              "p90": 4253,
+              "p99": 4253,
+              "max": 4253
+            },
+            "action.NEW_AD_PAGE_CREATED_start": {
+              "median": 5267,
+              "mean": 5267,
+              "mdev": 26.7074,
+              "stddev": 38,
+              "min": 5230,
+              "p10": 5230,
+              "p90": 5305,
+              "p99": 5305,
+              "max": 5305
+            },
+            "action.NEW_AD_PAGE_CREATED_end": {
+              "median": 5268,
+              "mean": 5268,
+              "mdev": 26.7216,
+              "stddev": 38,
+              "min": 5230,
+              "p10": 5230,
+              "p90": 5306,
+              "p99": 5306,
+              "max": 5306
+            },
+            "action.AD_BLOCK_DETECTED_start": {
+              "median": 5341,
+              "mean": 5341,
+              "mdev": 31.8127,
+              "stddev": 45,
+              "min": 5296,
+              "p10": 5296,
+              "p90": 5386,
+              "p99": 5386,
+              "max": 5386
+            },
+            "action.AD_BLOCK_DETECTED_end": {
+              "median": 5341,
+              "mean": 5341,
+              "mdev": 31.742,
+              "stddev": 45,
+              "min": 5296,
+              "p10": 5296,
+              "p90": 5386,
+              "p99": 5386,
+              "max": 5386
+            },
+            "action.SHOW_SOCIAL_NETWORK_start": {
+              "median": 5365,
+              "mean": 5365,
+              "mdev": 31.346,
+              "stddev": 44,
+              "min": 5321,
+              "p10": 5321,
+              "p90": 5409,
+              "p99": 5409,
+              "max": 5409
+            },
+            "action.SHOW_SOCIAL_NETWORK_end": {
+              "median": 5365,
+              "mean": 5365,
+              "mdev": 31.3743,
+              "stddev": 44,
+              "min": 5321,
+              "p10": 5321,
+              "p90": 5410,
+              "p99": 5410,
+              "max": 5410
+            },
+            "action.PAGE_MOUNT_start": {
+              "median": 5376,
+              "mean": 5376,
+              "mdev": 31.544,
+              "stddev": 45,
+              "min": 5331,
+              "p10": 5331,
+              "p90": 5421,
+              "p99": 5421,
+              "max": 5421
+            },
+            "action.PAGE_MOUNT_end": {
+              "median": 5381,
+              "mean": 5381,
+              "mdev": 31.3602,
+              "stddev": 44,
+              "min": 5337,
+              "p10": 5337,
+              "p90": 5426,
+              "p99": 5426,
+              "max": 5426
+            },
+            "react_render:end": {
+              "median": 5586,
+              "mean": 5586,
+              "mdev": 31.742,
+              "stddev": 45,
+              "min": 5541,
+              "p10": 5541,
+              "p90": 5631,
+              "p99": 5631,
+              "max": 5631
+            },
+            "gpt-tag-load": {
+              "median": 5733,
+              "mean": 5733,
+              "mdev": 33.5239,
+              "stddev": 47,
+              "min": 5686,
+              "p10": 5686,
+              "p90": 5780,
+              "p99": 5780,
+              "max": 5780
+            },
+            "js_player_js_start_execution": {
+              "median": 6377,
+              "mean": 6377,
+              "mdev": 48.6843,
+              "stddev": 69,
+              "min": 6308,
+              "p10": 6308,
+              "p90": 6446,
+              "p99": 6446,
+              "max": 6446
+            },
+            "fetchConfig_started": {
+              "median": 6401,
+              "mean": 6401,
+              "mdev": 48.557,
+              "stddev": 69,
+              "min": 6333,
+              "p10": 6333,
+              "p90": 6470,
+              "p99": 6470,
+              "max": 6470
+            },
+            "GPT-Init": {
+              "median": 6801,
+              "mean": 6801,
+              "mdev": 62.4375,
+              "stddev": 88,
+              "min": 6713,
+              "p10": 6713,
+              "p90": 6889,
+              "p99": 6889,
+              "max": 6889
+            },
+            "4d-load-user-start": {
+              "median": 7438,
+              "mean": 7438,
+              "mdev": 168.1429,
+              "stddev": 238,
+              "min": 7200,
+              "p10": 7200,
+              "p90": 7676,
+              "p99": 7676,
+              "max": 7676
+            },
+            "4d-load-context-start": {
+              "median": 7440,
+              "mean": 7440,
+              "mdev": 167.8247,
+              "stddev": 237,
+              "min": 7203,
+              "p10": 7203,
+              "p90": 7678,
+              "p99": 7678,
+              "max": 7678
+            },
+            "4d-load-start": {
+              "median": 7442,
+              "mean": 7442,
+              "mdev": 167.7894,
+              "stddev": 237,
+              "min": 7204,
+              "p10": 7204,
+              "p90": 7679,
+              "p99": 7679,
+              "max": 7679
+            },
+            "fetchConfig_complete": {
+              "median": 7743,
+              "mean": 7743,
+              "mdev": 39.1949,
+              "stddev": 55,
+              "min": 7688,
+              "p10": 7688,
+              "p90": 7799,
+              "p99": 7799,
+              "max": 7799
+            },
+            "fetchPrebid_started": {
+              "median": 7876,
+              "mean": 7876,
+              "mdev": 58.5909,
+              "stddev": 83,
+              "min": 7793,
+              "p10": 7793,
+              "p90": 7959,
+              "p99": 7959,
+              "max": 7959
+            },
+            "ATP-First-Prebid-Auction": {
+              "median": 8224,
+              "mean": 8224,
+              "mdev": 75.1655,
+              "stddev": 106,
+              "min": 8117,
+              "p10": 8117,
+              "p90": 8330,
+              "p99": 8330,
+              "max": 8330
+            },
+            "gpt-first-ad-request": {
+              "median": 8514,
+              "mean": 8514,
+              "mdev": 37.7878,
+              "stddev": 53,
+              "min": 8460,
+              "p10": 8460,
+              "p90": 8567,
+              "p99": 8567,
+              "max": 8567
+            },
+            "ATP-First-A9-Auction": {
+              "median": 9052,
+              "mean": 9052,
+              "mdev": 70.9087,
+              "stddev": 100,
+              "min": 8951,
+              "p10": 8951,
+              "p90": 9152,
+              "p99": 9152,
+              "max": 9152
+            },
+            "gpt-first-ad-render": {
+              "median": 10505,
+              "mean": 10505,
+              "mdev": 768.2362,
+              "stddev": 1086,
+              "min": 9419,
+              "p10": 9419,
+              "p90": 11592,
+              "p99": 11592,
+              "max": 11592
+            },
+            "ATP-First-Request": {
+              "median": 10544,
+              "mean": 10544,
+              "mdev": 762.551,
+              "stddev": 1078,
+              "min": 9465,
+              "p10": 9465,
+              "p90": 11622,
+              "p99": 11622,
+              "max": 11622
+            },
+            "js_evaluatedJS": {
+              "median": 10064,
+              "mean": 10064,
+              "mdev": 409.1603,
+              "stddev": 579,
+              "min": 9485,
+              "p10": 9485,
+              "p90": 10642,
+              "p99": 10642,
+              "max": 10642
+            },
+            "promise_resolution_loadEmbedPieces": {
+              "median": 10095,
+              "mean": 10095,
+              "mdev": 388.2087,
+              "stddev": 549,
+              "min": 9546,
+              "p10": 9546,
+              "p90": 10644,
+              "p99": 10644,
+              "max": 10644
+            },
+            "ads_dfp_plugin_requestAdsLoader": {
+              "median": 10544,
+              "mean": 10544,
+              "mdev": 383.959,
+              "stddev": 543,
+              "min": 10001,
+              "p10": 10001,
+              "p90": 11087,
+              "p99": 11087,
+              "max": 11087
+            },
+            "createPlayer_started": {
+              "median": 10625,
+              "mean": 10625,
+              "mdev": 384.0438,
+              "stddev": 543,
+              "min": 10082,
+              "p10": 10082,
+              "p90": 11168,
+              "p99": 11168,
+              "max": 11168
+            },
+            "ads_fetchVASTAd_started": {
+              "median": 11560,
+              "mean": 11560,
+              "mdev": 442.5145,
+              "stddev": 626,
+              "min": 10934,
+              "p10": 10934,
+              "p90": 12186,
+              "p99": 12186,
+              "max": 12186
+            },
+            "4d-load-context-end": {
+              "median": 12001,
+              "mean": 12001,
+              "mdev": 730.9221,
+              "stddev": 1034,
+              "min": 10968,
+              "p10": 10968,
+              "p90": 13035,
+              "p99": 13035,
+              "max": 13035
+            },
+            "4d-load-user-end": {
+              "median": 11019,
+              "mean": 11019,
+              "mdev": 1426.3192,
+              "stddev": 2017,
+              "min": 9002,
+              "p10": 9002,
+              "p90": 13036,
+              "p99": 13036,
+              "max": 13036
+            },
+            "4d-load-end": {
+              "median": 12002,
+              "mean": 12002,
+              "mdev": 731.0989,
+              "stddev": 1034,
+              "min": 10968,
+              "p10": 10968,
+              "p90": 13036,
+              "p99": 13036,
+              "max": 13036
+            },
+            "ATP-First-Money-Request": {
+              "median": 14234,
+              "mean": 14234,
+              "mdev": 323.3953,
+              "stddev": 457,
+              "min": 13776,
+              "p10": 13776,
+              "p90": 14691,
+              "p99": 14691,
+              "max": 14691
+            },
+            "ATP-First-Impression": {
+              "median": 15229,
+              "mean": 15229,
+              "mdev": 531.7938,
+              "stddev": 752,
+              "min": 14477,
+              "p10": 14477,
+              "p90": 15981,
+              "p99": 15981,
+              "max": 15981
+            },
+            "snaptr": {
+              "median": 18916,
+              "mean": 18916,
+              "mdev": 735.1082,
+              "stddev": 1040,
+              "min": 17876,
+              "p10": 17876,
+              "p90": 19956,
+              "p99": 19956,
+              "max": 19956
+            },
+            "ads_fetchVASTAd_complete": {
+              "median": 18992,
+              "mean": 18992,
+              "mdev": 38.6858,
+              "stddev": 55,
+              "min": 18937,
+              "p10": 18937,
+              "p90": 19047,
+              "p99": 19047,
+              "max": 19047
+            },
+            "ads_dfp_plugin_requestAds": {
+              "median": 18994,
+              "mean": 18994,
+              "mdev": 38.502,
+              "stddev": 54,
+              "min": 18940,
+              "p10": 18940,
+              "p90": 19049,
+              "p99": 19049,
+              "max": 19049
+            },
+            "ATP-First-Money-Impression": {
+              "median": 19661,
+              "mean": 19661,
+              "mdev": 1198.9066,
+              "stddev": 1696,
+              "min": 17965,
+              "p10": 17965,
+              "p90": 21356,
+              "p99": 21356,
+              "max": 21356
+            },
+            "ATP-First-Money-Viewable-Impression": {
+              "median": 25809,
+              "mean": 25809,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 25809,
+              "p10": 25809,
+              "p90": 25809,
+              "p99": 25809,
+              "max": 25809
+            },
+            "ATP-First-Viewable-Impression": {
+              "median": 25809,
+              "mean": 25809,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 25809,
+              "p10": 25809,
+              "p90": 25809,
+              "p99": 25809,
+              "max": 25809
+            }
+          },
+          "measures": {
+            "js_jsStarted_inline": {
+              "median": 6377,
+              "mean": 6377,
+              "mdev": 48.6843,
+              "stddev": 69,
+              "min": 6308,
+              "p10": 6308,
+              "p90": 6446,
+              "p99": 6446,
+              "max": 6446
+            },
+            "ATP-Init-To-First-Prebid-Auction": {
+              "median": 6773,
+              "mean": 6773,
+              "mdev": 110.1955,
+              "stddev": 156,
+              "min": 6617,
+              "p10": 6617,
+              "p90": 6928,
+              "p99": 6928,
+              "max": 6928
+            },
+            "ATP-Init-To-First-A9-Auction": {
+              "median": 7601,
+              "mean": 7601,
+              "mdev": 105.9387,
+              "stddev": 150,
+              "min": 7451,
+              "p10": 7451,
+              "p90": 7751,
+              "p99": 7751,
+              "max": 7751
+            },
+            "ATP-Init-To-First-Request": {
+              "median": 9093,
+              "mean": 9093,
+              "mdev": 727.521,
+              "stddev": 1029,
+              "min": 8064,
+              "p10": 8064,
+              "p90": 10122,
+              "p99": 10122,
+              "max": 10122
+            },
+            "ATP-Init-To-First-Money-Request": {
+              "median": 12783,
+              "mean": 12783,
+              "mdev": 358.4254,
+              "stddev": 507,
+              "min": 12276,
+              "p10": 12276,
+              "p90": 13290,
+              "p99": 13290,
+              "max": 13290
+            },
+            "ATP-Init-To-First-Impression": {
+              "median": 13778,
+              "mean": 13778,
+              "mdev": 566.8239,
+              "stddev": 802,
+              "min": 12976,
+              "p10": 12976,
+              "p90": 14579,
+              "p99": 14579,
+              "max": 14579
+            },
+            "ATP-Init-To-First-Money-Impression": {
+              "median": 18210,
+              "mean": 18210,
+              "mdev": 1233.9367,
+              "stddev": 1745,
+              "min": 16465,
+              "p10": 16465,
+              "p90": 19955,
+              "p99": 19955,
+              "max": 19955
+            },
+            "ATP-Init-To-Money-Viewable-Impression": {
+              "median": 24407,
+              "mean": 24407,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 24407,
+              "p10": 24407,
+              "p90": 24407,
+              "p99": 24407,
+              "max": 24407
+            },
+            "ATP-Init-To-Viewable-Impression": {
+              "median": 24407,
+              "mean": 24407,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 24407,
+              "p10": 24407,
+              "p90": 24407,
+              "p99": 24407,
+              "max": 24407
+            },
+            "lteu": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0636,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "ltpq": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0141,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "react_render": {
+              "median": 1383,
+              "mean": 1383,
+              "mdev": 8.4287,
+              "stddev": 12,
+              "min": 1371,
+              "p10": 1371,
+              "p90": 1395,
+              "p99": 1395,
+              "max": 1395
+            },
+            "action.@@router/LOCATION_CHANGE": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "action.NEW_AD_PAGE_CREATED": {
+              "median": 1,
+              "mean": 1,
+              "mdev": 0.0141,
+              "stddev": 0,
+              "min": 1,
+              "p10": 1,
+              "p90": 1,
+              "p99": 1,
+              "max": 1
+            },
+            "action.AD_BLOCK_DETECTED": {
+              "median": 1,
+              "mean": 1,
+              "mdev": 0.0707,
+              "stddev": 0,
+              "min": 1,
+              "p10": 1,
+              "p90": 1,
+              "p99": 1,
+              "max": 1
+            },
+            "action.SHOW_SOCIAL_NETWORK": {
+              "median": 0,
+              "mean": 0,
+              "mdev": 0.0283,
+              "stddev": 0,
+              "min": 0,
+              "p10": 0,
+              "p90": 0,
+              "p99": 0,
+              "max": 0
+            },
+            "action.PAGE_MOUNT": {
+              "median": 5,
+              "mean": 5,
+              "mdev": 0.1838,
+              "stddev": 0,
+              "min": 5,
+              "p10": 5,
+              "p90": 6,
+              "p99": 6,
+              "max": 6
+            },
+            "js_timeToEvaluate_mobile": {
+              "median": 3687,
+              "mean": 3687,
+              "mdev": 360.476,
+              "stddev": 510,
+              "min": 3177,
+              "p10": 3177,
+              "p90": 4196,
+              "p99": 4196,
+              "max": 4196
+            },
+            "fetchConfig_complete": {
+              "median": 1342,
+              "mean": 1342,
+              "mdev": 9.3621,
+              "stddev": 13,
+              "min": 1329,
+              "p10": 1329,
+              "p90": 1355,
+              "p99": 1355,
+              "max": 1355
+            },
+            "4d-load-user": {
+              "median": 3581,
+              "mean": 3581,
+              "mdev": 1258.1763,
+              "stddev": 1779,
+              "min": 1801,
+              "p10": 1801,
+              "p90": 5360,
+              "p99": 5360,
+              "max": 5360
+            },
+            "4d-load-context": {
+              "median": 4561,
+              "mean": 4561,
+              "mdev": 563.0974,
+              "stddev": 796,
+              "min": 3765,
+              "p10": 3765,
+              "p90": 5357,
+              "p99": 5357,
+              "max": 5357
+            },
+            "4d-load": {
+              "median": 4560,
+              "mean": 4560,
+              "mdev": 563.3095,
+              "stddev": 797,
+              "min": 3764,
+              "p10": 3764,
+              "p90": 5357,
+              "p99": 5357,
+              "max": 5357
+            },
+            "ads_requestAdsLoader": {
+              "median": 480,
+              "mean": 480,
+              "mdev": 25.2013,
+              "stddev": 36,
+              "min": 444,
+              "p10": 444,
+              "p90": 516,
+              "p99": 516,
+              "max": 516
+            },
+            "createPlayer_started": {
+              "median": 530,
+              "mean": 530,
+              "mdev": 4.1649,
+              "stddev": 6,
+              "min": 524,
+              "p10": 524,
+              "p90": 536,
+              "p99": 536,
+              "max": 536
+            },
+            "ads_requestAds": {
+              "median": 8451,
+              "mean": 8451,
+              "mdev": 422.4609,
+              "stddev": 597,
+              "min": 7853,
+              "p10": 7853,
+              "p90": 9048,
+              "p99": 9048,
+              "max": 9048
+            },
+            "ads_vastAdDuration": {
+              "median": 7432,
+              "mean": 7432,
+              "mdev": 481.2003,
+              "stddev": 681,
+              "min": 6751,
+              "p10": 6751,
+              "p90": 8112,
+              "p99": 8112,
+              "max": 8112
+            }
+          }
+        }
+      }
+    }
+  }
+]
