@@ -28,9 +28,10 @@ app.post("/report_broken_page",(req, res)=>{
 
 app.post("/send_data_report",(req, res)=>{
   const userId = req.body.user;
-  const data = req.body.data;
+  const database = req.body.database;
+  const visitInstances = req.body.visitInstances;
 
-  console.log(data)
+  console.log(visitInstances)
 })
 
 app.get("/test", (req,res)=>{

@@ -9,10 +9,11 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v20"
+let db_name = "capstone_plugin_v22"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
+let instanceStore = "instanceStore"
 let featureIndexMapping = {
     "addEventListener__createElement__getElementsByTagName__insertBefore__toString": 0,
     "onkeyup": 1,
@@ -714,6 +715,11 @@ const setupDB = async (data) =>{
                     console.log("hashcode_to_script store created")
                 }
 
+                let visitInstanceObjectStore = db.createObjectStore(instanceStore,{autoIncrement:true});
+                visitInstanceObjectStore.transaction.oncomplete = () =>{
+                    console.log("Visit Instance store created")
+                }
+
                 await featuresList.forEach(async feature=>{
                     await featureObjectStore.add(feature)
                 })
@@ -755,7 +761,6 @@ const runScriptLabelling = (db) =>{
                         resolve({cancel:false})
                     }
                 }
-
 
             })
         }
@@ -903,13 +908,26 @@ checkforUserIdentifications();
 
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
     if (changeInfo.status == 'complete') {
-
-        console.log("****************")
-        
         browser.tabs.executeScript(tab.ib, {
             file: 'inject.js'
         });
-
     }
-  })
+})
+
+
+const request_ = window.indexedDB.open(db_name,db_version);
+
+request_.onsuccess = (event) => {
+
+    db = event.target.result;
+
+    browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+        if (message.from == "injectedScript") {            
+            var tx3 = db.transaction(instanceStore, 'readwrite');
+            var visitInstanceDBStore = tx3.objectStore(instanceStore);
+            visitInstanceDBStore.add(message.message)
+        }
+    })  
+}
+
 

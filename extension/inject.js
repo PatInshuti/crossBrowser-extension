@@ -1,36 +1,34 @@
 const perfData = window.performance.timing;
 const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+const renderTime = perfData.domComplete - perfData.domLoading;
 
-console.log(perfData)
 console.log("Page Load Time: "+pageLoadTime)
+console.log("Page Render Time: "+renderTime)
 
-// var startTime = new Date().getTime();
+let resources = window.performance.getEntries();
 
-// function onLoadEventHandler() {  
-//     //  var latency = startTime - performance.timing.navigationStart;  
-//     const perfData = browser.performance.timing;
-//      const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+let encodedBodySize = 0;
+let transferSize = 0
+resources.forEach(resource=>{
+    if (resource.encodedBodySize){    
+        encodedBodySize += resource.encodedBodySize
+    }
 
-//      console.log('Latency = ' + latency + 'ms');  
-// }
+    if (resource.transferSize){
+        transferSize += resource.transferSize
+    }
+})
 
-// onLoadEventHandler()
+encodedBodySize = encodedBodySize/1024 //kilobyte
+transferSize = transferSize/1024 //Kilobyte
 
-
-// console.log("****")
-// console.log(perfData)
-// console.log(pageLoadTime)
-// // console.log("inject")
-
-
-// // window.onload = function(){
-// //     setTimeout(function(){
-// //       var t = performance.timing;
-// //       console.log(t.loadEventEnd - t.responseEnd);
-// //     }, 0);
-// //   }
+let visitInstance = {
+    "websiteName":window.location.href,
+    "transferSize":transferSize,
+    "pageLoadTime":pageLoadTime,
+    "pageRenderTime":renderTime
+}
 
 
-// // var loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
-// // console.log(window.performance);
-// // console.log("here*********")
+browser.runtime.sendMessage({ from:"injectedScript",message:visitInstance });
+

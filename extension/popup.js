@@ -1,7 +1,8 @@
 
-let db_name = "capstone_plugin_v13"
+let db_name = "capstone_plugin_v22"
 let db_version = 1
 let hashCodeToScriptStore = "hashCodeToScriptStore"
+let instanceStore = "instanceStore"
 let serverDomain = "10.225.86.123"
 let port = "4444"
 let apiUrl=`http://${serverDomain}`;
@@ -64,22 +65,32 @@ document.addEventListener('DOMContentLoaded', function(){
             
             getAllhashCodeToScript.onsuccess = async (event) =>{
                 // Start intercepting requests
-                theMapping = event.target.result;
+                let theMapping = event.target.result;
 
                 data = {
-                    "data":theMapping,
+                    "database":theMapping,
                     "user":uniqueUserIdentification
                 }
 
-                fetch(testUrl+"/send_data_report", {
-                    method: 'POST', 
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-            
-                    body: JSON.stringify(data)
-                });
+                var tx3 = db.transaction(instanceStore, 'readwrite');
+                var instanceDBStore = tx3.objectStore(instanceStore);
+                var visitInstanceDBStore = instanceDBStore.getAll();
+                
+                visitInstanceDBStore.onsuccess = async (event) =>{
+                    let visitInstances = event.target.result;
+                    data["visitInstances"] = visitInstances;
+
+                    fetch(testUrl+"/send_data_report", {
+                        method: 'POST', 
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                
+                        body: JSON.stringify(data)
+                    });
+
+                }
             }
         }
 
