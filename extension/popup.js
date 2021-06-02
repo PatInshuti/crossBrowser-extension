@@ -5,13 +5,14 @@ let hashCodeToScriptStore = "hashCodeToScriptStore"
 let serverDomain = "10.225.86.123"
 let port = "4444"
 let apiUrl=`http://${serverDomain}`;
-let testUrl = `http://127.0.0.1:4444`
+let testUrl = `http://10.225.86.123.:4444`
 
 browser = (function () {
     return window.browser || window.chrome;
 })();
 
 document.addEventListener('DOMContentLoaded', function(){
+    
 
     let uniqueUserIdentification = localStorage.getItem("uniqueUserIdentificationPlugin");
     

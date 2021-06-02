@@ -9,7 +9,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v13"
+let db_name = "capstone_plugin_v20"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"
@@ -523,6 +523,107 @@ let featureIndexMapping = {
     "keys": 506,
     "parent": 507
 }
+
+let preSavedData = 
+[
+    {
+      id: 'http://yasirzaki.net/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.13.0',
+      label: 'social'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js?ver=2.3.11',
+      label: 'utility'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-content/plugins/papercite/js/papercite.js?ver=5.5.5',
+      label: 'ads+marketing'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-content/plugins/vertical-news-scroller/js/jv.js?ver=2.0',
+      label: 'tag-manager+content'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-content/themes/identity/js/identity.js?ver=20150504',
+      label: 'tag-manager+content'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-content/themes/identity/js/navigation.js?ver=20120206',
+      label: 'tag-manager+content'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-content/themes/identity/js/skip-link-focus-fix.js?ver=20130115',
+      label: 'tag-manager+content'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-includes/js/wp-embed.min.js?ver=5.5.5',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'http://yasirzaki.net/wp-includes/js/wp-emoji-release.min.js?ver=5.5.5',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'https://cdn.sstatic.net/Js/full-anon.en.js?v=1d3841b989ab',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'https://cdn.sstatic.net/Js/highlightjs-loader.en.js?v=f98abf599e61',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'https://cdn.sstatic.net/Js/post-validation.en.js?v=3627640a6800',
+      label: 'ads+marketing'
+    },
+    {
+      id: 'https://cdn.sstatic.net/Js/stub.en.js?v=dcfe3f53782e',
+      label: 'social'
+    },
+    {
+      id: 'https://cdn.sstatic.net/clc/clc.min.js?v=07743a815201',
+      label: 'hosting+cdn'
+    },
+    {
+      id: 'https://duckduckgo.com/a.js?p=1&src_id=stack_overflow&from=nlp_qa&id=54176735&q=correct%20way%20to%20add%20multiple%20objects%20in%20indexeddb&s=stackoverflow.com&tl=Correct%20way%20to%20add%20multiple%20objects%20in%20indexedDb%3F',
+      label: 'tag-manager+content'
+    },
+    {
+      id: 'https://duckduckgo.com/d.js?q=insert%20an%20array%20of%20objects%20to%20indexedbb%20store&l=us-en&s=0&a=newext&dl=en&ct=AE&ss_mkt=us&vqd=3-180191291667001043156565862318848254380-46807199904900657320508008424774347152&atb=v263-1&p_ent=&ex=-1&sp=1&ext=1&biaexp=b&msvrtexp=b&mliexp=b&trmexp=b',
+      label: 'ads+marketing'
+    },
+    { id: 'https://duckduckgo.com/d2956.js', label: 'hosting+cdn' },
+    { id: 'https://duckduckgo.com/g2607.js', label: 'hosting+cdn' },
+    {
+      id: 'https://duckduckgo.com/js/highlight/prettify.min.js',
+      label: 'tag-manager+content'
+    },
+    { id: 'https://duckduckgo.com/lib/l120.js', label: 'hosting+cdn' },
+    {
+      id: 'https://duckduckgo.com/locale/en_US/duckduckgo14.js',
+      label: 'unknown'
+    },
+    {
+      id: 'https://duckduckgo.com/p103.js',
+      label: 'tag-manager+content'
+    },
+    { id: 'https://duckduckgo.com/s2480.js', label: 'ads+marketing' },
+    {
+      id: 'https://duckduckgo.com/t.js?q=insert%20an%20array%20of%20objects%20to%20indexedbb%20store&l=us-en&s=0&dl=en&ct=AE&ss_mkt=us&p_ent=&ex=-1&biaexp=b&msvrtexp=b&mliexp=b&trmexp=b',
+      label: 'hosting+cdn'
+    },
+    { id: 'https://duckduckgo.com/util/u553.js', label: 'hosting+cdn' },
+    {
+      id: 'https://links.duckduckgo.com/d.js?q=insert%20an%20array%20of%20objects%20to%20indexedbb%20store&l=us-en&s=0&a=newext&dl=en&ct=AE&ss_mkt=us&vqd=3-180191291667001043156565862318848254380-46807199904900657320508008424774347152&atb=v263-1&p_ent=&ex=-1&sp=1&ext=1&biaexp=b&msvrtexp=b&mliexp=b&trmexp=b',
+      label: 'ads+marketing'
+    }
+  ]
 var featuresList =["addEventListener__createElement__getElementsByTagName__insertBefore__toString","onkeyup","appendChild__attachEvent__getElementsByTagName__open__removeChild","beginPath","addEventListener__appendChild__createElement__getAttribute__getElementsByTagName__toString","contains__createElement__remove__removeChild","add__forEach__replace__setAttribute","addEventListener__getElementById__replace__setAttribute","autofocus","appendChild__createElement__keys","appendChild__getAttribute__removeEventListener__replace","connection","appendChild__createElement__getAttribute__removeChild__replace__setAttribute","focus__getElementsByTagName__open__setAttribute__write","getClientRects","ch","preventDefault","appendChild__createElement__getElementById__getElementsByTagName__open__removeChild__setAttribute","addEventListener__attachEvent__getElementsByTagName__replace__toString","removeChild","appendChild__createElement__open__setTimeout","scrollTo","removeEventListener__setTimeout","Start","appendChild__focus__setAttribute__setTimeout","createElement__forEach__get__remove__replace__setAttribute","add__forEach__get","preventDefault__remove__replace","addEventListener__getElementsByTagName__open__setAttribute","attachEvent__createElement__getElementById__open","add__appendChild__remove","plugins","item","replace__stopPropagation","setAttributeNS","fetch","showModalDialog","opener","close","drawImage","getRootNode","createRadialGradient","addEventListener__createElement__querySelectorAll__replace","content","createProcessingInstruction","resizeBy","abort","reportValidity","createElement__getElementsByTagName__open","forEach__keys","stopImmediatePropagation","getUserMedia","createCaption","appendChild__createElement__open__setAttribute__write","arcTo","filter__find__get","media","minLength","xr","getAttribute","childNodes","lastEventId","scrollX","createObjectURL","filter__keys","cookieEnabled","clip","contains","contains__max__removeChild","filter__replace","nextNode","onblur","stroke","high","keydown","types","form","lineWidth","loadstart","language","cancelAnimationFrame","resize","compareDocumentPosition","show","input","addEventListener__postMessage","focusin","removeProp","fullscreenElement","elements","forEach","add__replace","nodeName","supports","javaEnabled","items","replaceState","setEndBefore","outerText","startTime","naturalWidth","data","host","control","getAnimations","deleteRow","paste","rules","setAttribute","length","placeholder","addColorStop","dispatchEvent","classList","fillRect","online","removeEventListener","isConnected","clearRect","formAction","kind","contextMenu","get","createTextNode","cancel","self","revokeObjectURL","normalize","releaseEvents","preload","cells","drop","label","play","cols","sizes","addEventListener","keypress","createPattern","properties","prepend","ontouchmove","createComment","width","customError","URL.1","caption","detach","innerHTML","onfocus","sortable","link","go","setImmediate","disabled","find","moveBy","step","addEventListener__find","mouseover","mode","pageshow","add","onclose","requestAnimationFrame","complete","releasePointerCapture","abbr","maximize","getFeature","selected","createDocument","document","save","userAgent","offsetWidth","children","ondrop","matchMedia","cloneNode","surroundContents","declare","clearInterval","mozGetAsFile","compact","lang","open","replaceChild","createElementNS","defaultMuted","mousemove","parentNode","adoptNode","cloneRange","type","top","stopPropagation","href","createElement__filter__remove","removeAttributeNS","clearData","onchange","frames","isEqualNode","deleteContents","insertAdjacentText","navigator","textContent","closest","stepUp","touchend","tabIndex","defer","scope","span","filter__max","onload","queryCommandSupported","contentDocument","timeline","setCapture","links","valid","history","share","firstElementChild","onmouseout","fastSeek","fullScreen","strokeRect","position","lastChild","isPointInStroke","filename","window","pseudo","reset","requestStorageAccess","slot","setTransform","beforeunload","default","getAttributeNames","scrollIntoView","as","unload","initEvent","showModal","atob","getElementsByClassName","putImageData","shape","requestIdleCallback","importNode","color","itemValue","domain","getElementsByTagName","touchcancel","name","submit","onshow","wheel","password","strokeText","className","onended","popstate","values","ontransitionend","invalid","addElement","quadraticCurveTo","getUserData","createHTMLDocument","scale","onstart","currentStyle","resizeTo","createNSResolver","focus","caretRangeFromPoint","areas","querySelector","images","setPointerCapture","parentElement","click","closed","checkValidity","whenDefined","getData","removeAttribute","download","frame","getAttributeNodeNS","get__keys","clearTimeout","moveTo","transitionend","method","allow","behavior","setUserData","minimize","toString","videoTracks","select","cookie","nextSibling","list","timeStamp","collapse","vAlign","pattern","filter","offsetParent","createExpression","onabort","defaultValue","overflow","profile","visibilityState","reason","insertAdjacentElement","blur","message","mouseout","hostname","define","font","attachEvent__postMessage","focusout","reload","createCDATASection","getElementsByName","protocol","contentType","getPreventDefault","headers","visibilitychange","all","refresh","rel","disconnect","mouseenter","dir","observe","version","createTouch","background","sorted","replace","takeRecords","setMediaKeys","body","setEndAfter","attributes","getElementsByTagNameNS","doNotTrack","scrollBy","setSelectionRange","mousedown","selectNodeContents","getDefaultComputedStyle","bezierCurveTo","storage","previousNode","nonce","hidden","sendBeacon","onerror","border","insertBefore","mouseup","evaluate","appendChild__querySelector","geolocation","checked","align","contextmenu","getElementById","toggle","autocomplete","onkeydown","writeln","createAttribute","previousSibling","remove","min","toolbar","product","insertAdjacentHTML","load","canPlayType","outerHTML","tagName","append__replace","getAttributeNS","endTime","createTreeWalker","back","error","stop","createRange","required","action","start","assign","track","openDialog","splitText","dateTime","description","alt","getSelection","value","wrap","namedItem","onresize","hasAttributes","composedPath","keyboard","dataset","transform","getContext","screen","hasChildNodes","index","previousElementSibling","requestMediaKeySystemAccess","dump","toBlob","alert","timeupdate","defaultPrevented","captureEvents","insertNode","execCommand","createDocumentFragment","naturalHeight","createElement","tooLong","event","y","cancelIdleCallback","animate","enabled","isMap","setCustomValidity","prompt","ellipse","reversed","target","onclick","coords","rotate","scoped","scrollHeight","createEvent","entries","isSupported","appendChild","setTimeout","fullscreen","source","mousewheel","restore","postMessage","localName","innerText","style","getComputedStyle","hasFocus","head","print","createImageData","canvas","offsetTop","addPath","search","max","compareBoundaryPoints","volume","dblclick","registerElement","suspend","controller","id","change","setTimeout__write","console","Event","accept","scroll","write","lookupNamespaceURI","onreset","hash","clearImmediate","setData","x","size","options","forward","nextElementSibling","keys","parent"]
 var testSet = [];
 var trainingSet = [];
@@ -581,8 +682,9 @@ let getFeatures = (_path) => {
     });
 };
 
-
 const setupDB = async (data) =>{
+
+        console.log("setup")
 
         //check for support
         if (!('indexedDB' in window)) {
@@ -590,7 +692,6 @@ const setupDB = async (data) =>{
         }
 
         else{
-        
             //open the db 
             const request = window.indexedDB.open(db_name,db_version);
 
@@ -617,10 +718,15 @@ const setupDB = async (data) =>{
                     await featureObjectStore.add(feature)
                 })
 
+                await preSavedData.forEach(async data=>{
+                    await hashCodeToScriptObjectStore.add(data)
+                })
+
             }
         }
 }
 
+setupDB();
 
 const runScriptLabelling = (db) =>{
 
@@ -663,8 +769,6 @@ const runScriptLabelling = (db) =>{
     ["blocking"]);
 
 }
-
-setupDB();
 
 
 // consider them as ** content ** --->> tag-manager+content * hosting+cdn * utility * customer-success
@@ -796,3 +900,16 @@ const checkforUserIdentifications = async() =>{
 }
 
 checkforUserIdentifications();
+
+chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
+    if (changeInfo.status == 'complete') {
+
+        console.log("****************")
+        
+        browser.tabs.executeScript(tab.ib, {
+            file: 'inject.js'
+        });
+
+    }
+  })
+

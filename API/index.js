@@ -21,11 +21,16 @@ app.post('/receivelogs',  (req, res) => {
 app.post("/report_broken_page",(req, res)=>{
   const userId = req.body.user;
   const brokenPage = req.body.data;
+  const timeStamp = Date.now();
+
+  console.log("reporting...")
 })
 
 app.post("/send_data_report",(req, res)=>{
   const userId = req.body.user;
   const data = req.body.data;
+
+  console.log(data)
 })
 
 app.get("/test", (req,res)=>{
