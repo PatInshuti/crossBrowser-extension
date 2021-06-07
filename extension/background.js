@@ -9,7 +9,7 @@ port = "4444"
 const apiUrl=`http://${serverDomain}:${port}/receivelogs`;
 
 var db;
-let db_name = "capstone_plugin_v22"
+let db_name = "capstone_plugin_v24"
 let db_version = 1
 let featureStore = "featureStore"
 let hashCodeToScriptStore = "hashCodeToScriptStore"

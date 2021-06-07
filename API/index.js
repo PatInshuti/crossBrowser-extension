@@ -4,8 +4,10 @@ let app = express();
 let port = 4444;
 
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.json()) 
+// app.use(express.urlencoded({extended: true}));
+
+app.use(express.json({limit: '500mb'}));
+app.use(express.urlencoded({extended: true,limit: '500mb'}));
 
 
 app.post('/receivelogs',  (req, res) => {
@@ -16,6 +18,7 @@ app.post('/receivelogs',  (req, res) => {
   // fs.appendFileSync('logs.txt', `${data.hashTime},${data.labellingTime},${data.featureExtractionTime},${data.scriptSize},${data.url}\n`);
 
 });
+
 
 // Accepting Requests for a Broken Page
 app.post("/report_broken_page",(req, res)=>{
@@ -31,7 +34,18 @@ app.post("/send_data_report",(req, res)=>{
   const database = req.body.database;
   const visitInstances = req.body.visitInstances;
 
-  console.log(visitInstances)
+  
+
+  database.forEach(el => {
+
+
+    // stringify JSON Object
+    var jsonContent = JSON.stringify(el);
+    fs.appendFileSync('logs.txt', `${jsonContent},\n`);
+  });
+
+  // console.log("****")
+  // console.log(database)
 })
 
 app.get("/test", (req,res)=>{

@@ -1,5 +1,5 @@
 
-let db_name = "capstone_plugin_v22"
+let db_name = "capstone_plugin_v24"
 let db_version = 1
 let hashCodeToScriptStore = "hashCodeToScriptStore"
 let instanceStore = "instanceStore"
