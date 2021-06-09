@@ -34,15 +34,16 @@ app.post("/send_data_report",(req, res)=>{
   const database = req.body.database;
   const visitInstances = req.body.visitInstances;
 
+  console.log(visitInstances)
 
-  database.forEach(el => {
-    // stringify JSON Object
-    var jsonContent = JSON.stringify(el);
-    fs.writeFileSync('logs.txt', `${jsonContent},\n`);
-    console.log(el)
-  });
 
-  console.log(database.length)
+  // database.forEach(el => {
+  //   // stringify JSON Object
+  //   var jsonContent = JSON.stringify(el);
+  //   fs.appendFileSync('data-logs.txt', `${jsonContent},\n`);
+  // });
+
+  // console.log(database.length)
 
   // console.log("****")
   // console.log(database)

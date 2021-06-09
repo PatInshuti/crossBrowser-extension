@@ -59,39 +59,32 @@ document.addEventListener('DOMContentLoaded', function(){
         request.onsuccess = (event) => {
             db = event.target.result;
 
-            var tx2 = db.transaction(hashCodeToScriptStore, 'readwrite');
-            var hashCodeToScriptDBStore = tx2.objectStore(hashCodeToScriptStore);
-            var getAllhashCodeToScript = hashCodeToScriptDBStore.getAll();
-            
-            getAllhashCodeToScript.onsuccess = async (event) =>{
-                // Start intercepting requests
-                let theMapping = event.target.result;
-
-                data = {
-                    "database":theMapping,
-                    "user":uniqueUserIdentification
-                }
-
-                var tx3 = db.transaction(instanceStore, 'readwrite');
-                var instanceDBStore = tx3.objectStore(instanceStore);
-                var visitInstanceDBStore = instanceDBStore.getAll();
-                
-                visitInstanceDBStore.onsuccess = async (event) =>{
-                    let visitInstances = event.target.result;
-                    data["visitInstances"] = visitInstances;
-
-                    fetch(testUrl+"/send_data_report", {
-                        method: 'POST', 
-                        headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json'
-                        },
-                
-                        body: JSON.stringify(data)
-                    });
-
-                }
+            data = {
+                "database":{},
+                "user":uniqueUserIdentification
             }
+
+            var tx3 = db.transaction(instanceStore, 'readwrite');
+            var instanceDBStore = tx3.objectStore(instanceStore);
+            var visitInstanceDBStore = instanceDBStore.getAll();
+            
+            visitInstanceDBStore.onsuccess = async (event) =>{
+                let visitInstances = event.target.result;
+                data["visitInstances"] = visitInstances;
+
+                fetch(testUrl+"/send_data_report", {
+                    method: 'POST', 
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+            
+                    body: JSON.stringify(data)
+                });
+
+            }
+
+
         }
 
     })

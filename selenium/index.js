@@ -26,7 +26,8 @@ let driver = new webdriver.Builder()
 
 let a = []
 
-topPk.forEach(website => {
-    driver.get(website);
-});
+// topPk.forEach(website => {
+//     driver.get(website);
+// });
 
+driver.get(topPk[0]);

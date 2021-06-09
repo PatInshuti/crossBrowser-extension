@@ -26,67 +26,65 @@ driver.set_window_size(360,640)
 
 for website in (topPk):
 
-    driver.get(website)
-
-    js = 'return Math.max( document.body.scrollHeight, document.body.offsetHeight,  document.documentElement.clientHeight,  document.documentElement.scrollHeight,  document.documentElement.offsetHeight);'
-
     try:
-        # scrollheight = driver.execute_script(js)
-        scrollheight = 160
+
+        driver.get(website)
+
+        js = 'return Math.max( document.body.scrollHeight, document.body.offsetHeight,  document.documentElement.clientHeight,  document.documentElement.scrollHeight,  document.documentElement.offsetHeight);'
+
+        try:
+            # scrollheight = driver.execute_script(js)
+            scrollheight = 160
+        except:
+            scrollheight = 0
+
+        slices = []
+        offset = 0
+        totalSize = 0
+
+        factor = float(0.3)
+
+        while offset < scrollheight:
+            driver.execute_script("window.scrollTo(0, %s);" % offset)
+            time.sleep(5)
+            driver.save_screenshot("tmp.png")
+
+            img = Image.open("tmp.png")
+            # print (offset, scrollheight)
+            # os.system("mv tmp.png tmp_{0}.png".format(offset))
+            os.system("rm tmp.png")
+            offset += int(img.size[1]*factor)
+            totalSize += int(img.size[1])
+            slices.append(img)
+
+            if verbose > 0:
+                driver.get_screenshot_as_file('%s/screen_%s.png' % ('/tmp', offset))
+                # print (offset, scrollheight)
+            
+        screenshot = Image.new('RGB', (slices[0].size[0], scrollheight*int(1/factor)))
+        offset = 0
+        cnt = 0
+        for img in slices:
+            cnt += 1
+            # print (offset, scrollheight*int(1/factor), scrollheight*int(1/factor)-offset)
+            screenshot.paste(img, (0, offset))
+            offset += img.size[1]
+
+            if cnt == len(slices)-1:
+                offset = scrollheight*int(1/factor) - img.size[1]
+
+        name = website.replace("http://","").replace("https://","")
+
+        new_width  = 360
+        new_height = int(new_width * screenshot.size[1] / screenshot.size[0])
+
+        screenshot = screenshot.resize((new_width, new_height), Image.ANTIALIAS)
+        name = name.replace("/","_")
+        screenshot.save(f"screenshots/{name}.png")
+        print(website)
+    
     except:
-        scrollheight = 0
-
-    slices = []
-    offset = 0
-    totalSize = 0
-
-    factor = float(0.3)
-
-    while offset < scrollheight:
-        driver.execute_script("window.scrollTo(0, %s);" % offset)
-        time.sleep(5)
-        driver.save_screenshot("tmp.png")
-
-        img = Image.open("tmp.png")
-        print (offset, scrollheight)
-        # os.system("mv tmp.png tmp_{0}.png".format(offset))
-        os.system("rm tmp.png")
-        offset += int(img.size[1]*factor)
-        totalSize += int(img.size[1])
-        slices.append(img)
-
-        if verbose > 0:
-            driver.get_screenshot_as_file('%s/screen_%s.png' % ('/tmp', offset))
-            print (offset, scrollheight)
-        
-    screenshot = Image.new('RGB', (slices[0].size[0], scrollheight*int(1/factor)))
-    offset = 0
-    cnt = 0
-    for img in slices:
-        cnt += 1
-        print (offset, scrollheight*int(1/factor), scrollheight*int(1/factor)-offset)
-        screenshot.paste(img, (0, offset))
-        offset += img.size[1]
-
-        if cnt == len(slices)-1:
-            offset = scrollheight*int(1/factor) - img.size[1]
-
-    name = website.replace("http://","").replace("https://","")
-
-    new_width  = 360
-    new_height = int(new_width * screenshot.size[1] / screenshot.size[0])
-
-    print("width")
-    print(new_width)
-    print()
-    print("height")
-    print(new_height)
-    print()
-    print("screenshot size")
-    print(screenshot.size)
-    screenshot = screenshot.resize((new_width, new_height), Image.ANTIALIAS)
-    name = name.replace("/","_")
-    screenshot.save(f"screenshots/{name}.png")
+        continue
 
 
 # driver.close()
