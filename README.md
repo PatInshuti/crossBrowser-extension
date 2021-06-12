@@ -8,6 +8,8 @@ Running code:  ```web-ext sign --api-key=user:16645015:501 --api-secret=cb7fb9c3
 #### Finding & Installing the Plugin in Phone's Storage
 ```file:storage/emulated/0/Download/capstone.xpi```
 
+### Browsertime version: `8.4.0`
+
 ### Testing
 
 - Browsertime version 8.4.0
